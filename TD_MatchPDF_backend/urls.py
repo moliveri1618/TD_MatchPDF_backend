@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from TD_MatchPDF_backend_project import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("stoca", views.yo),
+
 ]
