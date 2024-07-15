@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.decorators import api_view
-from django.core.files.storage import FileSystemStorage
-import os
-import shutil
-
+from .utils import *
+from django.http import JsonResponse
 
 # Create your views here.
 @api_view(['POST'])
@@ -16,33 +14,12 @@ def yo(request):
 def pdf_compare(request):
 
     if 'file1' in request.FILES and 'file2' in request.FILES:
-        uploaded_file1 = request.FILES['file1']
-        uploaded_file2 = request.FILES['file2']
-        print(f'Filename 1: {uploaded_file1.name}')
-        print(f'Filename 2: {uploaded_file2.name}')
 
-        # Define the directory to store the files
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        files_dir = os.path.join(script_dir, 'Files')
+        #Save PDFs into files folder
+        file_path1, file_path2 = save_PDF(request)
 
-        # Delete all existing files in the directory
-        if os.path.exists(files_dir):
-            shutil.rmtree(files_dir)
-        os.makedirs(files_dir)
-
-        # Save the uploaded files to the Files directory
-        fs = FileSystemStorage(location=files_dir)
-        filename1 = fs.save(uploaded_file1.name, uploaded_file1)
-        filename2 = fs.save(uploaded_file2.name, uploaded_file2)
-        file_path1 = fs.path(filename1)
-        file_path2 = fs.path(filename2)
-        print(f'File 1 saved at: {file_path1}')
-        print(f'File 2 saved at: {file_path2}')
-
-        # Here you can add your logic to compare the PDF files
-        # For example, you could use a library like PyPDF2 or pdfminer to extract text and compare
-
+        # PDF Compare
+        res = get_ordine_data(file_path1, file_path2)
+        return JsonResponse(res, safe=False)
     else:
-        print('Both files are required')
-
-    return HttpResponse("Files received and processed")
+        return JsonResponse({'error': 'Both files are required'}, status=400)
