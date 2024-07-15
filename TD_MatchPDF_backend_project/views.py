@@ -18,6 +18,8 @@ def pdf_compare(request):
     if 'file1' in request.FILES and 'file2' in request.FILES:
         uploaded_file1 = request.FILES['file1']
         uploaded_file2 = request.FILES['file2']
+        print(f'Filename 1: {uploaded_file1.name}')
+        print(f'Filename 2: {uploaded_file2.name}')
 
         # Define the directory to store the files
         script_dir = os.path.dirname(os.path.abspath(__file__))
