@@ -1,0 +1,67 @@
+###########
+
+POST http://127.0.0.1:8000/yo/
+Content-Type: application/json
+
+# {
+#   "message": "yoo"
+# }
+
+
+# #####
+
+# POST https://mauri1618.pythonanywhere.com/stoca?DOI=10.1016/j.carbpol.2016.01.046
+# Content-Type: application/json
+
+
+# ######
+# POST http://127.0.0.1:8000/yo
+# Content-Type: application/json
+
+# #######
+# POST https://mauri1618.pythonanywhere.com/yo
+# Content-Type: application/json
+
+# ###
+# # Test POST request to local server for inserting a DOI record
+# POST http://127.0.0.1:8000/doi_post/
+# Content-Type: application/json
+
+# {
+# "title": "Exploring New Dimensions",
+# "authors": "Jane Doe, John Smith",
+# "year": 2023,
+# "journal": "Advanced Research Journal",
+# "volume": "15",
+# "pages": "215-230",
+# "impact_factor": 2.3,
+# "publisher": "Academic Publishing",
+# "research_groups_first": "Innovative Tech Lab",
+# "research_groups_corresp": "Global Research Group",
+# "research_groups_other": "Eco Science Team",
+# "projects": "Future Tech Initiative",
+# "citation_count": 45,
+# "article_type": "Original Research",
+# "doi": "10.2023/arj123456"
+# }
+
+
+# ####
+# GET http://172.17.231.51:8080/doi_get/
+
+# ####
+# POST http://172.17.231.51:8080/yo
+
+# ###
+
+# POST http://172.17.231.51:8080/stoca?DOI=10.1016/j.carbpol.2016.01.046
+
+
+# ####
+# POST http://127.0.0.1:8000/check_pws_ms_AD/
+# Content-Type: application/json
+
+# {
+#   "email": "mauro.oliveri@ibet.pt",
+#   "password": "12345678Lzxcdczscl!"
+# }

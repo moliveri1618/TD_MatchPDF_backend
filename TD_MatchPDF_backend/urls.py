@@ -19,5 +19,6 @@ from django.urls import path
 from TD_MatchPDF_backend_project import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("yo", views.yo),
+    path("yo/", views.yo),
+    path("pdf_compare/", views.pdf_compare),
 ]
