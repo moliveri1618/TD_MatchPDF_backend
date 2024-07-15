@@ -7,7 +7,7 @@ import os
 # Create your views here.
 @api_view(['POST'])
 def yo(request):
-    return HttpResponse("yuppiii")
+    return HttpResponse("hahahaha")
 
 
 # Create your views here.
