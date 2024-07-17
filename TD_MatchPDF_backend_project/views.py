@@ -22,6 +22,12 @@ def pdf_compare(request):
         res = get_ordine_data(file_path1, file_path2)
 
         errori = find_errors(res)
+
+        response_data = {
+            'res': res,
+            'errori': errori
+        }
+        
         
         return JsonResponse(res, safe=False)
     else:
