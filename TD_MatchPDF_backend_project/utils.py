@@ -189,6 +189,10 @@ def guess_compare_strings(str1, str2):
     if ('sx' in str1_clean and 'dx' in str2_clean) or ('dx' in str1_clean and 'sx' in str2_clean):
         return False
     
+    # Check if one string ends with '1' and the other ends with '2'
+    if (str1_clean.endswith('1') and str2_clean.endswith('2')) or (str1_clean.endswith('2') and str2_clean.endswith('1')):
+        return False
+    
     # Check if they are different by only one character
     if Levenshtein.distance(str1_clean, str2_clean) <= 1:
         return True
@@ -206,73 +210,26 @@ def compare_data(res, data_ordine, renamed_data):
                 res[item1['pos_cliente']] = []
 
                 if item1['tipo'] == item2['tipo'].replace(" ", ""): 
-                    res[item1['pos_cliente']].append({
-                        'Tipo':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
+                    res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'true'])
                 else:
-                    res[item1['pos_cliente']].append({
-                        'Tipo':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'false',
-                        }
-                    })
-
+                    res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'false'])
+                print(item1['pos_cliente'])
+                print(item1['pezzi'])
+                print(item2['pezzi'])
                 if item1['pezzi'] == item2['pezzi']:
-                    res[item1['pos_cliente']].append({
-                        'Pezzi':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
+                    res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'true'])
                 else:
-                    res[item1['pos_cliente']].append({
-                        'Pezzi':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
+                    res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'false'])
 
                 if item1['BRM-L'] == item2['BRM-L']:
-                    res[item1['pos_cliente']].append({
-                        'BRM-L':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
+                    res[item1['pos_cliente']].append(['BRM-L', 'true', 'true', 'true'])
                 else:
-                    res[item1['pos_cliente']].append({
-                        'BRM-L':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
+                    res[item1['pos_cliente']].append(['BRM-L', 'true', 'true', 'false'])
 
                 if item1['BRM-A'] == item2['BRM-A']:
-                    res[item1['pos_cliente']].append({
-                        'BRM-A':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
+                    res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'true'])
                 else:
-                    res[item1['pos_cliente']].append({
-                        'BRM-A':{
-                            'PDF1': 'true',
-                            'PDF2': 'true',
-                            'Confronto': 'true',
-                        }
-                    })
-
+                    res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'false'])
     return res
 
 

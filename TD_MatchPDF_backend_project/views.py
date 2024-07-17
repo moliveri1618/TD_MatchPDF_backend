@@ -20,6 +20,7 @@ def pdf_compare(request):
 
         # PDF Compare
         res = get_ordine_data(file_path1, file_path2)
+        
         return JsonResponse(res, safe=False)
     else:
         return JsonResponse({'error': 'Both files are required'}, status=400)
