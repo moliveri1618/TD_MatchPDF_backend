@@ -203,10 +203,13 @@ def guess_compare_strings(str1, str2):
 
 
 
-def compare_data(res, data_ordine, renamed_data):
+def compare_data(res, data_ordine, renamed_data, nuova_regola):
     for item1 in data_ordine:
         for item2 in renamed_data:
-            if guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
+            if  (item1['pos_cliente'] == nuova_regola[0] and item2['pos_cliente'] == nuova_regola[1]) or \
+                (item1['pos_cliente'] == nuova_regola[1] and item2['pos_cliente'] == nuova_regola[0]) or \
+                guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
+
                 res[item1['pos_cliente']] = []
 
                 if item1['tipo'] == item2['tipo'].replace(" ", ""): 
@@ -268,7 +271,7 @@ def save_PDF(request):
     return file_path1, file_path2
 
 
-def get_ordine_data(file_path1, file_path2):
+def get_ordine_data(file_path1, file_path2, nuova_regola):
 
     #Ordine
     data_ordine = extract_data_from_ordine(file_path1)
@@ -287,7 +290,7 @@ def get_ordine_data(file_path1, file_path2):
 
     #Compare the two lists
     res = {}
-    res = compare_data(res, data_ordine, renamed_data)
+    res = compare_data(res, data_ordine, renamed_data, nuova_regola)
     print_res(res)
 
     return res
