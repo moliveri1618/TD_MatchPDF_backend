@@ -174,7 +174,6 @@ def rename_pos_cliente2(data):
 
 
 
-
 def guess_compare_strings(str1, str2):
     
     # Remove all spaces from the strings

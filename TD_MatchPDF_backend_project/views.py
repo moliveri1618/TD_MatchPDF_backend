@@ -13,9 +13,10 @@ def yo(request):
 @api_view(['POST'])
 def pdf_compare(request):
 
+    ai = request.data.get('AI', '')
     nuova_regola = request.data.get('regole', '')
-    print('yo')
-    print(nuova_regola)
+    print(ai)
+    print('yooo')
     if nuova_regola == 'aaaa':
         nuova_regola = ['null', 'null']
 
