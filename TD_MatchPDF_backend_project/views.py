@@ -20,6 +20,8 @@ def pdf_compare(request):
 
         # PDF Compare
         res = get_ordine_data(file_path1, file_path2)
+
+        errori = find_errors(res)
         
         return JsonResponse(res, safe=False)
     else:

@@ -189,9 +189,9 @@ def guess_compare_strings(str1, str2):
     if ('sx' in str1_clean and 'dx' in str2_clean) or ('dx' in str1_clean and 'sx' in str2_clean):
         return False
     
-    # Check if one string ends with '1' and the other ends with '2'
-    if (str1_clean.endswith('1') and str2_clean.endswith('2')) or (str1_clean.endswith('2') and str2_clean.endswith('1')):
-        return False
+    # # Check if one string ends with '1' and the other ends with '2'
+    # if (str1_clean.endswith('1') and str2_clean.endswith('2')) or (str1_clean.endswith('2') and str2_clean.endswith('1')):
+    #     return False
     
     # Check if they are different by only one character
     if Levenshtein.distance(str1_clean, str2_clean) <= 1:
@@ -213,9 +213,7 @@ def compare_data(res, data_ordine, renamed_data):
                     res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'false'])
-                print(item1['pos_cliente'])
-                print(item1['pezzi'])
-                print(item2['pezzi'])
+
                 if item1['pezzi'] == item2['pezzi']:
                     res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'true'])
                 else:
@@ -293,3 +291,53 @@ def get_ordine_data(file_path1, file_path2):
     print_res(res)
 
     return res
+
+
+def replace_index_with_label(errors):
+    # Mapping of indices to labels
+    index_to_label = {
+        0: 'tipo',
+        1: 'pezzi',
+        2: 'BRM-L',
+        3: 'BRM-A'
+    }
+    
+    # New dictionary to store the replaced values
+    replaced_errors = {}
+    
+    for key, error_list in errors.items():
+        replaced_errors[key] = []
+        for error in error_list:
+            index, sub_index, value = error
+            label = index_to_label.get(index, index)  # Replace index with label if it exists in the dictionary
+            replaced_errors[key].append((label, sub_index, value))
+    
+    return replaced_errors
+
+def convert_to_dict(errors):
+    converted_dict = {}
+    for key, error_list in errors.items():
+        labels = set()  # Using a set to avoid duplicates
+        for error in error_list:
+            label, _, _ = error
+            labels.add(label)
+        converted_dict[key] = list(labels)  # Converting the set back to a list
+    
+    return converted_dict
+
+def find_errors(res):
+
+    errors = {}
+    for key, values in res.items():
+        for index, sublist in enumerate(values):
+            for sub_index, item in enumerate(sublist):
+                if sub_index > 0 and item != 'true':  # Ignore the first item (header)
+                    if key not in errors:
+                        errors[key] = []
+                    errors[key].append((index, sub_index, item))
+
+    replaced_errors = replace_index_with_label(errors)
+    converted_dict = convert_to_dict(replaced_errors)
+    print(converted_dict)
+
+    return converted_dict
