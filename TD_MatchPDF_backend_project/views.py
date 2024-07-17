@@ -29,6 +29,6 @@ def pdf_compare(request):
         }
         
         
-        return JsonResponse(res, safe=False)
+        return JsonResponse(response_data, safe=False)
     else:
         return JsonResponse({'error': 'Both files are required'}, status=400)
