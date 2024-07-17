@@ -217,25 +217,30 @@ def compare_data(res, data_ordine, renamed_data, nuova_regola):
                     res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'false'])
-                    errors[item1['pos_cliente']].append(['tipo', 'mismatch', item1['tipo'], item2['tipo']])
+                    #errors[item1['pos_cliente']].append(['tipo', item1['tipo'], item2['tipo']])
+                    errors[item1['pos_cliente']].append(['tipo---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
 
-                if item1['pezzi'] == item2['pezzi']:
+
+                if item1['pezzi'] == item2['pezzi'].replace(" ", ""):
                     res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'false'])
-                    errors[item1['pos_cliente']].append(['pezzi', 'mismatch', item1['tipo'], item2['tipo']])
+                    #errors[item1['pos_cliente']].append(['pezzi', item1['tipo'], item2['tipo']])
+                    errors[item1['pos_cliente']].append(['pezzi---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
 
-                if item1['BRM-L'] == item2['BRM-L']:
+                if item1['BRM-L'] == item2['BRM-L'].replace(" ", ""):
                     res[item1['pos_cliente']].append(['BRM-L', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['BRM-L', 'true', 'true', 'false'])
-                    errors[item1['pos_cliente']].append(['BRM-L', 'mismatch', item1['tipo'], item2['tipo']])
+                    #errors[item1['pos_cliente']].append(['BRM-L', item1['tipo'], item2['tipo']])
+                    errors[item1['pos_cliente']].append(['BRM-L---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
 
-                if item1['BRM-A'] == item2['BRM-A']:
+
+                if item1['BRM-A'] == item2['BRM-A'].replace(" ", ""):
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'false'])
-                    errors[item1['pos_cliente']].append(['BRM-A', 'mismatch', item1['tipo'], item2['tipo']])
+                    errors[item1['pos_cliente']].append(['BRM-A---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
     return res, errors
 
 
@@ -327,7 +332,7 @@ def get_ordine_data(file_path1, file_path2, nuova_regola):
     #Compare the two lists
     res = {}
     res, errors = compare_data(res, data_ordine, renamed_data, nuova_regola)
-    print_res(res)
+    errors = remove_empty_errors(errors)
 
     return res, nuova_regola_error, errors
 
@@ -364,19 +369,5 @@ def convert_to_dict(errors):
     
     return converted_dict
 
-def find_errors(res):
-
-    errors = {}
-    for key, values in res.items():
-        for index, sublist in enumerate(values):
-            for sub_index, item in enumerate(sublist):
-                if sub_index > 0 and item != 'true':  # Ignore the first item (header)
-                    if key not in errors:
-                        errors[key] = []
-                    errors[key].append((index, sub_index, item))
-
-    replaced_errors = replace_index_with_label(errors)
-    converted_dict = convert_to_dict(replaced_errors)
-    print(converted_dict)
-
-    return converted_dict
+def remove_empty_errors(errors_dict):
+    return {k: v for k, v in errors_dict.items() if v}

@@ -26,7 +26,7 @@ def pdf_compare(request):
 
         # PDF Compare
         res, nuova_regola_error, errori = get_ordine_data(file_path1, file_path2, nuova_regola)
-        #errori = find_errors(res)
+        print(errori)
 
         response_data = {
             'res': res,
