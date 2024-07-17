@@ -201,9 +201,9 @@ def guess_compare_strings(str1, str2):
 
 
 
-
-
 def compare_data(res, data_ordine, renamed_data, nuova_regola):
+
+    errors = {}
     for item1 in data_ordine:
         for item2 in renamed_data:
             if  (item1['pos_cliente'] == nuova_regola[0] and item2['pos_cliente'] == nuova_regola[1]) or \
@@ -211,27 +211,32 @@ def compare_data(res, data_ordine, renamed_data, nuova_regola):
                 guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
 
                 res[item1['pos_cliente']] = []
+                errors[item1['pos_cliente']] = []
 
                 if item1['tipo'] == item2['tipo'].replace(" ", ""): 
                     res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['tipo', 'true', 'true', 'false'])
+                    errors[item1['pos_cliente']].append(['tipo', 'mismatch', item1['tipo'], item2['tipo']])
 
                 if item1['pezzi'] == item2['pezzi']:
                     res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['pezzi', 'true', 'true', 'false'])
+                    errors[item1['pos_cliente']].append(['pezzi', 'mismatch', item1['tipo'], item2['tipo']])
 
                 if item1['BRM-L'] == item2['BRM-L']:
                     res[item1['pos_cliente']].append(['BRM-L', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['BRM-L', 'true', 'true', 'false'])
+                    errors[item1['pos_cliente']].append(['BRM-L', 'mismatch', item1['tipo'], item2['tipo']])
 
                 if item1['BRM-A'] == item2['BRM-A']:
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'false'])
-    return res
+                    errors[item1['pos_cliente']].append(['BRM-A', 'mismatch', item1['tipo'], item2['tipo']])
+    return res, errors
 
 
 
@@ -271,6 +276,30 @@ def save_PDF(request):
     return file_path1, file_path2
 
 
+def get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, nuova_regola):
+    pos_cliente_data_ordine = [entry['pos_cliente'] for entry in renamed_data_ordine]
+    pos_cliente_data = [entry['pos_cliente'] for entry in renamed_data]
+
+    # Split the nuova_regola into words
+    words = nuova_regola.split()
+
+   # Find matching words in the arrays
+    ordine_match = None
+    data_match = None
+    
+    for word in words:
+        if word in pos_cliente_data_ordine:
+            ordine_match = word
+        if word in pos_cliente_data:
+            data_match = word
+    
+    # Return the two words if both matches are found, otherwise return False
+    if ordine_match and data_match:
+        return ordine_match, data_match
+    else:
+        return False
+
+
 def get_ordine_data(file_path1, file_path2, nuova_regola):
 
     #Ordine
@@ -287,13 +316,20 @@ def get_ordine_data(file_path1, file_path2, nuova_regola):
         print(item)
     print('...............')
 
+    #Nuova regola logic
+    nuova_regola_error = ''
+    if nuova_regola != ['null', 'null']:
+        nuova_regola = get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, nuova_regola)
+        if nuova_regola == False:
+            nuova_regola_error = 'No Match Found'
+            nuova_regola = ['null', 'null']
 
     #Compare the two lists
     res = {}
-    res = compare_data(res, data_ordine, renamed_data, nuova_regola)
+    res, errors = compare_data(res, data_ordine, renamed_data, nuova_regola)
     print_res(res)
 
-    return res
+    return res, nuova_regola_error, errors
 
 
 def replace_index_with_label(errors):
