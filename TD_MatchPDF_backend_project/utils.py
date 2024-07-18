@@ -201,18 +201,12 @@ def guess_compare_strings(str1, str2):
 
 
 
-def compare_data(res, data_ordine, renamed_data, nuova_regola):
-
-    # prepare nuova_regola into array of string without punctuation
-    words_in_nuova_regola = nuova_regola.split() 
-    translator = str.maketrans('', '', string.punctuation)
-    words_in_nuova_regola = nuova_regola.translate(translator).split()
+def compare_data(res, data_ordine, renamed_data):
 
     errors = {}
     for item1 in data_ordine:
         for item2 in renamed_data:
-            if guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']) or \
-               (item1['pos_cliente'] in words_in_nuova_regola and item2['pos_cliente'] in words_in_nuova_regola) :
+            if guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
 
                 res[item1['pos_cliente']] = []
                 errors[item1['pos_cliente']] = []
@@ -310,7 +304,7 @@ def add_regola_to_res(res, nuova_regola, data_ordine, renamed_data):
 
 
 
-def get_ordine_conferma_ordine_data(file_path1, file_path2, nuova_regola):
+def get_ordine_conferma_ordine_data(file_path1, file_path2):
 
     #Ordine
     data_ordine = extract_data_from_ordine(file_path1)
@@ -328,18 +322,8 @@ def get_ordine_conferma_ordine_data(file_path1, file_path2, nuova_regola):
 
     #Compare the two lists
     res = {}
-    res, errors = compare_data(res, data_ordine, renamed_data, nuova_regola)
+    res, errors = compare_data(res, data_ordine, renamed_data)
     errors = remove_empty_errors(errors)
-
-    # # Nuova regola logic
-    # nuova_regola_error = ''
-    # if nuova_regola != 'aaaa':
-    #     nuova_regola = get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, res, nuova_regola)
-    #     if len(nuova_regola)> 1:
-    #         res = add_regola_to_res(res, nuova_regola, data_ordine, renamed_data)
-    #         pass
-    #     else:
-    #         nuova_regola_error = 'No matches found for these two words'
 
     return res, errors
 
@@ -378,3 +362,11 @@ def convert_to_dict(errors):
 
 def remove_empty_errors(errors_dict):
     return {k: v for k, v in errors_dict.items() if v}
+
+
+def aggiungi_regole(res, renamed_data, renamed_data_conferma_ordine):
+    print(renamed_data)
+    print(renamed_data_conferma_ordine)
+    print(res)
+
+    return 1

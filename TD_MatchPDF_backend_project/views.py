@@ -22,8 +22,10 @@ def pdf_compare(request):
         file_path1, file_path2 = save_PDF(request)
 
         # PDF Compare
-        res, errori = get_ordine_conferma_ordine_data(file_path1, file_path2, nuova_regola)
+        res, errori = get_ordine_conferma_ordine_data(file_path1, file_path2)
         #print(errori)
+
+        # Aggiungi regole
 
         response_data = {
             'res': res,
