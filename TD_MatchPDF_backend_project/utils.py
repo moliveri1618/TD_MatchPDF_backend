@@ -339,16 +339,16 @@ def get_ordine_conferma_ordine_data(file_path1, file_path2):
     #Ordine
     data_ordine = extract_data_from_ordine(file_path1)
     renamed_data_ordine = rename_pos_cliente2(data_ordine)
-    # for data in renamed_data_ordine:
-    #     print(data)
-    # print('...............')
+    for data in renamed_data_ordine:
+        print(data)
+    print('...............')
 
     #Conferma
     extracted_text = extract_text_from_pdf(file_path2)
     renamed_data = rename_pos_cliente2(extracted_text)
-    # for item in renamed_data:
-    #     print(item)
-    # print('...............')
+    for item in renamed_data:
+        print(item)
+    print('...............')
 
     #Compare the two lists
     res = {}
