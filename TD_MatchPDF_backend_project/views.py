@@ -7,7 +7,7 @@ from django.http import JsonResponse
 # Create your views here.
 @api_view(['POST'])
 def yo(request):
-    return HttpResponse("hahahaha")
+    return HttpResponse("yuuuu")
 
 
 @api_view(['POST'])
