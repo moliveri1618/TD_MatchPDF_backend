@@ -297,13 +297,9 @@ def get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, res, nuova_re
     # Check if any word is in pos_cliente_data_ordine or pos_cliente_data
     translator = str.maketrans('', '', string.punctuation)
     words_in_nuova_regola = nuova_regola.translate(translator).split()
-    matches = [word for word in words_in_nuova_regola if word in pos_cliente_data_ordine or word in pos_cliente_data]
-    
-    print(pos_cliente_data_ordine)
-    print(pos_cliente_data)
-    print(nuova_regola)
-    print(matches)
 
+
+    matches = [word for word in words_in_nuova_regola if word in pos_cliente_data_ordine or word in pos_cliente_data]
     return matches 
 
 
