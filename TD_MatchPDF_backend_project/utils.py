@@ -325,7 +325,7 @@ def get_ordine_conferma_ordine_data(file_path1, file_path2):
     res, errors = compare_data(res, data_ordine, renamed_data)
     errors = remove_empty_errors(errors)
 
-    return res, errors
+    return res, errors, data_ordine, renamed_data
 
 
 def replace_index_with_label(errors):
@@ -364,9 +364,54 @@ def remove_empty_errors(errors_dict):
     return {k: v for k, v in errors_dict.items() if v}
 
 
-def aggiungi_regole(res, renamed_data, renamed_data_conferma_ordine):
+# Function to normalize the string by removing punctuation and extra spaces
+def normalize_string(s):
+    return re.sub(r'\s+', ' ', re.sub(r'\W+', ' ', s)).strip().lower()
+
+# Function to check for the presence of consecutive words
+def is_full_string_match(words, array):
+    for i in range(len(words)):
+        for j in range(i + 1, len(words) + 1):
+            substring = ' '.join(words[i:j])
+            for element in array:
+                if substring == normalize_string(element['pos_cliente']):
+                    return element
+    return None
+
+
+# Function to remove the matched substring from the original string
+def remove_matched_substring(original_string, substring):
+    pattern = re.compile(re.escape(substring), re.IGNORECASE)
+    return pattern.sub('', original_string, count=1)
+
+
+
+def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
+    print(nuova_regola)
     print(renamed_data)
     print(renamed_data_conferma_ordine)
-    print(res)
+
+    # Convert the first string to lower case and split into words
+    words_1 = normalize_string(nuova_regola).split()
+
+    # Check for consecutive words in the second array
+    result1 = is_full_string_match(words_1, renamed_data)
+
+    if result1:
+        #print(f"First Match found: {result1}")
+        updated_nuova_regola = remove_matched_substring(nuova_regola, result1['pos_cliente'])
+        #print(f"Updated nuova_regola: {updated_nuova_regola}")
+        words_2 = normalize_string(updated_nuova_regola).split()
+        result2 = is_full_string_match(words_2, renamed_data_conferma_ordine)
+
+        if result2:
+            print(f"Second Match found: {result2}")
+        else:
+            print("No second match found")
+    else:
+        result1 = 'No match found'
+        print("No match found")
+
+
 
     return 1

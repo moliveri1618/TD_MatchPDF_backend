@@ -22,10 +22,12 @@ def pdf_compare(request):
         file_path1, file_path2 = save_PDF(request)
 
         # PDF Compare
-        res, errori = get_ordine_conferma_ordine_data(file_path1, file_path2)
+        res, errori, data_ordine, renamed_data = get_ordine_conferma_ordine_data(file_path1, file_path2)
         #print(errori)
 
         # Aggiungi regole
+        if nuova_regola != 'aaaa':
+            aggiungi_regole(nuova_regola, data_ordine, renamed_data)
 
         response_data = {
             'res': res,
