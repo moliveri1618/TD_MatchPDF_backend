@@ -199,6 +199,35 @@ def guess_compare_strings(str1, str2):
     
     return False
 
+def compare_data_AI(res, result1, result2):
+
+    res[result1['pos_cliente']] = []
+
+    if result1['tipo'] == result2['tipo'].replace(" ", ""): 
+        res[result1['pos_cliente']].append(['tipo', 'true', 'true', 'true'])
+    else:
+        res[result1['pos_cliente']].append(['tipo', 'true', 'true', 'false'])
+
+    if result1['pezzi'] == result2['pezzi'].replace(" ", ""): 
+        res[result1['pos_cliente']].append(['pezzi', 'true', 'true', 'true'])
+    else:
+        res[result1['pos_cliente']].append(['pezzi', 'true', 'true', 'false'])
+
+    if result1['BRM-L'] == result2['BRM-L'].replace(" ", ""): 
+        res[result1['pos_cliente']].append(['BRM-L', 'true', 'true', 'true'])
+    else:
+        res[result1['pos_cliente']].append(['BRM-L', 'true', 'true', 'false'])
+
+    if result1['BRM-A'] == result2['BRM-A'].replace(" ", ""): 
+        res[result1['pos_cliente']].append(['BRM-A', 'true', 'true', 'true'])
+    else:
+        res[result1['pos_cliente']].append(['BRM-A', 'true', 'true', 'false'])
+
+    return res
+
+    
+
+    
 
 
 def compare_data(res, data_ordine, renamed_data):
@@ -206,6 +235,7 @@ def compare_data(res, data_ordine, renamed_data):
     errors = {}
     for item1 in data_ordine:
         for item2 in renamed_data:
+
             if guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
 
                 res[item1['pos_cliente']] = []
@@ -233,12 +263,12 @@ def compare_data(res, data_ordine, renamed_data):
                     #errors[item1['pos_cliente']].append(['BRM-L', item1['tipo'], item2['tipo']])
                     errors[item1['pos_cliente']].append(['BRM-L---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
 
-
                 if item1['BRM-A'] == item2['BRM-A'].replace(" ", ""):
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'true'])
                 else:
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'false'])
                     errors[item1['pos_cliente']].append(['BRM-A---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
+
     return res, errors
 
 
@@ -309,16 +339,16 @@ def get_ordine_conferma_ordine_data(file_path1, file_path2):
     #Ordine
     data_ordine = extract_data_from_ordine(file_path1)
     renamed_data_ordine = rename_pos_cliente2(data_ordine)
-    for data in renamed_data_ordine:
-        print(data)
-    print('...............')
+    # for data in renamed_data_ordine:
+    #     print(data)
+    # print('...............')
 
     #Conferma
     extracted_text = extract_text_from_pdf(file_path2)
     renamed_data = rename_pos_cliente2(extracted_text)
-    for item in renamed_data:
-        print(item)
-    print('...............')
+    # for item in renamed_data:
+    #     print(item)
+    # print('...............')
 
     #Compare the two lists
     res = {}
@@ -387,9 +417,6 @@ def remove_matched_substring(original_string, substring):
 
 
 def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
-    print(nuova_regola)
-    print(renamed_data)
-    print(renamed_data_conferma_ordine)
 
     # Convert the first string to lower case and split into words
     words_1 = normalize_string(nuova_regola).split()
@@ -405,12 +432,20 @@ def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
         result2 = is_full_string_match(words_2, renamed_data_conferma_ordine)
 
         if result2:
-            print(f"Second Match found: {result2}")
+            #print(f"Second Match found: {result2}")
+            res_AI = {}
+            res_AI = compare_data_AI(res_AI, result1, result2)
+            return res_AI
         else:
-            print("No second match found")
+            #print("No second match found")
+            res_AI = ''
+            errors_AI = ''
+            return res_AI
     else:
-        result1 = 'No match found'
-        print("No match found")
+        #print("No second match found")
+        res_AI = ''
+        errors_AI = ''
+        return res_AI
 
 
 

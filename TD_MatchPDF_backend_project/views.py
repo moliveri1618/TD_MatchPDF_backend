@@ -27,12 +27,14 @@ def pdf_compare(request):
 
         # Aggiungi regole
         if nuova_regola != 'aaaa':
-            aggiungi_regole(nuova_regola, data_ordine, renamed_data)
+            res_AI = aggiungi_regole(nuova_regola, data_ordine, renamed_data)
+            print(res)
+            print(res_AI)
 
         response_data = {
             'res': res,
             'errori': errori,
-            # 'nuova_regola_error': nuova_regola_error
+            'res_AI': res_AI
         }
         
         
