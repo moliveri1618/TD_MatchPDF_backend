@@ -28,8 +28,12 @@ def pdf_compare(request):
         # Aggiungi regole
         if nuova_regola != 'aaaa':
             res_AI = aggiungi_regole(nuova_regola, data_ordine, renamed_data)
-            print(res)
-            print(res_AI)
+            if res_AI != '':
+                res = append_2_dict(res, res_AI)
+                # print(res)
+                # print(res_AI)
+            else:
+                res_AI = 'No match found'
 
         response_data = {
             'res': res,

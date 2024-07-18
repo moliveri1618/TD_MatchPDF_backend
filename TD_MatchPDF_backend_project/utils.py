@@ -439,14 +439,25 @@ def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
         else:
             #print("No second match found")
             res_AI = ''
-            errors_AI = ''
             return res_AI
     else:
         #print("No second match found")
         res_AI = ''
-        errors_AI = ''
         return res_AI
 
 
 
     return 1
+
+
+
+def append_2_dict(dict1, dict2):
+
+    # Append the second dictionary to the first one
+    for key, value in dict2.items():
+        if key in dict1:
+            dict1[key].extend(value)
+        else:
+            dict1[key] = value
+
+    return dict1
