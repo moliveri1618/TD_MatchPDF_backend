@@ -13,12 +13,8 @@ def yo(request):
 @api_view(['POST'])
 def pdf_compare(request):
 
-    ai = request.data.get('AI', '')
     nuova_regola = request.data.get('regole', '')
-    print(ai)
-    print('yooo')
-    if nuova_regola == 'aaaa':
-        nuova_regola = ['null', 'null']
+    print(nuova_regola)
 
     if 'file1' in request.FILES and 'file2' in request.FILES:
 
@@ -26,13 +22,13 @@ def pdf_compare(request):
         file_path1, file_path2 = save_PDF(request)
 
         # PDF Compare
-        res, nuova_regola_error, errori = get_ordine_data(file_path1, file_path2, nuova_regola)
-        print(errori)
+        res, errori = get_ordine_conferma_ordine_data(file_path1, file_path2, nuova_regola)
+        #print(errori)
 
         response_data = {
             'res': res,
             'errori': errori,
-            'nuova_regola_errori': nuova_regola_error
+            # 'nuova_regola_error': nuova_regola_error
         }
         
         

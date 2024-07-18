@@ -5,6 +5,7 @@ import Levenshtein
 from django.core.files.storage import FileSystemStorage
 import os
 import shutil
+import string
 
 
 def flattening_data(data):
@@ -202,12 +203,16 @@ def guess_compare_strings(str1, str2):
 
 def compare_data(res, data_ordine, renamed_data, nuova_regola):
 
+    # prepare nuova_regola into array of string without punctuation
+    words_in_nuova_regola = nuova_regola.split() 
+    translator = str.maketrans('', '', string.punctuation)
+    words_in_nuova_regola = nuova_regola.translate(translator).split()
+
     errors = {}
     for item1 in data_ordine:
         for item2 in renamed_data:
-            if  (item1['pos_cliente'] == nuova_regola[0] and item2['pos_cliente'] == nuova_regola[1]) or \
-                (item1['pos_cliente'] == nuova_regola[1] and item2['pos_cliente'] == nuova_regola[0]) or \
-                guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
+            if guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']) or \
+               (item1['pos_cliente'] in words_in_nuova_regola and item2['pos_cliente'] in words_in_nuova_regola) :
 
                 res[item1['pos_cliente']] = []
                 errors[item1['pos_cliente']] = []
@@ -255,13 +260,13 @@ def save_PDF(request):
     #Save files into Files directory
     uploaded_file1 = request.FILES['file1']
     uploaded_file2 = request.FILES['file2']
-    print(f'Filename 1: {uploaded_file1.name}')
-    print(f'Filename 2: {uploaded_file2.name}')
+    # print(f'Filename 1: {uploaded_file1.name}')
+    # print(f'Filename 2: {uploaded_file2.name}')
 
     # Define the directory to store the files
     script_dir = os.path.dirname(os.path.abspath(__file__))
     files_dir = os.path.join(script_dir, 'Files')
-    print(script_dir)
+    # print(script_dir)
 
     # Delete all existing files in the directory
     if os.path.exists(files_dir):
@@ -274,37 +279,42 @@ def save_PDF(request):
     filename2 = fs.save(uploaded_file2.name, uploaded_file2)
     file_path1 = fs.path(filename1)
     file_path2 = fs.path(filename2)
-    print(f'File 1 saved at: {file_path1}')
-    print(f'File 2 saved at: {file_path2}')
+    #print(f'File 1 saved at: {file_path1}')
+    #print(f'File 2 saved at: {file_path2}')
 
     return file_path1, file_path2
 
 
-def get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, nuova_regola):
+def get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, res, nuova_regola):
+
+    #get the two pos client from nuova_regola
     pos_cliente_data_ordine = [entry['pos_cliente'] for entry in renamed_data_ordine]
     pos_cliente_data = [entry['pos_cliente'] for entry in renamed_data]
 
-    # Split the nuova_regola into words
-    words = nuova_regola.split()
+    #split into words
+    words_in_nuova_regola = nuova_regola.split() 
 
-   # Find matching words in the arrays
-    ordine_match = None
-    data_match = None
+    # Check if any word is in pos_cliente_data_ordine or pos_cliente_data
+    translator = str.maketrans('', '', string.punctuation)
+    words_in_nuova_regola = nuova_regola.translate(translator).split()
+    matches = [word for word in words_in_nuova_regola if word in pos_cliente_data_ordine or word in pos_cliente_data]
     
-    for word in words:
-        if word in pos_cliente_data_ordine:
-            ordine_match = word
-        if word in pos_cliente_data:
-            data_match = word
-    
-    # Return the two words if both matches are found, otherwise return False
-    if ordine_match and data_match:
-        return ordine_match, data_match
-    else:
-        return False
+    print(pos_cliente_data_ordine)
+    print(pos_cliente_data)
+    print(nuova_regola)
+    print(matches)
+
+    return matches 
 
 
-def get_ordine_data(file_path1, file_path2, nuova_regola):
+def add_regola_to_res(res, nuova_regola, data_ordine, renamed_data):
+    res.append()
+
+
+
+
+
+def get_ordine_conferma_ordine_data(file_path1, file_path2, nuova_regola):
 
     #Ordine
     data_ordine = extract_data_from_ordine(file_path1)
@@ -320,20 +330,22 @@ def get_ordine_data(file_path1, file_path2, nuova_regola):
         print(item)
     print('...............')
 
-    #Nuova regola logic
-    nuova_regola_error = ''
-    if nuova_regola != ['null', 'null']:
-        nuova_regola = get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, nuova_regola)
-        if nuova_regola == False:
-            nuova_regola_error = 'No Match Found'
-            nuova_regola = ['null', 'null']
-
     #Compare the two lists
     res = {}
     res, errors = compare_data(res, data_ordine, renamed_data, nuova_regola)
     errors = remove_empty_errors(errors)
 
-    return res, nuova_regola_error, errors
+    # # Nuova regola logic
+    # nuova_regola_error = ''
+    # if nuova_regola != 'aaaa':
+    #     nuova_regola = get_regola_from_pos_cliente(renamed_data_ordine, renamed_data, res, nuova_regola)
+    #     if len(nuova_regola)> 1:
+    #         res = add_regola_to_res(res, nuova_regola, data_ordine, renamed_data)
+    #         pass
+    #     else:
+    #         nuova_regola_error = 'No matches found for these two words'
+
+    return res, errors
 
 
 def replace_index_with_label(errors):
