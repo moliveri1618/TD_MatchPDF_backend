@@ -189,9 +189,9 @@ def guess_compare_strings(str1, str2):
     if ('sx' in str1_clean and 'dx' in str2_clean) or ('dx' in str1_clean and 'sx' in str2_clean):
         return False
     
-    # # Check if one string ends with '1' and the other ends with '2'
-    # if (str1_clean.endswith('1') and str2_clean.endswith('2')) or (str1_clean.endswith('2') and str2_clean.endswith('1')):
-    #     return False
+    # Check if one string ends with '1' and the other ends with '2'
+    if (str1_clean.endswith('1') and str2_clean.endswith('2')) or (str1_clean.endswith('2') and str2_clean.endswith('1')):
+        return False
     
     # Check if they are different by only one character
     if Levenshtein.distance(str1_clean, str2_clean) <= 1:
