@@ -400,13 +400,20 @@ def normalize_string(s):
 
 # Function to check for the presence of consecutive words
 def is_full_string_match(words, array):
-    for i in range(len(words)):
-        for j in range(i + 1, len(words) + 1):
-            substring = ' '.join(words[i:j])
-            for element in array:
-                if substring == normalize_string(element['pos_cliente']):
-                    return element
-    return None
+    longest_match = None
+    longest_length = 0
+    for element in array:
+        normalized_pos_cliente = normalize_string(element['pos_cliente'])
+        pos_words = normalized_pos_cliente.split()
+        for i in range(len(words)):
+            for j in range(i + 1, len(words) + 1):
+                substring = ' '.join(words[i:j])
+                if substring == normalized_pos_cliente:
+                    current_length = j - i
+                    if current_length > longest_length:
+                        longest_match = element
+                        longest_length = current_length
+    return longest_match
 
 
 # Function to remove the matched substring from the original string
@@ -425,9 +432,9 @@ def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
     result1 = is_full_string_match(words_1, renamed_data)
 
     if result1:
-        #print(f"First Match found: {result1}")
+        print(f"First Match found: {result1}")
         updated_nuova_regola = remove_matched_substring(nuova_regola, result1['pos_cliente'])
-        #print(f"Updated nuova_regola: {updated_nuova_regola}")
+        print(f"Updated nuova_regola: {updated_nuova_regola}")
         words_2 = normalize_string(updated_nuova_regola).split()
         result2 = is_full_string_match(words_2, renamed_data_conferma_ordine)
 
