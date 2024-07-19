@@ -229,14 +229,18 @@ def compare_data_AI(res, result1, result2):
 
     
 
+from collections import defaultdict
 
 def compare_data(res, data_ordine, renamed_data):
 
     errors = {}
+    matched_pairs = defaultdict(bool)
+
     for item1 in data_ordine:
         for item2 in renamed_data:
 
             if guess_compare_strings(item1['pos_cliente'], item2['pos_cliente']):
+                matched_pairs[(item1['pos_cliente'], item2['pos_cliente'])] = True
 
                 res[item1['pos_cliente']] = []
                 errors[item1['pos_cliente']] = []
@@ -269,7 +273,15 @@ def compare_data(res, data_ordine, renamed_data):
                     res[item1['pos_cliente']].append(['BRM-A', 'true', 'true', 'false'])
                     errors[item1['pos_cliente']].append(['BRM-A---> PDF1 - ' + item1['tipo'], ' PDF2 - ' + item2['tipo']])
 
-    return res, errors
+    # Unmatched items
+    matched_pos_clienti_1 = {pair[0] for pair in matched_pairs}
+    matched_pos_clienti_2 = {pair[1] for pair in matched_pairs}
+    pos_cliente_senza_match1 = [item['pos_cliente'] for item in data_ordine if item['pos_cliente'] not in matched_pos_clienti_1]
+    pos_client_senza_match2 = [item['pos_cliente'] for item in renamed_data if item['pos_cliente'] not in matched_pos_clienti_2]
+    # print(pos_cliente_senza_match1)
+    # print(pos_client_senza_match2)
+
+    return res, pos_cliente_senza_match1, pos_client_senza_match2
 
 
 
@@ -352,10 +364,9 @@ def get_ordine_conferma_ordine_data(file_path1, file_path2):
 
     #Compare the two lists
     res = {}
-    res, errors = compare_data(res, data_ordine, renamed_data)
-    errors = remove_empty_errors(errors)
+    res, pos_client_senza_match1, pos_client_senza_match2 = compare_data(res, data_ordine, renamed_data)
 
-    return res, errors, data_ordine, renamed_data
+    return res, pos_client_senza_match1, pos_client_senza_match2, data_ordine, renamed_data
 
 
 def replace_index_with_label(errors):
@@ -432,9 +443,9 @@ def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
     result1 = is_full_string_match(words_1, renamed_data)
 
     if result1:
-        print(f"First Match found: {result1}")
+        #print(f"First Match found: {result1}")
         updated_nuova_regola = remove_matched_substring(nuova_regola, result1['pos_cliente'])
-        print(f"Updated nuova_regola: {updated_nuova_regola}")
+        #print(f"Updated nuova_regola: {updated_nuova_regola}")
         words_2 = normalize_string(updated_nuova_regola).split()
         result2 = is_full_string_match(words_2, renamed_data_conferma_ordine)
 
@@ -442,19 +453,19 @@ def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
             #print(f"Second Match found: {result2}")
             res_AI = {}
             res_AI = compare_data_AI(res_AI, result1, result2)
-            return res_AI
+            return res_AI, result1['pos_cliente'], result2['pos_cliente']
         else:
             #print("No second match found")
             res_AI = ''
-            return res_AI
+            result1 = ''
+            result2 = ''
+            return res_AI, result1, result2
     else:
         #print("No second match found")
         res_AI = ''
-        return res_AI
-
-
-
-    return 1
+        result1 = ''
+        result2 = ''
+        return res_AI, result1, result2
 
 
 
@@ -468,3 +479,20 @@ def append_2_dict(dict1, dict2):
             dict1[key] = value
 
     return dict1
+
+
+
+def remove_resul12_from_array_senza_match(pos_client_senza_match1, pos_client_senza_match2, result1_pos_cliente, result2_pos_cliente):
+    
+    if result1_pos_cliente != '' and result2_pos_cliente != '':
+        try:
+            pos_client_senza_match1.remove(result1_pos_cliente)
+        except ValueError:
+            print(f"{result1_pos_cliente} not found in pos_client_senza_match1")
+        
+        try:
+            pos_client_senza_match2.remove(result2_pos_cliente)
+        except ValueError:
+            print(f"{result2_pos_cliente} not found in pos_client_senza_match2")
+
+    return pos_client_senza_match1, pos_client_senza_match2
