@@ -42,8 +42,8 @@ def pdf_compare(request):
         # print(pos_client_senza_match2)
         response_data = {
             'res': res,
-            'pos_client_senza_match1': pos_client_senza_match1,
-            'pos_client_senza_match2': pos_client_senza_match2,
+            'pos_cliente_senza_match1': pos_client_senza_match1,
+            'pos_cliente_senza_match2': pos_client_senza_match2,
             'res_AI': res_AI
         }
         
