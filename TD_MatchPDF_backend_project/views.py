@@ -17,7 +17,6 @@ def pdf_compare_ordine_e_conferma(request):
     nuova_regola_list = nuova_regola_safe_check(nuova_regola)
     #print(nuova_regola_list)
 
-
     if 'file1' in request.FILES and 'file2' in request.FILES:
 
         #Save PDFs into files folder
