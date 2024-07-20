@@ -6,6 +6,7 @@ from django.core.files.storage import FileSystemStorage
 import os
 import shutil
 import string
+import json
 
 
 def flattening_data(data):
@@ -351,16 +352,16 @@ def get_ordine_conferma_ordine_data(file_path1, file_path2):
     #Ordine
     data_ordine = extract_data_from_ordine(file_path1)
     renamed_data_ordine = rename_pos_cliente2(data_ordine)
-    for data in renamed_data_ordine:
-        print(data)
-    print('...............')
+    # for data in renamed_data_ordine:
+    #     print(data)
+    # print('...............')
 
     #Conferma
     extracted_text = extract_text_from_pdf(file_path2)
     renamed_data = rename_pos_cliente2(extracted_text)
-    for item in renamed_data:
-        print(item)
-    print('...............')
+    # for item in renamed_data:
+    #     print(item)
+    # print('...............')
 
     #Compare the two lists
     res = {}
@@ -405,6 +406,16 @@ def remove_empty_errors(errors_dict):
     return {k: v for k, v in errors_dict.items() if v}
 
 
+def nuova_regola_safe_check(nuova_regola):
+
+    if nuova_regola == '[]':
+        nuova_regola_list = ''
+    else:
+        nuova_regola_list = json.loads(nuova_regola)
+
+    return nuova_regola_list
+
+
 # Function to normalize the string by removing punctuation and extra spaces
 def normalize_string(s):
     return re.sub(r'\s+', ' ', re.sub(r'\W+', ' ', s)).strip().lower()
@@ -434,18 +445,18 @@ def remove_matched_substring(original_string, substring):
 
 
 
-def aggiungi_regole(nuova_regola, renamed_data, renamed_data_conferma_ordine):
+def aggiungi_regole(nuova_regola_list, renamed_data, renamed_data_conferma_ordine):
 
     # Convert the first string to lower case and split into words
-    words_1 = normalize_string(nuova_regola).split()
+    words_1 = normalize_string(nuova_regola_list).split()
 
     # Check for consecutive words in the second array
     result1 = is_full_string_match(words_1, renamed_data)
 
     if result1:
         #print(f"First Match found: {result1}")
-        updated_nuova_regola = remove_matched_substring(nuova_regola, result1['pos_cliente'])
-        #print(f"Updated nuova_regola: {updated_nuova_regola}")
+        updated_nuova_regola = remove_matched_substring(nuova_regola_list, result1['pos_cliente'])
+        #print(f"Updated nuova_regola_list: {updated_nuova_regola}")
         words_2 = normalize_string(updated_nuova_regola).split()
         result2 = is_full_string_match(words_2, renamed_data_conferma_ordine)
 
@@ -480,6 +491,23 @@ def append_2_dict(dict1, dict2):
 
     return dict1
 
+
+def remove_duplicates_from_dict(all_ai_matches):
+
+    seen_keys = set()
+    unique_data = []
+
+    for dictionary in all_ai_matches:
+        # Get the key of the current dictionary
+        key = next(iter(dictionary))
+        # Check if the key is already in seen_keys
+        if key not in seen_keys:
+            # Add the key to seen_keys
+            seen_keys.add(key)
+            # Add the dictionary to unique_data
+            unique_data.append(dictionary)
+
+    return unique_data
 
 
 def remove_resul12_from_array_senza_match(pos_client_senza_match1, pos_client_senza_match2, result1_pos_cliente, result2_pos_cliente):

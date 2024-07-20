@@ -9,12 +9,14 @@ from django.http import JsonResponse
 def yo(request):
     return HttpResponse("yuuuu")
 
-
+#all_ai_matches = []
 @api_view(['POST'])
 def pdf_compare_ordine_e_conferma(request):
 
     nuova_regola = request.data.get('regole', '')
-    #print(nuova_regola)
+    nuova_regola_list = nuova_regola_safe_check(nuova_regola)
+    #print(nuova_regola_list)
+
 
     if 'file1' in request.FILES and 'file2' in request.FILES:
 
@@ -25,13 +27,17 @@ def pdf_compare_ordine_e_conferma(request):
         res, pos_client_senza_match1, pos_client_senza_match2, data_ordine, renamed_data = get_ordine_conferma_ordine_data(file_path1, file_path2)
 
         # Aggiungi regole
-        if nuova_regola != '':
-            res_AI, result1_pos_cliente, result2_pos_cliente = aggiungi_regole(nuova_regola, data_ordine, renamed_data)
+        if nuova_regola_list != '':
+            print(nuova_regola_list[-1])
+            res_AI, result1_pos_cliente, result2_pos_cliente = aggiungi_regole(nuova_regola_list[-1], data_ordine, renamed_data)
             pos_client_senza_match1, pos_client_senza_match2 = remove_resul12_from_array_senza_match(pos_client_senza_match1, pos_client_senza_match2, result1_pos_cliente, result2_pos_cliente)
 
             if res_AI != '':
-                res = append_2_dict(res, res_AI)
+                # all_ai_matches.append(res_AI.copy())
+                # for item in all_ai_matches: res = append_2_dict(res, item)
+                append_2_dict(res, res_AI)
                 # print(res)
+                # print(all_ai_matches[0])
                 # print(res_AI)
             else:
                 res_AI = 'No match found'
