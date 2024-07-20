@@ -11,10 +11,10 @@ def yo(request):
 
 
 @api_view(['POST'])
-def pdf_compare(request):
+def pdf_compare_ordine_e_conferma(request):
 
     nuova_regola = request.data.get('regole', '')
-    print(nuova_regola)
+    #print(nuova_regola)
 
     if 'file1' in request.FILES and 'file2' in request.FILES:
 
