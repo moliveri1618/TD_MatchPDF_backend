@@ -293,7 +293,7 @@ def print_res(res):
     return 'diocane'
 
 
-def save_PDF(request):
+def save_PDF(request, folder_name):
     #Save files into Files directory
     uploaded_file1 = request.FILES['file1']
     uploaded_file2 = request.FILES['file2']
@@ -302,7 +302,7 @@ def save_PDF(request):
 
     # Define the directory to store the files
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    files_dir = os.path.join(script_dir, 'Files')
+    files_dir = os.path.join(script_dir, folder_name)
     # print(script_dir)
 
     # Delete all existing files in the directory
@@ -524,3 +524,177 @@ def remove_resul12_from_array_senza_match(pos_client_senza_match1, pos_client_se
             print(f"{result2_pos_cliente} not found in pos_client_senza_match2")
 
     return pos_client_senza_match1, pos_client_senza_match2
+
+
+def pdf_to_text(pdf_path, txt_path):
+    # Open the PDF file
+    pdf_document = fitz.open(pdf_path)
+
+    # Initialize an empty string for the text content
+    text_content = ""
+
+    # Loop through each page
+    for page_num in range(len(pdf_document)):
+        page = pdf_document.load_page(page_num)  # Load page
+        text_content += page.get_text()  # Extract text from page
+
+    # Write the text content to a text file
+    with open(txt_path, 'w', encoding='utf-8') as txt_file:
+        txt_file.write(text_content)
+
+    return 1
+
+
+def pdf_rules2(context2):
+
+    lines = context2.split('\n')
+    all_obj = []
+    res = {}
+    n_obj = 0
+
+    for i in range(len(lines)):
+
+        # Ignore empty lines
+        if lines[i].strip() == "":
+            continue
+ 
+        if lines[i].strip() == "Infisso":
+            n_obj = lines[i-1].strip()
+            for n in n_obj:
+                all_obj.append(res)
+            res = {}
+            n_obj = 0
+            #print(lines[i-1].strip())
+
+        if lines[i].strip()[:1] == "G" and "(" in lines[i]:
+            split_string = lines[i].split("(", 1)
+            res[split_string[0][1:].strip()] = split_string[1][:-1].strip()
+            # print(split_string[0][1:])
+            # print(split_string[1][:-1])
+
+        #print(lines[i].strip())
+
+    return all_obj
+
+
+def clean_and_enumerate(data):
+    if data and isinstance(data[0], dict) and not data[0]:
+        data = data[1:]  # Remove the first empty dictionary
+    
+    enumerated_data = {index + 1: obj for index, obj in enumerate(data)}
+    return enumerated_data
+
+
+def define_txtfile_path(folder_name):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    files_dir = os.path.join(script_dir, folder_name)
+    txt_path = os.path.join(files_dir, "output.txt")
+
+    return txt_path
+
+def get_text_from_textfile(txt_path):
+
+    # Open the file in read mode
+    with open(txt_path, 'r') as file:
+        # Read the content of the file
+        content = file.read()
+
+    return content
+
+
+def pdf_rules(context):
+
+    lines = context.split('\n')
+    all_obj = []
+    res = {}
+    flag = 0
+    for i in range(len(lines)):
+
+        if lines[i].strip() == "anta":
+            flag = 1
+
+        # Ignore empty lines
+        if lines[i].strip() == "":
+            continue
+
+        # Tipologia infissi  A1 A2
+        if lines[i].strip() == 'tipo':
+            if i + 2 < len(lines):
+                #print(lines[i + 2])
+                if lines[i + 2] == 'pezzi':
+                    lines[i + 2] = '414'
+                res['Tipologia Infissi'] = tipologia_infissi_definer(lines[i + 2].strip())
+                res['Pos Cliente'] = lines[i + 1]
+                #print(res['tipologia_infisso'])
+                #print('------')
+
+        # Soglia infissi  B1
+        elif lines[i].strip() == 'col. esterno':
+            if i + 3 < len(lines):
+                #print(lines[i+3].strip())
+                res['Soglia Infissi'] = soglia_infissi_definer(lines[i + 3].strip())
+                #print(res['Soglia Infissi'])
+                #print('------')
+            if i + 5 < len(lines): # Nodo centrale B
+                #print(lines[i+5].strip())
+                res['Nodo centrale'] = nodo_centrale_definer(lines[i+5].strip())
+                #print(res['Nodo centrale'])
+                #print("--------")
+
+        # Modello finestra, cerniere, codice vetro infissi C1-3 F1-3 D1-3
+        elif flag == 1 and re.match(Modello_finestra__cerniere_codice_vetro_infissi_pattern, lines[i].strip()):
+                #print(lines[i].strip())
+                stoca, check = Modello_finestra__cerniere_codice_vetro_infissi_pattern_definer(lines[i].strip())
+                if check == 1:
+                    res['Modello Finestra'] = stoca
+                else:
+                    res['Cerniere'] = stoca
+
+        # reset all if end of the entry
+        elif lines[i].strip() == 'data:':
+            #print(res)
+            all_obj.append(res)
+            res = {}
+            flag = 0
+
+
+        #print(lines[i].strip())
+    
+
+    return all_obj
+
+
+def clean_list(lst):
+    # Check if the list is not empty before accessing the first item
+    if lst and not lst[0]:
+        lst.pop(0)
+    return lst
+
+
+def modify_list(list):
+    # Transform the data
+    transformed_data = {item.get("Pos Cliente", "").strip(): {
+        "Tipologia Infissi": item.get("Tipologia Infissi", ""),
+        "Soglia Infissi": item.get("Soglia Infissi", ""),
+        "Nodo Centrale": item.get("Nodo centrale", ""),
+        "Modello Finestra": item.get("Modello Finestra", ""),
+        "Cerniere": item.get("Cerniere", "")
+    } for item in list}
+
+    return transformed_data
+
+
+def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
+    
+    # extract rules from conferma
+    #pdf_path1 = "Esempio1 Ordine.pdf"
+    txt_path1 = define_txtfile_path(folder_name)
+    pdf_to_text(pdf_path1, txt_path1)
+    context1 = get_text_from_textfile(txt_path1)
+    list1 = pdf_rules(context1)
+    list1 = clean_list(list1)
+    list1 = modify_list(list1)
+    print(list1)
+    # print('\n')
+
+    return 1

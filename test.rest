@@ -3,6 +3,13 @@
 POST http://127.0.0.1:8000/yo/
 Content-Type: application/json
 
+
+
+###########
+POST http://127.0.0.1:8000/pdf_compare_contratto_ordine/
+Content-Type: application/json
+
+
 # {
 #   "message": "yoo"
 # }

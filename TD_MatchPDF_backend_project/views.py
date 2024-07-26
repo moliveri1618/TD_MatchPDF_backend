@@ -26,7 +26,7 @@ def pdf_compare_ordine_e_conferma(request):
     if 'file1' in request.FILES and 'file2' in request.FILES:
 
         #Save PDFs into files folder
-        file_path1, file_path2 = save_PDF(request)
+        file_path1, file_path2 = save_PDF(request, 'Files')
 
         # PDF Compare
         res, pos_client_senza_match1, pos_client_senza_match2, data_ordine, renamed_data = get_ordine_conferma_ordine_data(file_path1, file_path2)
@@ -40,7 +40,7 @@ def pdf_compare_ordine_e_conferma(request):
             if res_AI != '':
                 all_ai_matches.append(res_AI.copy())
                 for item in all_ai_matches: res = append_2_dict(res, item)
-                #append_2_dict(res, res_AI)
+                # append_2_dict(res, res_AI)
                 # print(res)
                 # print(all_ai_matches[0])
                 # print(res_AI)
@@ -62,3 +62,17 @@ def pdf_compare_ordine_e_conferma(request):
         return JsonResponse(response_data, safe=False)
     else:
         return JsonResponse({'error': 'Both files are required'}, status=400)
+
+
+@api_view(['POST'])
+def pdf_compare_contratto_ordine(request):
+
+    if 'file1' in request.FILES and 'file2' in request.FILES:
+
+        #Save PDFs into files folder
+        file_path1, file_path2 = save_PDF(request, 'Files_contratto_ordine')
+
+        # PDF Compare
+        get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
+
+    return JsonResponse({'ssds': 'asfdsf'}, status=400)

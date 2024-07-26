@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("yo/", views.yo),
     path("pdf_compare_ordine_conferma/", views.pdf_compare_ordine_e_conferma),
+    path("pdf_compare_contratto_ordine/", views.pdf_compare_contratto_ordine),
 ]
