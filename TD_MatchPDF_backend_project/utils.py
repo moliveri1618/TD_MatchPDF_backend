@@ -7,6 +7,38 @@ import os
 import shutil
 import string
 import json
+import fitz  # PyMuPDF
+from .models import *
+
+def tipologia_infissi_definer(text_line):
+
+    if text_line in tipologia_infisso:
+        return tipologia_infisso[text_line]
+    else:
+        return 'None'
+    
+def soglia_infissi_definer(text_line):
+    if text_line in soglia_infissi:
+        return soglia_infissi[text_line]
+    elif text_line[:1] in soglia_infissi:
+        return soglia_infissi[text_line[:1]]
+    else:
+        return 'None'
+
+def nodo_centrale_definer(text_line):
+    if text_line in nodo_centrale:
+        return nodo_centrale[text_line]
+    else:
+        return 'None'
+    
+def Modello_finestra__cerniere_codice_vetro_infissi_pattern_definer(text_line):
+    if text_line in modello_finestra:
+        return modello_finestra[text_line], 1
+    elif text_line in cerniere:
+        return cerniere[text_line], 2
+    else:
+        return 'None', 'None'
+        
 
 
 def flattening_data(data):
@@ -391,6 +423,14 @@ def replace_index_with_label(errors):
     
     return replaced_errors
 
+def split_last_two_word(my_string):
+    # print('-------------')
+    # print(list2)
+    split_obj2 = my_string.split()
+    last_two_words_obj2_tipologia_infisso = ' '.join(split_obj2[-2:])
+
+    return last_two_words_obj2_tipologia_infisso
+
 def convert_to_dict(errors):
     converted_dict = {}
     for key, error_list in errors.items():
@@ -443,6 +483,40 @@ def remove_matched_substring(original_string, substring):
     pattern = re.compile(re.escape(substring), re.IGNORECASE)
     return pattern.sub('', original_string, count=1)
 
+
+
+# Function to compare and create new lists
+def remove_matches_from_list(list1, list2):
+    matched_list = {}
+    keys_to_remove_list1 = []
+    keys_to_remove_list2 = []
+
+    for key1, obj1 in list1.items():
+        for key2, obj2 in list2.items():
+            # print(obj1['Tipologia Infisso'])
+            # print(obj2['Tipologia Infisso'])
+            # print(key1)
+
+            
+            res = get_obj2_tipologia_infissi(obj1, obj2)
+            if  obj1['Tipologia Infissi'] == res                                                   and \
+                obj1['Soglia Infissi'] == obj2.get('Soglia Infissi', obj1['Soglia Infissi'])       and \
+                obj1['Nodo Centrale'] == obj2.get('Nodo Centrale', obj1['Nodo Centrale'])          and \
+                obj1['Modello Finestra'] == obj2.get('Modello Finestra', obj1['Modello Finestra']) and \
+                obj1['Cerniere'] == obj2.get('Cerniere', obj1['Cerniere']):
+                    
+                    matched_list[key1 + 'match con' + key2] = obj1
+                    keys_to_remove_list1.append(key1)
+                    keys_to_remove_list2.append(key2)
+
+    # Remove matched items from list1 and list2
+    for key in keys_to_remove_list1:
+        list1.pop(key, None)
+    
+    for key in keys_to_remove_list2:
+        list2.pop(key, None)
+
+    return matched_list, list1, list2
 
 
 def aggiungi_regole(nuova_regola_list, renamed_data, renamed_data_conferma_ordine):
@@ -544,6 +618,20 @@ def pdf_to_text(pdf_path, txt_path):
 
     return 1
 
+def get_obj2_tipologia_infissi(obj1, obj2):
+    #print(obj2['Tipologia Infissi'])
+    if obj2.get('Tipologia Infissi'):
+        try:
+            last_two_words_obj2_tipologia_infisso = split_last_two_word(obj2['Tipologia Infissi'])
+            obj2['Tipologia Infissi'] = last_two_words_obj2_tipologia_infisso
+        except KeyError:
+            pass
+    else:
+        obj2['Tipologia Infissi'] = obj1['Tipologia Infissi']
+
+    return obj2['Tipologia Infissi']
+
+
 
 def pdf_rules2(context2):
 
@@ -559,9 +647,15 @@ def pdf_rules2(context2):
             continue
  
         if lines[i].strip() == "Infisso":
-            n_obj = lines[i-1].strip()
-            for n in n_obj:
-                all_obj.append(res)
+            try:
+                n_obj = lines[i-1].strip()
+                for n in range(int(n_obj)):
+                    all_obj.append(res)
+                    # print(all_obj)
+                    # print('\n')
+            except ValueError:
+                print(f"Skipping: {n_obj} is not an integer")
+        
             res = {}
             n_obj = 0
             #print(lines[i-1].strip())
@@ -585,10 +679,10 @@ def clean_and_enumerate(data):
     return enumerated_data
 
 
-def define_txtfile_path(folder_name):
+def define_txtfile_path(folder_name, txt_file_name):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     files_dir = os.path.join(script_dir, folder_name)
-    txt_path = os.path.join(files_dir, "output.txt")
+    txt_path = os.path.join(files_dir, txt_file_name)
 
     return txt_path
 
@@ -684,17 +778,47 @@ def modify_list(list):
     return transformed_data
 
 
+def get_text_from_textfile2(txt_path):
+    # Open the file in read mode with the correct encoding
+    with open(txt_path, 'r', encoding='utf-8') as file:
+        # Read the content of the file
+        content = file.read()
+
+    return content
+
+
 def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     
-    # extract rules from conferma
-    #pdf_path1 = "Esempio1 Ordine.pdf"
-    txt_path1 = define_txtfile_path(folder_name)
+    # extract rules from ordine
+    txt_path1 = define_txtfile_path(folder_name, "output.txt")
     pdf_to_text(pdf_path1, txt_path1)
     context1 = get_text_from_textfile(txt_path1)
     list1 = pdf_rules(context1)
     list1 = clean_list(list1)
     list1 = modify_list(list1)
-    print(list1)
+    #print(list1)
     # print('\n')
 
-    return 1
+    # extract rules from contratto
+    txt_path2 = define_txtfile_path(folder_name, "output1.txt")
+    pdf_to_text(pdf_path2, txt_path2)
+    context2 = get_text_from_textfile2(txt_path2)
+    list2 = pdf_rules2(context2)
+    list2 = clean_and_enumerate(list2)
+    #print(list2)
+    # print('\n')
+
+    #compare and remove the matches
+    # list2 = remove_keys(list2)
+    # print(list2)
+    matched_list, list1_no_match, list2_no_match = remove_matches_from_list(list1, list2)
+
+    #sort the non match lists by tipologia infisso
+    list1_no_match = dict(sorted(list1_no_match.items(), key=lambda item: item[1]['Tipologia Infissi']))
+    list2_no_match = dict(sorted(list2_no_match.items(), key=lambda item: item[1]['Tipologia Infissi']))
+
+    # print(matched_list)
+    # print(list1_no_match)
+    # print(list2_no_match)
+
+    return matched_list, list1_no_match, list2_no_match

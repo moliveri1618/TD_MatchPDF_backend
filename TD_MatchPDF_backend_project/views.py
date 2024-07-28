@@ -73,6 +73,39 @@ def pdf_compare_contratto_ordine(request):
         file_path1, file_path2 = save_PDF(request, 'Files_contratto_ordine')
 
         # PDF Compare
-        get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
+        matched_list, list1_no_match, list2_no_match = get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
 
-    return JsonResponse({'ssds': 'asfdsf'}, status=400)
+        matched_list = {
+            'PF2 Salone+Studio 414match con1': {
+                'Tipologia Infissi': '3 ANTE',
+                'Soglia Infissi': 'None',
+                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
+                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
+                'Cerniere': 'None'
+            },
+            'PF2 Salone+Studio 414match con2': {
+                'Tipologia Infissi': '3 ANTE',
+                'Soglia Infissi': 'None',
+                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
+                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
+                'Cerniere': 'None'
+            },
+            'PF2 Salone+Studio 414match con3': {
+                'Tipologia Infissi': '3 ANTE',
+                'Soglia Infissi': 'None',
+                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
+                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
+                'Cerniere': 'None'
+            }
+        }
+
+        response_data = {
+            'matched_list': matched_list,
+            'no_match_list_ordine': list1_no_match,
+            'no_match_list_contratto': list2_no_match
+        }
+
+        return JsonResponse(response_data, safe=False)
+    else:
+        return JsonResponse({'error': 'Both files are required'}, status=400)
+
