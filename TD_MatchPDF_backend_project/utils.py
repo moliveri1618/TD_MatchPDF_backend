@@ -496,12 +496,10 @@ def remove_matches_from_list(list1, list2):
             # print(obj1['Tipologia Infisso'])
             # print(obj2['Tipologia Infisso'])
             # print(key1)
-
             
-            res = get_obj2_tipologia_infissi(obj1, obj2)
-            if  obj1['Tipologia Infissi'] == res                                                   and \
+            if  obj1['Tipologia Infissi'] == obj2.get('Tipologia Infissi', obj1['Tipologia Infissi'])                                                   and \
                 obj1['Soglia Infissi'] == obj2.get('Soglia Infissi', obj1['Soglia Infissi'])       and \
-                obj1['Nodo Centrale'] == obj2.get('Nodo centrale', obj1['Nodo Centrale'])          and \
+                obj1['Colore PVC'] == obj2.get('Colore PVC', obj1['Colore PVC'])          and \
                 obj1['Modello Finestra'] == obj2.get('Modello Finestra', obj1['Modello Finestra']) and \
                 obj1['Cerniere'] == obj2.get('Cerniere', obj1['Cerniere']):
                     
@@ -695,6 +693,16 @@ def get_text_from_textfile(txt_path):
 
     return content
 
+def remove_trash(list2):
+    res = {k: v for k, v in list2.items() if 'ENOVA' not in v}
+
+    return res
+
+def colore_pvc_definer(text_line):
+    if text_line in colore_pvc:
+        return colore_pvc[text_line]
+    else:
+        return 'None'
 
 def modello_finestra_definer(text_line):
     if text_line in modello_finestra:
@@ -724,6 +732,7 @@ def  pdf_rules(context):
         if lines[i].strip() == "anta"             or \
            lines[i].strip() == "ferramenta"       or \
            lines[i].strip() == "accessori"        or \
+           lines[i].strip() == "telaio"           or \
            lines[i].strip() == "vetro/pannello" :
             flag = lines[i].strip()
 
@@ -733,26 +742,56 @@ def  pdf_rules(context):
 
         # Tipologia infissi  A1 A2
         if lines[i].strip() == 'tipo':
+            porta_finestra = ''
             if i + 2 < len(lines):
                 #print(lines[i + 2])
                 if lines[i + 2] == 'pezzi':
                     lines[i + 2] = '414'
-                res['Tipologia Infissi'] = tipologia_infissi_definer(lines[i + 2].strip())
+
+                if lines[i + 5] == 'porta':
+                    porta_finestra = 'PORTA FINESTRA'
+                elif lines[i + 5] == 'finestra':
+                    porta_finestra = 'FINESTRA'
+                elif lines[i + 4] == 'porta':
+                    porta_finestra = 'PORTA FINESTRA'
+                elif lines[i + 4] == 'finestra':
+                    porta_finestra = 'FINESTRA'
+                elif lines[i + 6] == 'porta':
+                    porta_finestra = 'PORTA FINESTRA'
+                elif lines[i + 6] == 'finestra':
+                    porta_finestra = 'FINESTRA'
+
+                if lines[i + 2].strip() in tipologia_infisso_porta_finestra: 
+                    res['Tipologia Infissi'] = porta_finestra + ' ' + tipologia_infissi_definer(lines[i + 2].strip())
+                else:
+                    res['Tipologia Infissi'] = tipologia_infissi_definer(lines[i + 2].strip())
+
                 res['Pos Cliente'] = lines[i + 1]
                 #print(res['tipologia_infisso'])
                 #print('------')
 
         # Soglia infissi  B1
-        elif lines[i].strip() == 'col. esterno':
-            if i + 3 < len(lines):
+        elif flag == 'telaio' and lines[i].strip() == 'col. esterno':
+            soglia_infissi_check = res['Tipologia Infissi'].split()[:2]
+            #print(soglia_infissi_check[0] == 'PORTA' and soglia_infissi_check[1] == 'FINESTRA')
+            if i + 3 < len(lines) and soglia_infissi_check[0] == 'PORTA' and soglia_infissi_check[1] == 'FINESTRA':
                 #print(lines[i+3].strip())
                 res['Soglia Infissi'] = soglia_infissi_definer(lines[i + 3].strip())
-                #print(res['Soglia Infissi'])
-                #print('------')
+                # print(res['Soglia Infissi'])
+                # print('------')
             if i + 5 < len(lines): # Nodo centrale B3
+                #print('pos cliente', res['Pos Cliente'])
                 #print(lines[i+5].strip())
-                res['Nodo centrale'] = nodo_centrale_definer(lines[i+5].strip())
-                #print(res['Nodo centrale'])
+                yoo = colore_pvc_definer(lines[i+5].strip())
+                #print(yoo)
+                if yoo == 'None':
+                    if i + 6 < len(lines): # Nodo centrale B3
+                        #print(lines[i+6].strip())
+                        res['Colore PVC'] = colore_pvc_definer(lines[i+6].strip())
+                else:
+                    res['Colore PVC'] = yoo
+
+                #print(res['Colore pvc'])
                 #print("--------")
 
         # Modello finestra C1
@@ -763,9 +802,9 @@ def  pdf_rules(context):
                 res['Modello Finestra'] = stoca
 
         # Cerniere D1
-        elif flag == 'ferramenta' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
-            #print('ferramenta', lines[i].strip())
-            #print('pos cliente', res['Pos Cliente'])
+        elif flag == 'ferramenta' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()) and lines[i-1].strip() != 'alt. Maniglia':
+            # print('ferramenta', lines[i].strip())
+            # print('pos cliente', res['Pos Cliente'])
             stoca = cerniere_definer(lines[i].strip())
             if stoca != 'None':
                 res['Cerniere'] = stoca
@@ -820,6 +859,14 @@ def get_text_from_textfile2(txt_path):
 
     return content
 
+def clean_dict(d):
+    for key, value in d.items():
+        if isinstance(value, dict):
+            clean_dict(value)
+        elif value == 'None':
+            d[key] = ''
+    return d
+
 
 def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     
@@ -830,8 +877,9 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list1 = pdf_rules(context1)
     list1 = clean_list(list1)
     list1 = modify_list(list1)
-    print(list1)
-    print('\n')
+    list1 = clean_dict(list1)
+    # print(list1)
+    # print('\n')
 
     # extract rules from contratto
     txt_path2 = define_txtfile_path(folder_name, "output1.txt")
@@ -839,23 +887,20 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     context2 = get_text_from_textfile2(txt_path2)
     list2 = pdf_rules2(context2)
     list2 = clean_and_enumerate(list2)
-    print(list2)
-    print('\n')
+    list2 = remove_trash(list2)
+    # print(list2)
+    # print('\n')
 
     #compare and remove the matches
     # list2 = remove_keys(list2)
     # print(list2)
     matched_list, list1_no_match, list2_no_match = remove_matches_from_list(list1, list2)
 
-    #sort the non match lists by tipologia infisso
-    list1_no_match = dict(sorted(list1_no_match.items(), key=lambda item: item[1]['Tipologia Infissi']))
-    list2_no_match = dict(sorted(list2_no_match.items(), key=lambda item: item[1]['Tipologia Infissi']))
-
-    print(matched_list)
-    print('\n')
-    print(list1_no_match)
-    print('\n')
-    print(list2_no_match)
-    print('\n')
+    # print(matched_list)
+    # print('\n')
+    # print(list1_no_match)
+    # print('\n')
+    # print(list2_no_match)
+    # print('\n')
 
     return matched_list, list1_no_match, list2_no_match

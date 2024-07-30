@@ -178,7 +178,7 @@ fermovetro_infisso = {
 }
 
 nodo_centrale_pattern = r'^[0-79][0-79]/[0-79][0-79]$'
-modello_finestra__cerniere_pattern = r'^(0|[1-9]\d{1,2})(\.\d+)?(-\d+)?$'
+modello_finestra__cerniere_pattern = r'^[NKC]?\d{1,3}(\.\d+)?(-\d+)?[NKC]?$'
 
 soglia_infissi = {
     "9": "SOGLIA STANDARD (Non ribassata)",
@@ -215,6 +215,56 @@ obj_model = {
     # "Canalina_interno_vetro_Infisso": "",
     # "Fermavetro_Infisso": "",
     # "Guarnizioni": ""
+}
+
+tipologia_infisso_porta_finestra = {
+    "101": "1 ANTA",
+    "201": "2 ANTE",
+    "202": "2 ANTE",
+    "203": "2 ANTE",
+    "204": "2 ANTE",
+    "401": "2 ANTE",
+    "301": "3 ANTE",
+    "302": "3 ANTE",
+    "303": "3 ANTE",
+    "304": "3 ANTE",
+    "321": "3 ANTE",
+    "322": "3 ANTE",
+    "323": "3 ANTE",
+    "324": "3 ANTE",
+    "414": "3 ANTE",
+    "415": "3 ANTE",
+    "420": "3 ANTE",
+    "421": "3 ANTE",
+    "424": "3 ANTE",
+    "471": "4 ANTE",
+    "472": "4 ANTE",
+    "205": "1 ANTA CON SOPRALUCE",
+    "206": "1 ANTA CON SOPRALUCE",
+    "208": "1 ANTA CON SOPRALUCE",
+    "309": "2 ANTE CON SOPRALUCE",
+    "310": "2 ANTE CON SOPRALUCE",
+    "329": "2 ANTE CON SOPRALUCE",
+    "330": "2 ANTE CON SOPRALUCE",
+    "403": "2 ANTE CON SOPRALUCE",
+    "404": "2 ANTE CON SOPRALUCE",
+    "207": "1 ANTA CON SOTTOLUCE FISSO VETRATO",
+    "308": "2 ANTA CON SOTTOLUCE FISSO VETRATO",
+    "402": "2 ANTA CON SOTTOLUCE FISSO VETRATO",
+}
+
+
+colore_pvc = {
+    "01": "BIANCO EXTRALISCIO 01",
+    "06": "GRIGIO SATINATO 06",
+    "07": "BIANCO PERLA GOFFRATO 07",
+    "13": "TINTA A LEGNO CASTAGNO 13",
+    "19": "TINTA A LEGNO ROVERE 19",
+    "27": "BIANCO PERLA SATINATO 27",
+    "42": "BIANCO GOFFRATO 42",
+    "45": "BIANCO SATINATO 45",
+    "46": "GRIGIO SETA SATINATO 46",
+    "55": "TINTA A LEGNO NOCE CHIARO 55"
 }
 
 

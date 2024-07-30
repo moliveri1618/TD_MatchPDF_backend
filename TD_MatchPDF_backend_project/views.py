@@ -74,9 +74,6 @@ def pdf_compare_contratto_ordine(request):
 
         # PDF Compare
         matched_list, list1_no_match, list2_no_match = get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
-
-        matched_list = test_matched_list2
-
         response_data = {
             'matched_list': matched_list,
             'no_match_list_ordine': list1_no_match,
