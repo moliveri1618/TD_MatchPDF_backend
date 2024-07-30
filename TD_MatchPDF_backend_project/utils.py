@@ -833,9 +833,10 @@ def  pdf_rules(context):
 
 
 def clean_list(lst):
-    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Nodo Centrale': '', 'Cerniere': ''}:
+    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Colore PVC': '', 'Cerniere': ''}:
         lst.pop(0)
     return lst
+
 
 
 def modify_list(list):
@@ -843,7 +844,7 @@ def modify_list(list):
     transformed_data = {item.get("Pos Cliente", "").strip(): {
         "Tipologia Infissi": item.get("Tipologia Infissi", ""),
         "Soglia Infissi": item.get("Soglia Infissi", ""),
-        "Nodo Centrale": item.get("Nodo centrale", ""),
+        "Colore PVC": item.get("Colore PVC", ""),
         "Modello Finestra": item.get("Modello Finestra", ""),
         "Cerniere": item.get("Cerniere", "")
     } for item in list}
