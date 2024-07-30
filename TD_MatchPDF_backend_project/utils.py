@@ -868,7 +868,7 @@ def clean_dict(d):
             d[key] = ''
     return d
 
-
+#####
 def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     
     # extract rules from ordine
