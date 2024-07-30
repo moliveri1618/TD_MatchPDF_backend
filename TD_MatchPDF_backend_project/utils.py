@@ -501,11 +501,11 @@ def remove_matches_from_list(list1, list2):
             res = get_obj2_tipologia_infissi(obj1, obj2)
             if  obj1['Tipologia Infissi'] == res                                                   and \
                 obj1['Soglia Infissi'] == obj2.get('Soglia Infissi', obj1['Soglia Infissi'])       and \
-                obj1['Nodo Centrale'] == obj2.get('Nodo Centrale', obj1['Nodo Centrale'])          and \
+                obj1['Nodo Centrale'] == obj2.get('Nodo centrale', obj1['Nodo Centrale'])          and \
                 obj1['Modello Finestra'] == obj2.get('Modello Finestra', obj1['Modello Finestra']) and \
                 obj1['Cerniere'] == obj2.get('Cerniere', obj1['Cerniere']):
                     
-                    matched_list[key1 + 'match con' + key2] = obj1
+                    matched_list[str(key1) + ' match con ' + str(key2)] = obj1
                     keys_to_remove_list1.append(key1)
                     keys_to_remove_list2.append(key2)
 
@@ -696,16 +696,36 @@ def get_text_from_textfile(txt_path):
     return content
 
 
-def pdf_rules(context):
+def modello_finestra_definer(text_line):
+    if text_line in modello_finestra:
+        return modello_finestra[text_line]
+    else:
+        return 'None'
+    
+
+def cerniere_definer(text_line):
+    #print('aa', text_line)
+    if text_line[:1] in cerniere:
+        #print('aaa', text_line[:1])
+        #print('bbbb', cerniere[text_line[:1]])
+        return cerniere[text_line[:1]]
+    else:
+        return 'None'
+
+
+def  pdf_rules(context):
 
     lines = context.split('\n')
     all_obj = []
-    res = {}
+    res = obj_model
     flag = 0
     for i in range(len(lines)):
 
-        if lines[i].strip() == "anta":
-            flag = 1
+        if lines[i].strip() == "anta"             or \
+           lines[i].strip() == "ferramenta"       or \
+           lines[i].strip() == "accessori"        or \
+           lines[i].strip() == "vetro/pannello" :
+            flag = lines[i].strip()
 
         # Ignore empty lines
         if lines[i].strip() == "":
@@ -729,27 +749,42 @@ def pdf_rules(context):
                 res['Soglia Infissi'] = soglia_infissi_definer(lines[i + 3].strip())
                 #print(res['Soglia Infissi'])
                 #print('------')
-            if i + 5 < len(lines): # Nodo centrale B
+            if i + 5 < len(lines): # Nodo centrale B3
                 #print(lines[i+5].strip())
                 res['Nodo centrale'] = nodo_centrale_definer(lines[i+5].strip())
                 #print(res['Nodo centrale'])
                 #print("--------")
 
-        # Modello finestra, cerniere, codice vetro infissi C1-3 F1-3 D1-3
-        elif flag == 1 and re.match(Modello_finestra__cerniere_codice_vetro_infissi_pattern, lines[i].strip()):
-                #print(lines[i].strip())
-                stoca, check = Modello_finestra__cerniere_codice_vetro_infissi_pattern_definer(lines[i].strip())
-                if check == 1:
-                    res['Modello Finestra'] = stoca
-                else:
-                    res['Cerniere'] = stoca
+        # Modello finestra C1
+        elif flag == 'anta' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
+            #print('anta', lines[i].strip())
+            stoca = modello_finestra_definer(lines[i].strip())
+            if stoca != 'None':
+                res['Modello Finestra'] = stoca
+
+        # Cerniere D1
+        elif flag == 'ferramenta' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
+            #print('ferramenta', lines[i].strip())
+            #print('pos cliente', res['Pos Cliente'])
+            stoca = cerniere_definer(lines[i].strip())
+            if stoca != 'None':
+                res['Cerniere'] = stoca
+
+        # # accessori E1
+        # elif flag == 'accessori' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
+        #     print('accessori', lines[i].strip())
+        
+        # # vetro/pannello E1
+        # elif flag == 'vetro/pannello' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
+        #     print('vetro/pannello', lines[i].strip())
 
         # reset all if end of the entry
         elif lines[i].strip() == 'data:':
+            #print('--------')
             #print(res)
             all_obj.append(res)
             res = {}
-            flag = 0
+            flag = ''
 
 
         #print(lines[i].strip())
@@ -759,8 +794,7 @@ def pdf_rules(context):
 
 
 def clean_list(lst):
-    # Check if the list is not empty before accessing the first item
-    if lst and not lst[0]:
+    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Nodo Centrale': '', 'Cerniere': ''}:
         lst.pop(0)
     return lst
 
@@ -796,8 +830,8 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list1 = pdf_rules(context1)
     list1 = clean_list(list1)
     list1 = modify_list(list1)
-    #print(list1)
-    # print('\n')
+    print(list1)
+    print('\n')
 
     # extract rules from contratto
     txt_path2 = define_txtfile_path(folder_name, "output1.txt")
@@ -805,8 +839,8 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     context2 = get_text_from_textfile2(txt_path2)
     list2 = pdf_rules2(context2)
     list2 = clean_and_enumerate(list2)
-    #print(list2)
-    # print('\n')
+    print(list2)
+    print('\n')
 
     #compare and remove the matches
     # list2 = remove_keys(list2)
@@ -817,8 +851,11 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list1_no_match = dict(sorted(list1_no_match.items(), key=lambda item: item[1]['Tipologia Infissi']))
     list2_no_match = dict(sorted(list2_no_match.items(), key=lambda item: item[1]['Tipologia Infissi']))
 
-    # print(matched_list)
-    # print(list1_no_match)
-    # print(list2_no_match)
+    print(matched_list)
+    print('\n')
+    print(list1_no_match)
+    print('\n')
+    print(list2_no_match)
+    print('\n')
 
     return matched_list, list1_no_match, list2_no_match

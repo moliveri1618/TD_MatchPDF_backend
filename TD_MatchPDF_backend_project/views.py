@@ -75,29 +75,7 @@ def pdf_compare_contratto_ordine(request):
         # PDF Compare
         matched_list, list1_no_match, list2_no_match = get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
 
-        matched_list = {
-            'PF2 Salone+Studio 414match con1': {
-                'Tipologia Infissi': '3 ANTE',
-                'Soglia Infissi': 'None',
-                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
-                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
-                'Cerniere': 'None'
-            },
-            'PF2 Salone+Studio 414match con2': {
-                'Tipologia Infissi': '3 ANTE',
-                'Soglia Infissi': 'None',
-                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
-                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
-                'Cerniere': 'None'
-            },
-            'PF2 Salone+Studio 414match con3': {
-                'Tipologia Infissi': '3 ANTE',
-                'Soglia Infissi': 'None',
-                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
-                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
-                'Cerniere': 'None'
-            }
-        }
+        matched_list = test_matched_list2
 
         response_data = {
             'matched_list': matched_list,

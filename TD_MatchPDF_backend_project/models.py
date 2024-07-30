@@ -1,6 +1,3 @@
-from django.db import models
-
-# Create your models here.
 tipologia_infisso = {
     "101": "1 ANTA",
     "201": "2 ANTE",
@@ -181,11 +178,12 @@ fermovetro_infisso = {
 }
 
 nodo_centrale_pattern = r'^[0-79][0-79]/[0-79][0-79]$'
-Modello_finestra__cerniere_codice_vetro_infissi_pattern = r'^\d{1,3}$'
+modello_finestra__cerniere_pattern = r'^(0|[1-9]\d{1,2})(\.\d+)?(-\d+)?$'
 
 soglia_infissi = {
     "9": "SOGLIA STANDARD (Non ribassata)",
     "733": "SOGLIA RIBASSATA",
+    "377": "SOGLIA RIBASSATA",
     "54": "LAMA PARAFREDDO SENZA SOGLIA"
 }
 
@@ -201,19 +199,46 @@ cerniere = {
     "2": "CERNIERE A SCOMPARSA"
 }
 
-final_form = {
-    "Tipologia_infissi": "",
-    "Materiale_infissi": "",
-    "Modello_Finestra": "",
-    "Colore_PVC": "",
-    "Maniglie_infissi": "",
-    "Colore_Maniglie_Infissi": "",
-    "Nodo_centrale": "",
-    "Azionamento": "",
-    "Codice_vetro_infissi": "",
-    "Vetri_Ornamentali": "",
-    "Canalina_interno_vetro_Infisso": "",
-    "Fermavetro_Infisso": "",
+obj_model = {
+    "Tipologia Infissi": "",
+    # "Materiale_infissi": "",
+    "Soglia Infissi": "",
+    "Nodo Centrale": "",
     "Cerniere": "",
-    "Guarnizioni": ""
+    "Modello Finestra": "",
+    # "Colore_PVC": "",
+    # "Maniglie_infissi": "",
+    # "Colore_Maniglie_Infissi": "",
+    # "Azionamento": "",
+    # "Codice_vetro_infissi": "",
+    # "Vetri_Ornamentali": "",
+    # "Canalina_interno_vetro_Infisso": "",
+    # "Fermavetro_Infisso": "",
+    # "Guarnizioni": ""
 }
+
+
+test_matched_list1 = {'PF2 Salone+Studio 414 match con 6': {'Tipologia Infissi': '3 ANTE', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF2 Salone match con 6': {'Tipologia Infissi': '3 ANTE', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 1': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 2': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 3': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 4': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 5': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}}  
+test_matched_list2 = {
+            'PF2 Salone+Studio 414 match con 1': {
+                'Tipologia Infissi': '3 ANTE',
+                'Soglia Infissi': 'None',
+                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
+                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
+                'Cerniere': 'None'
+            },
+            'PF2 Salone+Studio 414 match con 2': {
+                'Tipologia Infissi': '3 ANTE',
+                'Soglia Infissi': 'None',
+                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
+                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
+                'Cerniere': 'None'
+            },
+            'PF2 Salone+Studio 414 match con 3': {
+                'Tipologia Infissi': '3 ANTE',
+                'Soglia Infissi': 'None',
+                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
+                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
+                'Cerniere': 'None'
+            }
+        }
