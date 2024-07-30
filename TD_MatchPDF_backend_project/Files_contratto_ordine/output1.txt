@@ -3,38 +3,37 @@ Via Struppa 130c – 16165, Genova
 P.iva 01839260997
 Email: info@tigulliodesign.it
 Phone: +39 010 859 3420
- 
-CONTRATTO DI APPALTO
 NUMERO
-3077
+6903
 DATA
-21/05/2024
+09/05/2024
 ADDETTO
-Giulio Grasso
+001
 CELLULARE
-+39 328 1264071
++39 010 8593420
 COMMITTENTE
-MANGLAVITE MARINA
+BONALDO EMMA
 FATTURAZIONE ELETTRONICA / PEC
 0000000  
 CF / P.IVA
-MNGMRN45S64F205N
+BNLMME67E66D969Y
 INDIRIZZO
-VIA RONCAGLIA 13
+VIA PASTRENGO 3/4
 CITTÀ
-MILANO (MI)
+GENOVA (GE)
 CAP
-20146
+16122
 LUOGO / ZONA
-VIA RONCAGLIA 13 - MILANO (MI) - 20146 
+VIA PASTRENGO 3/4 - GENOVA (GE) - 16122 
 CELLULARE
-3393128276
+3483125378
 TELEFONO
  
 EMAIL
-lucagiorgiocosta@gmail.com
+emma.bonaldo@libero.it
 ALTRI CONTATTI
- 
+D'AGOSTINO FABRIZIO 3473904366
+fabrizio_dagostino@yahoo.it
 CONTATTO PROGETTO
  
 ARCHITETTO
@@ -45,7 +44,7 @@ CONSEGNA
 120-150 giorni dall'esito definitivo delle misure e dal versamento
 dell'acconto (escluso festività), salvo imprevisti
 TIPOLOGIA DI POSA IN OPERA
-Refilatura telaio esistente
+Rifasciamento telaio esistente
 IBAN
 IT40Q0306901439100000001820 - IT55U0503401431000000000614 - IT11O0538732050000047174375
 ARTICOLI
@@ -55,100 +54,193 @@ PREZZO
 1
 Infisso
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( FINESTRA 1 ANTA )
-G Materiale Infissi ( PVC )
+G Tipologia Infissi ( FINESTRA 1 ANTA CON SOTTOLUCE FISSO VETRATO )
+G Materiale Infissi ( ALLUMINIO-PVC )
 G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( BIANCO GOFFRATO 42 )
-G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BIANCO LISCIO 01 )
-G Nodo centrale ( NODO SENZA BATTUTA )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
 G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 2F48 )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI MEDITERRAN )
+G Codice vetro infissi ( VETRO UF63, VETRO UF13 )
 G Vetri Ornamentali ( VETRO SATINATO 48 )
 G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
 G Guarnizioni ( TERZA GUARNIZIONE )
-BAGNO MISURA CLIENTE 430X980 ok *****MANIGLIE BASSE PER SCONTO 75% °°°°
-Page 1/6
-2
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+Page 1/7
+Cucina.
+Sottoluce fisso vetrato UF18 satinato 48T.
+Finestra ad anta unica battente vetrocamera UF48 trasparente.
+Colore esterno anta e telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
+1
 Infisso
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( FINESTRA 1 ANTA )
-G Materiale Infissi ( PVC )
-G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( BIANCO GOFFRATO 42 )
-G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BIANCO LISCIO 01 )
-G Nodo centrale ( NODO SENZA BATTUTA )
+G Tipologia Infissi ( FINESTRA 1 ANTA CON SOTTOLUCE FISSO VETRATO )
+G Materiale Infissi ( ALLUMINIO-PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE TWIN )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
 G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 2F48 )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI MEDITERRAN )
+G Codice vetro infissi ( VETRO UF18, VETRO 81F3 )
 G Vetri Ornamentali ( VETRO SATINATO 48 )
 G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
 G Guarnizioni ( TERZA GUARNIZIONE )
-G Listelli Infissi ( LISTELLI ESTERNI CLASSIC )
-MISURA 790 X1510 BAGNO *****MANIGLIE BASSE PER SCONTO 75% °°°°
-3
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+G Oscurante infisso ( CON VENEZIANA INTEGRATA (COMANDO CON CATENELLA) )
+Salotto.
+Sottoluce fisso vetrato UF18 satinato 48T.
+Finestra ad anta unica battente vetrocamera 81F3 - 4T Bodysafe.
+Veneziana colore bianco traffico 0609 posizionata sulla finestra ad anta unica battente.
+Colore esterno anta e telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
+Riposizionare il condizionatore sul sottoluce fisso.
+1
 Infisso
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( PORTA FINESTRA 3 ANTE )
-G Materiale Infissi ( PVC )
-G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( TINTA LEGNO NOCE CHIARO 55 )
-G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BRONZO 74 )
+G Tipologia Infissi ( PORTA FINESTRA 2 ANTE )
+G Materiale Infissi ( ALLUMINIO-PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE TWIN )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
 G Nodo centrale ( NODO SENZA BATTUTA )
 G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 21F8 )
-G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI MEDITERRAN )
+G Codice vetro infissi ( VETRO 81F3 )
+G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
-G Soglia Infissi ( SOGLIA RIBASSATA )
+G Soglia Infissi ( SOGLIA STANDARD (NON RIBASSATA) )
 G Guarnizioni ( TERZA GUARNIZIONE )
-G Listelli Infissi ( LISTELLI ESTERNI CLASSIC )
-MISURE 1780 X2400 SOGGIORNO E 1 CAMERA 1 ANTA FISSA CODICE 10 *****MANIGLIE
-BASSE PER SCONTO 75% °°°°
-Page 2/6
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+G Oscurante infisso ( CON VENEZIANA INTEGRATA (COMANDO CON CATENELLA) )
+Page 2/7
+Salotto.
+Colore esterno anta e telaio in alluminio LC32 dorato.
+Veneziane colore bianco traffico 0609.
+81F3 - 4T Bodysafe.
+Copri-cerniere bianchi.
+1
+Infisso
+G Fornitore ( FINSTRAL)
+G Tipologia Infissi ( FINESTRA 1 ANTA CON SOTTOLUCE FISSO VETRATO )
+G Materiale Infissi ( ALLUMINIO-PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
+G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI MEDITERRAN )
+G Codice vetro infissi ( VETRO UF48, VETRO UF18 )
+G Vetri Ornamentali ( VETRO SATINATO 48 )
+G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
+G Fermavetro Infisso ( FERMAVETRO CLASSIC )
+G Cerniere ( CERNIERE A VISTA )
+G Guarnizioni ( TERZA GUARNIZIONE )
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+Camera Matrimoniale.
+Sottoluce fisso vetrato UF18 satinato 48T.
+Finestra ad anta unica battente vetrocamera UF48 trasparente.
+Colore esterno anta e telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
+1
+Infisso
+G Fornitore ( FINSTRAL)
+G Tipologia Infissi ( FINESTRA 2 ANTE CON SOTTOLUCE FISSO VETRATO )
+G Materiale Infissi ( ALLUMINIO-PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
+G Nodo centrale ( NODO SENZA BATTUTA )
+G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI MEDITERRAN )
+G Codice vetro infissi ( VETRO UF48, VETRO UF18 )
+G Vetri Ornamentali ( VETRO SATINATO 48 )
+G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
+G Fermavetro Infisso ( FERMAVETRO CLASSIC )
+G Cerniere ( CERNIERE A VISTA )
+G Guarnizioni ( TERZA GUARNIZIONE )
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+Camera Matrimoniale.
+Sottoluce fisso vetrato UF18 satinato 48T.
+Finestra a due ante battente vetrocamera UF48 trasparente.
+Colore esterno anta e telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
+Page 3/7
 1
 Infisso
 G Fornitore ( FINSTRAL)
 G Tipologia Infissi ( FINESTRA 2 ANTE )
-G Materiale Infissi ( PVC )
+G Materiale Infissi ( ALLUMINIO-PVC )
 G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( BIANCO GOFFRATO 42 )
-G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BIANCO LISCIO 01 )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
 G Nodo centrale ( NODO SENZA BATTUTA )
 G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 2F48 )
-G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2148 )
+G Vetri Ornamentali ( VETRO SATINATO 48 )
+G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
 G Guarnizioni ( TERZA GUARNIZIONE )
-G Listelli Infissi ( LISTELLI ESTERNI CLASSIC )
-MISURE 1600 X 1530 CAMERA DA LETTO LATO CORTILE *****MANIGLIE BASSE PER SCONTO
-75% °°°°
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+Bagno verde.
+Colore esterno anta e telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
 1
 Infisso
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( BILICO )
-G Materiale Infissi ( PVC )
-G Colore PVC ( TINTA LEGNO NOCE CHIARO 55 )
-G Canalina interno vetro Infisso ( CANALINA VETRO MARRONE 02 )
+G Tipologia Infissi ( FINESTRA 2 ANTE )
+G Materiale Infissi ( ALLUMINIO-PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
+G Nodo centrale ( NODO SENZA BATTUTA )
+G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2F48 )
+G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
 G Guarnizioni ( TERZA GUARNIZIONE )
-MISURE 1600 X 1530 FIN PIVOT VETRO 2113 E MANIGLIA 642 *****MANIGLIE BASSE PER
-SCONTO 75% CAMERA LATO STRADA °°°°
-€ 18.400,00
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+Cameretta bianca.
+Colore esterno telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
+Page 4/7
 1
-Asseverazione o Relazione Tecnica
-G Fornitore ( ALTRO)
-G Note ( È COMPRESO IL COSTO DELLA RELAZIONE TECNICA (E/O ASSEVERAZIONE),
-CHE VIENE REALIZZATA A CURA DI UN COLLABORATORE ESTERNO ABILITATO )
-€ 1.640,00
+Infisso
+G Fornitore ( FINSTRAL)
+G Tipologia Infissi ( FINESTRA 2 ANTE )
+G Materiale Infissi ( ALLUMINIO-PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
+G Colore PVC ( BIANCO SATINATO 45 )
+G Maniglie infissi ( MANIGLIA SERIE 2 )
+G Colore Maniglie Infissi ( TITANIO GF79 )
+G Nodo centrale ( NODO SENZA BATTUTA )
+G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2F48 )
+G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
+G Fermavetro Infisso ( FERMAVETRO CLASSIC )
+G Cerniere ( CERNIERE A VISTA )
+G Guarnizioni ( TERZA GUARNIZIONE )
+G Sistema Sicurezza Infissi ( ESECUZIONE STANDARD (NOTTOLINI MAGGIORATI) )
+Cameretta arancione.
+Colore esterno telaio in alluminio LC32 dorato.
+Copri-cerniere bianchi.
+€ 15.200,00
 La presente proposta d’ordine è stata formulata in base alle misure fornite dal cliente, e dovrà essere confermata dal
 nostro tecnico in fase di rilievo misure (qualora fossero rilevate misure non coerenti con quelle comunicate, sarà
 necessario apportare le opportune modifiche alla proposta d'ordine)
@@ -159,61 +251,38 @@ Rimozione e smaltimento serramenti esistenti
 Inclusa
 Posa in opera
 Inclusa
-Page 3/6
 Collaudo e certificazioni di posa al termine dei lavori
 Inclusa
-Trasporto al piano con piattaforme meccaniche, qualora necessarie
-Inclusa
+Opere murarie
+Non inclusa
 Assistenza pratica per detrazione fiscale
 Inclusa
-FORNITURA E POSA DI MANUFATTI IDONEI ALL’ELIMINAZIONE DELLE BARRIERE ARCHITETTONICHE SECONDO IL D.M. 236/1989 E ALLA
-DETRAZIONE DI CUI ALL’ART. 119 TER DEL D.L. 34/2020 La Società Tigullio Design Genova SRL dichiara di rendersi disponibile ad accettare il pagamento
-tramite SCONTO IN FATTURA (D.p.r. 917/86 e successive modifiche). Per usufruire dell’agevolazione gli interventi devono rispettare i requisiti previsti dal
-decreto del Ministro dei lavori pubblici n. 236 del 14 giugno 1989 (Prescrizioni tecniche necessarie a garantire l’accessibilità, l’adattabilità e la visitabilità degli
-edifici privati e di edilizia residenziale pubblica sovvenzionata e agevolata, ai fini del superamento e dell’eliminazione delle barriere architettoniche). Il fornitore
-non è responsabile della detrazione che farà il cliente.
-Il CLIENTE dichiara esplicitamente con la firma della presente Proposta d’ordine di:
- NON VOLER OPTARE per lo sconto in fattura e pertanto si impegna ad onoraredirettamente le scadenze economiche nei tempi e nei modi stabiliti nella
-presente proposta d’ordine (si informa che, a completamento della pratica per la detrazione fiscale, qualora spettante, è necessario inviare una comunicazione
-all’ENEA entro 90 giorni dalla fine dei lavori. La pratica è esclusivamente a carico del cliente. Tigullio Design Genova SRL si manleva da ogni responsabilità circa
-tale invio);
- VOLER OPTARE per lo sconto in fattura di cui DL34/2020 Art. 121 obbligandosipertanto a onorare direttamente la parte residua del debito nei tempi e nei
-modi stabiliti nella presente proposta d’ordine. L’azienda si occuperà dell’invio della comunicazione per l’opzione dello sconto in fattura nei tempi e nei modi
-previsti.
-Nel caso dello sconto in fattura la società Tigullio Design Genova SRL informa il Cliente che l’ordine verrà evaso dopo il pagamento della fattura di acconto.
-Tigullio Design Genova SRL si manleva da una eventuale esito non positivo della pratica di sconto in fattura e il cliente dovrà saldare la rimanenza tramite
-bonifico bancario.
-Il Cliente dichiara:
-G di essere in regola con gli obblighi concernenti le dichiarazioni in materia di imposte e tasse e con i conseguenti adempimenti
-G di non aver commesso violazioni, definitivamente accertate, rispetto agli obblighi relativi al pagamento delle imposte e tasse;
-E con la presente manleva la ditta Tigullio Design Genova SRL in qualità di:
-G fornitrice di prodotti oggetto di interventi di risparmio energetico e/o di ristrutturazione edilizia;
-da ogni eventuale conseguenza pregiudizievole che potesse derivare dalla non veridicità delle dichiarazioni rese.
-Ai fini prescritti dall'art. 1, c. 43bis L. 234/2021 si attesta che il CCNL applicato nell'esecuzione dei lavori è il seguente: C.C.N.L. EDILIZIA ANCE F012
+Si informa che, per ottenere la detrazione fiscale di legge, qualora spettante, è necessario inviare una comunicazione
+ENEA. Il cliente si impegna a produrre tutta la documentazione che la Tigullio Design Genova SRL richiederà,
+unitamente all’invio della ricevuta del pagamento della fattura d’acconto e/o entro e non oltre 20 giorni dalla firma della
+proposta d’ordine. Ai fini prescritti dall'art. 1, c. 43bis L. 234/2021 si attesta che il CCNL applicato nell'esecuzione dei
+lavori è il seguente: C.C.N.L. EDILIZIA ANCE F012
 FIRMA
+Page 5/7
 NOTE
-Garanzia Tigullio Design 24 mesi
-Garanzia Produttore 48 mesi.
+DETRAZIONE FISCALE AL 50% PER RISPARMIO ENERGETICO L. 296/06.
+LA PRESENTE PROPOSTA D'ORDINE ANNULLA E SOSTITUISCE LA
+PRECEDENTE STIPULATA IN DATA 24/04/2024.
+ACCONTO € 2216 ALL'ORDINE, SALDO 15000 € CON FINANZIAMENTO.
 MODALITÀ DI PAGAMENTO
-A carico cliente pari al 25% all'ordine. Restante 75% sconto in fattura
+Anticipo + Finanziamento
 FIRMA DEL PROPONENTE
 IMPONIBILE
-€ 20.040,00
+€ 15.200,00
 IVA DI LEGGE
-€ 1.096,80
+€ 2.016,00
 TOTALE COMPLESSIVO (IVA COMPRESA)
-€ 21.136,80
-TOTALE A CARICO DEL CLIENTE CON FORMULA DELLO
-SCONTO IN FATTURA
-€ 5.284,20
+€ 17.216,00
 DICHIARO DI AVER APPROVATO E ACCETTATO
 SPECIFICATAMENTE TUTTE LE CONDIZIONI DI VENDITA
 CONTENUTE IN TALE FOGLIO
 Il committente
 CONDIZIONI
-Page 4/6
-J
-J
 1. Frontespizio
 Sul frontespizio del presente contratto sono evidenziati:
 -i dati fiscali relativi ai soggetti contraenti;
@@ -258,6 +327,7 @@ avere caratteristiche di qualità analoghe a quelle presentate dal campione.
 - Con la sottoscrizione del verbale di collaudo l’opera si intenderà approvata ed accettata dal committente.
 - L’acquirente si obbliga alla firma del benestare di collaudo anche in presenza di vizi o difetti di funzionamento, segnalandoli sullo stesso. Qualora l'acquirente
 non fosse presente per la sottoscrizione, verrà considerato quale collaudo la dichiarazione del posatore
+Page 6/7
 10. Montaggio e/ o posa.
 - La ditta Venditrice si impegna, con proprio personale specializzato, al montaggio e/o posa dei beni a regola d’arte.
 - Nel caso in cui i lavori fossero eseguiti con mezzi propri, da imprese esterne appaltatrici, comunque dietro direzione dei lavori da parte della ditta Venditrice,
@@ -287,7 +357,6 @@ e/o nella quantità.
 13. Interessi di mora per ritardo nei pagamenti
 - La ditta Venditrice, nel caso di ritardo nei pagamenti concordati da parte del acquirente, si riserva la facoltà di applicare interessi di mora, nella misura legale
 corrente nel periodo, dal giorno di scadenza del pagamento al momento della sua reale effettuazione.
-Page 5/6
 14. Assistenza
 - Qualsiasi difformità emersa in fase di collaudo sarà coperta dalla garanzia di 24 mesi.
 - Per eventuali assistenze e/o sostituzioni saranno dovute, in tale periodo unicamente € 30 per il diritto di chiamata.
@@ -316,4 +385,4 @@ SRL con sede legale in Via Struppa 130C – 16165 Genova, all’indirizzo e-mail
 diritto di proporre reclamo all’autorità di controllo competente (Garante per la Protezione dei Dati Personali) qualora ritenesse che il trattamento dei suoi Dati
 Personali sia contrario alla normativa vigente.
 Powered by TCPDF (www.tcpdf.org)
-Page 6/6
+Page 7/7

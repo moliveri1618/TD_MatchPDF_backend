@@ -203,7 +203,7 @@ obj_model = {
     "Tipologia Infissi": "",
     # "Materiale_infissi": "",
     "Soglia Infissi": "",
-    "Nodo Centrale": "",
+    "Colore PVC": "",
     "Cerniere": "",
     "Modello Finestra": "",
     # "Colore_PVC": "",

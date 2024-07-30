@@ -1,8 +1,8 @@
 versione
-31/05/2024
-MANGLAVITE MARINA-2MI
+14/06/2024
+BONALDO EMMA
 commissione
-425007894
+425008084
 nr. ordine
 ordine
 indirizzo cliente
@@ -29,316 +29,23 @@ T +39 351 096 4713
 set. di consegna
 ordine
 2TGU
-commissione MANGLAVITE MARINA-2MI
+commissione BONALDO EMMA
 data: 
-31/05/2024
-Page 2 of 11
+14/06/2024
+Page 2 of 10
 pos..
 pos. cliente
 tipo
-PF2 Salone+Studio 414
+A-B
+401
 pezzi
  2
-porta
-1
-BRM-L
-BRM-A
-2405
-1780
-scarico aqua
-0
-3a guarn.
-1
-descrizione
-codice
-telaio
-posizione
-col. esterno
-col. interno/esterno
-col. interno
-377
-soglia ribassata a taglio termico
-55
-55
-sotto
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-55
-55
-destra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-55
-55
-sopra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-55
-55
-sinistra
-969
-traversa/montante telaio
-55
-55
-verticale
-28
-nodo centrale standard
-55
-55
-verticale
-lavorazioni telaio
-23
-foro di fissaggio laterale e superiore 6 mm
-anta
-descrizione
-codice
-campo fisso
--
-col. int./est.
-campo 1:
-55 / 55
-Slim-line
-970
-col. int./est.
-campo 2:
-55 / 55
-Slim-line
-970
-col. int./est.
-campo 3:
-55 / 55
-ferramenta
-esecuzione
-elemento fisso, con vetro montato n
-99.0
-sicurezza standard
-campo 1:
-esecuzione
-Din
-apertura ad anta sinistra con coman
-425.0
-sicurezza standard
-1
-campo 2:
-esecuzione
-Din
-anta/ribalta destra,
-411.0
-sicurezza standard
-2
-campo 3:
-6010 74
-maniglia per finestra in alluminio serie 1
-colore 74
-alt. Maniglia
-1050
-accessori
-campo 2:
-20-2
-apertura a ribalta estate/inverno 2 ante
- / 
-col. interno/estern
-pezzi
-1
-vetro/pannello
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 1:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 2:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 3:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-allargamento anta
-campo 3:
-03 / 03
-col. interno/estern
-10-00003 maniglietta esterna per porta-finestra FIN-Window/FIN-Ligna
-altro
-campo 1:
-R68
-zoccolo per soglia passante PVC-PVC
-posizione: sotto, colore interno: 55, colore esterno: 55, campo: 1, pezzi: 1
-2/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
-ordine
-2TGU
-commissione MANGLAVITE MARINA-2MI
-data: 
-31/05/2024
-Page 3 of 11
-pos..
-pos. cliente
-tipo
-PF2 Salone
-414
-pezzi
- 1
-porta
-2
-BRM-L
-BRM-A
-2380
-1780
-scarico aqua
-0
-3a guarn.
-1
-descrizione
-codice
-telaio
-posizione
-col. esterno
-col. interno/esterno
-col. interno
-377
-soglia ribassata a taglio termico
-55
-55
-sotto
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-55
-55
-destra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-55
-55
-sopra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-55
-55
-sinistra
-969
-traversa/montante telaio
-55
-55
-verticale
-28
-nodo centrale standard
-55
-55
-verticale
-lavorazioni telaio
-23
-foro di fissaggio laterale e superiore 6 mm
-anta
-descrizione
-codice
-campo fisso
--
-col. int./est.
-campo 1:
-55 / 55
-Slim-line
-970
-col. int./est.
-campo 2:
-55 / 55
-Slim-line
-970
-col. int./est.
-campo 3:
-55 / 55
-ferramenta
-esecuzione
-elemento fisso, con vetro montato n
-99.0
-sicurezza standard
-campo 1:
-esecuzione
-Din
-apertura ad anta sinistra con coman
-425.0
-sicurezza standard
-1
-campo 2:
-esecuzione
-Din
-anta/ribalta destra,
-411.0
-sicurezza standard
-2
-campo 3:
-6010 74
-maniglia per finestra in alluminio serie 1
-colore 74
-alt. Maniglia
-1050
-accessori
-campo 2:
-20-2
-apertura a ribalta estate/inverno 2 ante
- / 
-col. interno/estern
-pezzi
-1
-vetro/pannello
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 1:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 2:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 3:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-allargamento anta
-campo 3:
-03 / 03
-col. interno/estern
-10-00003 maniglietta esterna per porta-finestra FIN-Window/FIN-Ligna
-altro
-campo 1:
-R68
-zoccolo per soglia passante PVC-PVC
-posizione: sotto, colore interno: 55, colore esterno: 55, campo: 1, pezzi: 1
-3/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
-ordine
-2TGU
-commissione MANGLAVITE MARINA-2MI
-data: 
-31/05/2024
-Page 4 of 11
-pos..
-pos. cliente
-tipo
-F1sxLavand
-101
-pezzi
- 1
 finestra
-3
+1
 BRM-L
 BRM-A
-980
-430
+1570
+1174
 scarico aqua
 0
 3a guarn.
@@ -350,11 +57,18 @@ posizione
 col. esterno
 col. interno/esterno
 col. interno
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
+964M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
 *
+28K
+nodo centrale standard
+LC32
+45
+45
+verticale
 lavorazioni telaio
 23
 foro di fissaggio laterale e superiore 6 mm
@@ -362,27 +76,41 @@ anta
 descrizione
 codice
 Slim-line
-970
+970K
 col. int./est.
 campo 1:
-42 / 42
+45 / 45
+col. esternoLC32
+Slim-line
+970K
+col. int./est.
+campo 2:
+45 / 45
+col. esternoLC32
 ferramenta
 esecuzione
 Din
-anta/ribalta sinistra,
-411.0
+apertura ad anta sinistra con coman
+425.0
 sicurezza standard
 1
 campo 1:
-6010 01
-maniglia per finestra in alluminio serie 1
-colore 01
+esecuzione
+Din
+anta/ribalta destra,
+411.0
+sicurezza standard
+2
+campo 2:
+7040 79
+maniglia per finestra in alluminio serie 2
+colore 79
 alt. Maniglia
-280
+550
 accessori
 campo 1:
-20-1
-apertura a ribalta estate/inverno 1 anta
+20-2
+apertura a ribalta estate/inverno 2 ante
  / 
 col. interno/estern
 pezzi
@@ -391,23 +119,38 @@ vetro/pannello
 Plus-Valor 2 con Bodysafe doppio vetro 4T-20-4v, 28 mm protezione antinfortunistica interno 1(C)2
 2F48
 campo 1:
-ornamentale48T
 66
 fermavetro Classic, dalle linee decise col.dist.
 01
+Plus-Valor 2 con Bodysafe doppio vetro 4T-20-4v, 28 mm protezione antinfortunistica interno 1(C)2
+2F48
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+2/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
+ordine
+2TGU
+commissione BONALDO EMMA
+data: 
+14/06/2024
+Page 3 of 10
 pos..
 pos. cliente
 tipo
-Fisso Lavanderia
-102
+C
+401
 pezzi
  1
 finestra
-4
+2
 BRM-L
 BRM-A
-980
-340
+1570
+1170
 scarico aqua
 0
 3a guarn.
@@ -419,28 +162,64 @@ posizione
 col. esterno
 col. interno/esterno
 col. interno
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
+964M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
 *
+28K
+nodo centrale standard
+LC32
+45
+45
+verticale
 lavorazioni telaio
 23
 foro di fissaggio laterale e superiore 6 mm
 anta
 descrizione
 codice
-campo fisso
--
+Slim-line
+970K
 col. int./est.
 campo 1:
-42 / 42
+45 / 45
+col. esternoLC32
+Slim-line
+970K
+col. int./est.
+campo 2:
+45 / 45
+col. esternoLC32
 ferramenta
 esecuzione
-elemento fisso, con vetro montato n
-99.0
+Din
+apertura ad anta sinistra con coman
+425.0
 sicurezza standard
+1
 campo 1:
+esecuzione
+Din
+anta/ribalta destra,
+411.0
+sicurezza standard
+2
+campo 2:
+7040 79
+maniglia per finestra in alluminio serie 2
+colore 79
+alt. Maniglia
+550
+accessori
+campo 1:
+20-2
+apertura a ribalta estate/inverno 2 ante
+ / 
+col. interno/estern
+pezzi
+1
 vetro/pannello
 Plus-Valor 2 con Multiprotect doppio vetro 33.1v-18-4F, 28 mm protezione antinfortunistica interno 2(B)2
 2148
@@ -449,95 +228,36 @@ ornamentale48
 66
 fermavetro Classic, dalle linee decise col.dist.
 01
-4/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
+Plus-Valor 2 con Multiprotect doppio vetro 33.1v-18-4F, 28 mm protezione antinfortunistica interno 2(B)2
+2148
+campo 2:
+ornamentale48
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+3/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
 ordine
 2TGU
-commissione MANGLAVITE MARINA-2MI
+commissione BONALDO EMMA
 data: 
-31/05/2024
-Page 5 of 11
+14/06/2024
+Page 4 of 10
 pos..
 pos. cliente
 tipo
-Bilico F2 Letto
-450
+D
+207
 pezzi
  1
 finestra
-5
+3
 BRM-L
 BRM-A
-1400
-1380
-scarico aqua
-0
-descrizione
-codice
-telaio
-posizione
-col. esterno
-col. interno/esterno
-col. interno
-580
-forma ad L profondità: 72 mm, ingombro esterno: 77 mm
-01
-01
-*
-anta
-descrizione
-codice
-anta a bilico
-584
-col. int./est.
-campo 1:
-01 / 01
-ferramenta
-esecuzione
-Din
-anta a bilico con forbice laterale pe
-41.0
-sicurezza standard
-1
-campo 1:
-641 56
-maniglia con controllo apertura e chiusura
-colore 56
-alt. Maniglia
-1
-vetro/pannello
-Plus-Valor 2 con Multiprotect e Multiprotect doppio vetro 33.1v-18-33.1, 30 mm protezione antinfortunistica interno 2(B)2 esterno
-2113
-campo 1:
-66
-fermavetro Classic, dalle linee decise col.dist.
-03
-L'infsso deve essere colore 55
-5/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
-ordine
-2TGU
-commissione MANGLAVITE MARINA-2MI
-data: 
-31/05/2024
-Page 6 of 11
-pos..
-pos. cliente
-tipo
-F1sxLavand
-101
-pezzi
- 2
-finestra
-6
-BRM-L
-BRM-A
-1510
-790
+2510
+770
 scarico aqua
 0
 3a guarn.
@@ -549,37 +269,59 @@ posizione
 col. esterno
 col. interno/esterno
 col. interno
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
+965M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
 *
+969N
+traversa/montante telaio
+LC32
+45
+45
+orizz.
 lavorazioni telaio
+taglio telaio interno 10 mm
+110
+posizio sotto
 23
 foro di fissaggio laterale e superiore 6 mm
 anta
 descrizione
 codice
-Slim-line
-970
+campo fisso
+-
 col. int./est.
 campo 1:
-42 / 42
+45 / 45
+col. esternoLC32
+Slim-line
+970K
+col. int./est.
+campo 2:
+45 / 45
+col. esternoLC32
 ferramenta
 esecuzione
+elemento fisso, con vetro montato n
+99.0
+sicurezza standard
+campo 1:
+esecuzione
 Din
-anta/ribalta destra,
+anta/ribalta sinistra,
 411.0
 sicurezza standard
-2
-campo 1:
-6010 01
-maniglia per finestra in alluminio serie 1
-colore 01
+1
+campo 2:
+7040 79
+maniglia per finestra in alluminio serie 2
+colore 79
 alt. Maniglia
 280
 accessori
-campo 1:
+campo 2:
 20-1
 apertura a ribalta estate/inverno 1 anta
  / 
@@ -587,36 +329,43 @@ col. interno/estern
 pezzi
 1
 vetro/pannello
-Plus-Valor 2 con Bodysafe doppio vetro 4T-20-4v, 28 mm protezione antinfortunistica interno 1(C)2
-2F48
+Mediterran 2 con Multiprotect e Bodysafe doppio vetro a controllo solare 4T-18-33.1u, 28 mm protezione antinfortunistica interno
+UF18
 campo 1:
 ornamentale48T
 66
 fermavetro Classic, dalle linee decise col.dist.
 01
-6/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
+Mediterran 2 con Bodysafe doppio vetro a controllo solare 4T-20-4u, 28 mm protezione antinfortunistica interno 1(C)2
+UF48
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Copri Cerniere Bianchi
+4/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
 ordine
 2TGU
-commissione MANGLAVITE MARINA-2MI
+commissione BONALDO EMMA
 data: 
-31/05/2024
-Page 7 of 11
+14/06/2024
+Page 5 of 10
 pos..
 pos. cliente
 tipo
-F2 C.tta
-401
+E
+402
 pezzi
  1
 finestra
-7
+4
 BRM-L
 BRM-A
-1490
-1490
+2510
+1595
 scarico aqua
 0
 3a guarn.
@@ -628,32 +377,320 @@ posizione
 col. esterno
 col. interno/esterno
 col. interno
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
+965M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
 *
-28
+969N
+traversa/montante telaio
+LC32
+45
+45
+orizz.
+28K
 nodo centrale standard
-42
-42
+LC32
+45
+45
 verticale
 lavorazioni telaio
+taglio telaio interno 10 mm
+110
+posizio sotto
 23
 foro di fissaggio laterale e superiore 6 mm
 anta
 descrizione
 codice
-Slim-line
-970
+campo fisso
+-
 col. int./est.
 campo 1:
-42 / 42
+45 / 45
+col. esternoLC32
 Slim-line
-970
+970K
 col. int./est.
 campo 2:
-42 / 42
+45 / 45
+col. esternoLC32
+Slim-line
+970K
+col. int./est.
+campo 3:
+45 / 45
+col. esternoLC32
+ferramenta
+esecuzione
+elemento fisso, con vetro montato n
+99.0
+sicurezza standard
+campo 1:
+esecuzione
+Din
+apertura ad anta sinistra con coman
+425.0
+sicurezza standard
+1
+campo 2:
+esecuzione
+Din
+anta/ribalta destra,
+411.0
+sicurezza standard
+2
+campo 3:
+7040 79
+maniglia per finestra in alluminio serie 2
+colore 79
+alt. Maniglia
+280
+accessori
+campo 2:
+20-2
+apertura a ribalta estate/inverno 2 ante
+ / 
+col. interno/estern
+pezzi
+1
+vetro/pannello
+Mediterran 2 con Multiprotect e Bodysafe doppio vetro a controllo solare 4T-18-33.1u, 28 mm protezione antinfortunistica interno
+UF18
+campo 1:
+ornamentale48T
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Mediterran 2 con Bodysafe doppio vetro a controllo solare 4T-20-4u, 28 mm protezione antinfortunistica interno 1(C)2
+UF48
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Mediterran 2 con Bodysafe doppio vetro a controllo solare 4T-20-4u, 28 mm protezione antinfortunistica interno 1(C)2
+UF48
+campo 3:
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Copri-Cerniere Bianchi
+5/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
+ordine
+2TGU
+commissione BONALDO EMMA
+data: 
+14/06/2024
+Page 6 of 10
+pos..
+pos. cliente
+tipo
+F
+207
+pezzi
+ 1
+finestra
+5
+BRM-L
+BRM-A
+2520
+770
+scarico aqua
+0
+3a guarn.
+1
+descrizione
+codice
+telaio
+posizione
+col. esterno
+col. interno/esterno
+col. interno
+965M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
+*
+969N
+traversa/montante telaio
+LC32
+45
+45
+orizz.
+lavorazioni telaio
+taglio telaio interno 10 mm
+110
+posizio sotto
+23
+foro di fissaggio laterale e superiore 6 mm
+anta
+descrizione
+codice
+campo fisso
+-
+col. int./est.
+campo 1:
+45 / 45
+col. esternoLC32
+Slim-line Twin
+C788K
+col. int./est.
+campo 2:
+45 / 45
+C788K
+LC32
+col. esterno
+Slim-line Twin
+colore 45
+WS25
+veneziana
+colore
+comman
+0609
+27
+sinistra
+lung. cattenella
+1200
+ferramenta
+esecuzione
+elemento fisso, con vetro montato n
+99.0
+sicurezza standard
+campo 1:
+esecuzione
+Din
+anta/ribalta sinistra,
+411.0
+sicurezza standard
+1
+campo 2:
+7041 79
+maniglia per finestra in alluminio serie 2
+colore 79
+alt. Maniglia
+280
+accessori
+campo 2:
+20-1
+apertura a ribalta estate/inverno 1 anta
+ / 
+col. interno/estern
+pezzi
+1
+vetro/pannello
+predisposto per senza vetro, 30 mm
+00030
+campo 1:
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Mediterran 2 con Multiprotect e Bodysafe doppio vetro a controllo solare 33.1u-20-4T, 30 mm protezione antinfortunistica interno
+81F3
+campo 2:
+Bodysafe 4 mm
+4T0
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Copri Cerniere Bianchi
+6/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
+ordine
+2TGU
+commissione BONALDO EMMA
+data: 
+14/06/2024
+Page 7 of 10
+pos..
+pos. cliente
+tipo
+G
+401
+pezzi
+ 1
+porta
+6
+BRM-L
+BRM-A
+2520
+1594
+scarico aqua
+0
+3a guarn.
+1
+descrizione
+codice
+telaio
+posizione
+col. esterno
+col. interno/esterno
+col. interno
+965M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
+*
+C45K
+nodo centrale standard
+LC32
+45
+45
+verticale
+lavorazioni telaio
+taglio telaio interno 10 mm
+110
+posizio sotto
+23
+foro di fissaggio laterale e superiore 6 mm
+anta
+descrizione
+codice
+Slim-line Twin
+C788K
+col. int./est.
+campo 1:
+45 / 45
+C788K
+LC32
+col. esterno
+Slim-line Twin
+colore 45
+WS25
+veneziana
+colore
+comman
+0609
+27
+sinistra
+lung. cattenella
+2000
+Slim-line Twin
+C788K
+col. int./est.
+campo 2:
+45 / 45
+C788K
+LC32
+col. esterno
+Slim-line Twin
+colore 45
+WS25
+veneziana
+colore
+comman
+0609
+27
+destra
+lung. cattenella
+1000
 ferramenta
 esecuzione
 Din
@@ -669,11 +706,11 @@ anta/ribalta destra,
 sicurezza standard
 2
 campo 2:
-6010 01
-maniglia per finestra in alluminio serie 1
-colore 01
+7041 79
+maniglia per finestra in alluminio serie 2
+colore 79
 alt. Maniglia
-280
+1050
 accessori
 campo 1:
 20-2
@@ -683,41 +720,50 @@ col. interno/estern
 pezzi
 1
 vetro/pannello
-Plus-Valor 2 con Bodysafe doppio vetro 4T-20-4v, 28 mm protezione antinfortunistica interno 1(C)2
-2F48
+Mediterran 2 con Multiprotect e Bodysafe doppio vetro a controllo solare 33.1u-20-4T, 30 mm protezione antinfortunistica interno
+81F3
 campo 1:
+Bodysafe 4 mm
+4T0
 66
 fermavetro Classic, dalle linee decise col.dist.
-03
-Plus-Valor 2 con Bodysafe doppio vetro 4T-20-4v, 28 mm protezione antinfortunistica interno 1(C)2
-2F48
+01
+Mediterran 2 con Multiprotect e Bodysafe doppio vetro a controllo solare 33.1u-20-4T, 30 mm protezione antinfortunistica interno
+81F3
 campo 2:
+Bodysafe 4 mm
+4T0
 66
 fermavetro Classic, dalle linee decise col.dist.
-03
-7/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
+01
+allargamento anta
+campo 2:
+- / -
+col. interno/estern
+10-00004 maniglietta esterna per Slim-line Twin
+7/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
 ordine
 2TGU
-commissione MANGLAVITE MARINA-2MI
+commissione BONALDO EMMA
 data: 
-31/05/2024
-Page 8 of 11
+14/06/2024
+Page 8 of 10
 pos..
 pos. cliente
 tipo
-PF1dxCucina
-101
+H
+207
 pezzi
  1
-porta
-8
+finestra
+7
 BRM-L
 BRM-A
-2500
-780
+2520
+1184
 scarico aqua
 0
 3a guarn.
@@ -729,52 +775,59 @@ posizione
 col. esterno
 col. interno/esterno
 col. interno
-377
-soglia ribassata a taglio termico
-42
-42
-sotto
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
-destra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
-sopra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
-sinistra
+964M
+forma a Z profondità: 85 mm, ingombro esterno: 54 mm
+LC32
+45
+45
+*
+969N
+traversa/montante telaio
+LC32
+45
+45
+orizz.
 lavorazioni telaio
+taglio telaio interno 10 mm
+110
+posizio sotto
 23
 foro di fissaggio laterale e superiore 6 mm
 anta
 descrizione
 codice
-Slim-line
-970
+campo fisso
+-
 col. int./est.
 campo 1:
-42 / 42
+45 / 45
+col. esternoLC32
+Slim-line
+970K
+col. int./est.
+campo 2:
+45 / 45
+col. esternoLC32
 ferramenta
+esecuzione
+elemento fisso, con vetro montato n
+99.0
+sicurezza standard
+campo 1:
 esecuzione
 Din
 anta/ribalta destra,
 411.0
 sicurezza standard
 2
-campo 1:
-6010 01
-maniglia per finestra in alluminio serie 1
-colore 01
+campo 2:
+7040 79
+maniglia per finestra in alluminio serie 2
+colore 79
 alt. Maniglia
-1050
+280
 accessori
-campo 1:
+campo 2:
 20-1
 apertura a ribalta estate/inverno 1 anta
  / 
@@ -782,179 +835,73 @@ col. interno/estern
 pezzi
 1
 vetro/pannello
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
+Mediterran 2 con Multiprotect e Bodysafe doppio vetro a controllo solare 4T-18-33.1u, 28 mm protezione antinfortunistica interno
+UF18
 campo 1:
+ornamentale48T
 66
 fermavetro Classic, dalle linee decise col.dist.
 01
-allargamento anta
-campo 1:
-M01 / M01
-col. interno/estern
-10-00003 maniglietta esterna per porta-finestra FIN-Window/FIN-Ligna
-8/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
-ordine
-2TGU
-commissione MANGLAVITE MARINA-2MI
-data: 
-31/05/2024
-Page 9 of 11
+Mediterran 2 con Bodysafe doppio vetro a controllo solare 4T-20-4u, 28 mm protezione antinfortunistica interno 1(C)2
+UF48
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+01
+Copri Cerniere Bianchi
 pos..
 pos. cliente
 tipo
-PF1sxCucina
-101
+Piatti 38 PVC
+D741
+pezzi
+ 15
+8
+PVC coprifilo piatto tagliato a 28x3 mm
+lunghezza: 6000 mm, colore: 45
+D741
+8/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
+ordine
+2TGU
+commissione BONALDO EMMA
+data: 
+14/06/2024
+Page 9 of 10
+pos..
+pos. cliente
+tipo
+Piatti 160 PVC
+D249
 pezzi
  1
-porta
 9
-BRM-L
-BRM-A
-2500
-780
-scarico aqua
-0
-3a guarn.
-1
-descrizione
-codice
-telaio
-posizione
-col. esterno
-col. interno/esterno
-col. interno
-377
-soglia ribassata a taglio termico
-42
-42
-sotto
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
-destra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
-sopra
-961
-forma ad L profondità: 77 mm, ingombro esterno: 74 mm
-42
-42
-sinistra
-lavorazioni telaio
-23
-foro di fissaggio laterale e superiore 6 mm
-anta
-descrizione
-codice
-Slim-line
-970
-col. int./est.
-campo 1:
-42 / 42
-ferramenta
-esecuzione
-Din
-anta/ribalta sinistra,
-411.0
-sicurezza standard
-1
-campo 1:
-6010 01
-maniglia per finestra in alluminio serie 1
-colore 01
-alt. Maniglia
-1050
-accessori
-campo 1:
-20-1
-apertura a ribalta estate/inverno 1 anta
- / 
-col. interno/estern
-pezzi
-1
-vetro/pannello
-Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-18-4T, 28 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
-21F8
-campo 1:
-66
-fermavetro Classic, dalle linee decise col.dist.
-01
-allargamento anta
-campo 1:
-M01 / M01
-col. interno/estern
-10-00003 maniglietta esterna per porta-finestra FIN-Window/FIN-Ligna
+PVC coprifilo piatto 160x3 mm
+lunghezza: 6000 mm, colore: 45
+D249
 pos..
 pos. cliente
 tipo
-Piatti 160
-D249
+Piatti 38 All
+01-16030
 pezzi
- 23
+ 15
 10
-PVC coprifilo piatto 160x3 mm
-lunghezza: 6000 mm, colore: 42
-D249
-9/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
+alluminio coprifilo piatto 30x2 mm
+lunghezza: 6000 mm, colore: LC32
+01-16030
+9/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
 ordine
 2TGU
-commissione MANGLAVITE MARINA-2MI
+commissione BONALDO EMMA
 data: 
-31/05/2024
-Page 10 of 11
-pos..
-pos. cliente
-tipo
-Angolari 40x20
-D525
-pezzi
- 3
-11
-PVC angolare interno 40x20x30 mm
-lunghezza: 6000 mm, colore: 42
-D525
-pos..
-pos. cliente
-tipo
-Piatti 160
-D249
-pezzi
- 10
-12
-PVC coprifilo piatto 160x3 mm
-lunghezza: 6000 mm, colore: 55
-D249
-pos..
-pos. cliente
-tipo
-Angolari 40x20
-D525
-pezzi
- 6
-13
-PVC angolare interno 40x20x30 mm
-lunghezza: 6000 mm, colore: 55
-D525
-10/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
-ordine
-2TGU
-commissione MANGLAVITE MARINA-2MI
-data: 
-31/05/2024
-Page 11 of 11
+14/06/2024
+Page 10 of 10
 Riepilogo per la pianificazione della produzione Finstral
 Elementi:
 posizione
@@ -964,30 +911,83 @@ ferramenta speciale
 forma
 anta
 telaio
-580
-584
+964M
+970K
 1 - Rechteckform
- 1
- 4,50
-5
+ 4
+ 7,60
+1,2,7
+Anzahl
+Bezeichnung
+Typ
+HFT
+ 201
+HFT
+ 4
+profili rivestimento alluminio per produzione Italia o Greiz
 ordinati secondo codice anta
-961
-970
+965M
+970K
 1 - Rechteckform
- 10
- 17,80
-1,2,3,4,6,7,8,9
+ 2
+ 4,20
+3,4
+Anzahl
+Bezeichnung
+Typ
+HFT
+ 201
+HFT
+ 2
+profili rivestimento alluminio per produzione Italia o Greiz
 ordinati secondo codice anta
-10,11,12,13
+965M
+C788K
+1 - Rechteckform
+ 2
+ 4,20
+5,6
+Anzahl
+Bezeichnung
+Typ
+HFT
+ 201
+HFT
+ 2
+profili rivestimento alluminio per produzione Italia o Greiz
+ 320
+ 3
+anta Twin-line
+ABM
+ 202
+ABM
+ 3
+veneziane Twin/oscuramento interno
+ordinati secondo codice anta
+8,9,10
+Anzahl
+Bezeichnung
+Typ
+ABM
+ 230
+ABM
+ 15
+profilo rivestimento alluminio sfuso per A-P/A-A ordine Italia
 ordinati secondo codice anta
 Interlocutore:
 sett. di consegna richiesta:
 Lorenzo Bignone
 testo posizione
 posizione
-L'infisso deve essere colore 55
+Copri Cerniere Bianchi
+3
+Copri-Cerniere Bianchi
+4
+Copri Cerniere Bianchi
 5
-11/11
-31/05/2024
-Ordine serramenti per conferma ordine 425007894
-commissione MANGLAVITE MARINA-2MI
+Copri Cerniere Bianchi
+7
+10/10
+14/06/2024
+Ordine serramenti per conferma ordine 425008084
+commissione BONALDO EMMA
