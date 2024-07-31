@@ -637,6 +637,8 @@ def pdf_rules2(context2):
     all_obj = []
     res = {}
     n_obj = 0
+    flag_specifiche_condizioni = 0
+
 
     for i in range(len(lines)):
 
@@ -659,10 +661,27 @@ def pdf_rules2(context2):
             #print(lines[i-1].strip())
 
         if lines[i].strip()[:1] == "G" and "(" in lines[i]:
+
+            #####   to do: get obj numbers from here not up   ####
+            #print(lines[i-1].strip())
+            try:
+                pass
+                #print(int(lines[i-2].strip()[:2]))
+            except (IndexError, ValueError) as e:
+                pass
+                #print(lines[i-2].strip()[:2])
+            ######################################################
+            
+            # print(lines[i])
             split_string = lines[i].split("(", 1)
             res[split_string[0][1:].strip()] = split_string[1][:-1].strip()
             # print(split_string[0][1:])
             # print(split_string[1][:-1])
+
+        if lines[i].strip() == 'CONDIZIONI' or lines[i].strip() == 'SPECIFICHE' and flag_specifiche_condizioni == 0:
+            flag_specifiche_condizioni = 1
+            all_obj.append(res)
+
 
         #print(lines[i].strip())
 
