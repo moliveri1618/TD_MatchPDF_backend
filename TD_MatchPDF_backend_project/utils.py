@@ -488,11 +488,13 @@ def remove_matched_substring(original_string, substring):
 # Function to compare and create new lists
 def remove_matches_from_list(list1, list2):
     matched_list = {}
-    keys_to_remove_list1 = []
-    keys_to_remove_list2 = []
 
-    for key1, obj1 in list1.items():
-        for key2, obj2 in list2.items():
+    for key1 in list(list1.keys()):
+        obj1 = list1[key1]
+        
+        # Iterate over the items in list2
+        for key2 in list(list2.keys()):
+            obj2 = list2[key2]
             # print(obj1['Tipologia Infisso'])
             # print(obj2['Tipologia Infisso'])
             # print(key1)
@@ -504,15 +506,11 @@ def remove_matches_from_list(list1, list2):
                 obj1['Cerniere'] == obj2.get('Cerniere', obj1['Cerniere']):
                     
                     matched_list[str(key1) + ' match con ' + str(key2)] = obj1
-                    keys_to_remove_list1.append(key1)
-                    keys_to_remove_list2.append(key2)
-
-    # Remove matched items from list1 and list2
-    for key in keys_to_remove_list1:
-        list1.pop(key, None)
-    
-    for key in keys_to_remove_list2:
-        list2.pop(key, None)
+                    
+                    del list1[key1]
+                    del list2[key2]
+                    
+                    break
 
     return matched_list, list1, list2
 
@@ -636,9 +634,8 @@ def pdf_rules2(context2):
     lines = context2.split('\n')
     all_obj = []
     res = {}
-    n_obj = 0
+    n_obj = 1
     flag_specifiche_condizioni = 0
-
 
     for i in range(len(lines)):
 
@@ -647,30 +644,39 @@ def pdf_rules2(context2):
             continue
  
         if lines[i].strip() == "Infisso":
+
             try:
-                n_obj = lines[i-1].strip()
                 for n in range(int(n_obj)):
                     all_obj.append(res)
                     # print(all_obj)
                     # print('\n')
             except ValueError:
                 print(f"Skipping: {n_obj} is not an integer")
-        
+
             res = {}
             n_obj = 0
             #print(lines[i-1].strip())
 
         if lines[i].strip()[:1] == "G" and "(" in lines[i]:
+            if 'Fornitore'in lines[i]:
 
-            #####   to do: get obj numbers from here not up   ####
-            #print(lines[i-1].strip())
-            try:
-                pass
-                #print(int(lines[i-2].strip()[:2]))
-            except (IndexError, ValueError) as e:
-                pass
-                #print(lines[i-2].strip()[:2])
-            ######################################################
+                #reset
+                try:
+                    for n in range(int(n_obj)):
+                        all_obj.append(res)
+                        # print(all_obj)
+                        # print('\n')
+                except ValueError:
+                    print(f"Skipping: {n_obj} is not an integer")
+
+                res = {}
+                n_obj = 0
+
+                res['Design'] = lines[i-1].strip()
+                try:
+                    n_obj = int(lines[i-2].strip())
+                except (IndexError, ValueError) as e:
+                    n_obj = 1
             
             # print(lines[i])
             split_string = lines[i].split("(", 1)
@@ -681,7 +687,6 @@ def pdf_rules2(context2):
         if lines[i].strip() == 'CONDIZIONI' or lines[i].strip() == 'SPECIFICHE' and flag_specifiche_condizioni == 0:
             flag_specifiche_condizioni = 1
             all_obj.append(res)
-
 
         #print(lines[i].strip())
 
@@ -740,12 +745,12 @@ def cerniere_definer(text_line):
         return 'None'
 
 
-def  pdf_rules(context):
+def pdf_rules(context):
 
     lines = context.split('\n')
     all_obj = []
     res = obj_model
-    flag = 0
+    flag = ''
     for i in range(len(lines)):
 
         if lines[i].strip() == "anta"             or \
@@ -761,6 +766,7 @@ def  pdf_rules(context):
 
         # Tipologia infissi  A1 A2
         if lines[i].strip() == 'tipo':
+
             porta_finestra = ''
             if i + 2 < len(lines):
                 #print(lines[i + 2])
@@ -844,6 +850,16 @@ def  pdf_rules(context):
             res = {}
             flag = ''
 
+        elif lines[i].strip() == 'pos..':
+            is_end_of_obj = res.get('Pos Cliente', 'porco dio') # we are the end of the obj if post cliente exists, return all
+            if is_end_of_obj != 'porco dio':
+                all_obj.append(res)
+                res = {}
+                flag = ''
+
+        # if lines[i].strip() == '6/11':  # for testing
+        #     print('yoo')
+
 
         #print(lines[i].strip())
     
@@ -856,6 +872,19 @@ def clean_list(lst):
         lst.pop(0)
     return lst
 
+def delete_not_tipologia_infissi(list1):
+    for key in list(list1.keys()):
+        if list1[key]['Tipologia Infissi'] == '':
+            del list1[key]
+
+    return list1
+
+def delete_not_infisso(list2):
+    for key in list(list2.keys()):
+        if list2[key]['Design'].lower() != 'infisso':
+            del list2[key]
+
+    return list2
 
 
 def modify_list(list):
@@ -898,6 +927,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list1 = clean_list(list1)
     list1 = modify_list(list1)
     list1 = clean_dict(list1)
+    list1 = delete_not_tipologia_infissi(list1)
     # print(list1)
     # print('\n')
 
@@ -908,6 +938,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list2 = pdf_rules2(context2)
     list2 = clean_and_enumerate(list2)
     list2 = remove_trash(list2)
+    list2 = delete_not_infisso(list2)
     # print(list2)
     # print('\n')
 
