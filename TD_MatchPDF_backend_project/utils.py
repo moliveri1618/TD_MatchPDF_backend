@@ -745,7 +745,7 @@ def cerniere_definer(text_line):
         return 'None'
 
 
-def pdf_rules(context):
+def  pdf_rules(context):
 
     lines = context.split('\n')
     all_obj = []
@@ -827,7 +827,7 @@ def pdf_rules(context):
                 res['Modello Finestra'] = stoca
 
         # Cerniere D1
-        elif flag == 'ferramenta' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()) and lines[i-1].strip() != 'alt. Maniglia':
+        elif flag == 'ferramenta' and re.match(cerniere_pattern, lines[i].strip()) and lines[i-1].strip() != 'alt. Maniglia':
             # print('ferramenta', lines[i].strip())
             # print('pos cliente', res['Pos Cliente'])
             stoca = cerniere_definer(lines[i].strip())
@@ -838,9 +838,32 @@ def pdf_rules(context):
         # elif flag == 'accessori' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
         #     print('accessori', lines[i].strip())
         
-        # # vetro/pannello E1
-        # elif flag == 'vetro/pannello' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
-        #     print('vetro/pannello', lines[i].strip())
+        # vetro/pannello Fn1 - Fn2 - Fn3 
+        elif flag == 'vetro/pannello' and re.match(vetro_pannello_pattern, lines[i].strip()):
+            #print('vetro/pannello', lines[i].strip())
+            # F1.1
+            if re.match(vetro_pannello_Fn1_pattern, lines[i].strip()):
+                #print('F1n', lines[i].strip())
+                try:
+                    if res['Codice vetro infissi']:
+                        res['Codice vetro infissi'] += ',VETRO ' + lines[i].strip()
+                except KeyError:
+                        res['Codice vetro infissi'] = 'VETRO ' + lines[i].strip()
+
+            # F1.2
+            if lines[i].strip() in fermavetro_infisso:
+                res['Fermavetro Infisso'] = fermavetro_infisso[lines[i].strip()]
+
+            # F1.3
+            if lines[i].strip() in canalina_interno_vetro_Infisso:
+                res['Canalina interno vetro Infisso'] = canalina_interno_vetro_Infisso[lines[i].strip()]
+
+        # Fn4
+        elif flag == 'vetro/pannello' and 'ornamentale' in lines[i].strip():
+            rs = str(extract_numbers(lines[i].strip()))
+            #print(type(rs))
+            if rs in vetri_ornamentali:
+                res['Vetri Ornamentali'] = vetri_ornamentali[rs]
 
         # reset all if end of the entry
         elif lines[i].strip() == 'data:':
@@ -867,8 +890,17 @@ def pdf_rules(context):
     return all_obj
 
 
+def extract_numbers(string):
+    # Use regex to find all sequences of digits in the string
+    numbers = re.findall(r'\d+', string)
+    
+    # Convert the found sequences to integers
+    numbers = [int(num) for num in numbers]
+    
+    return numbers[0]
+
 def clean_list(lst):
-    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Colore PVC': '', 'Cerniere': ''}:
+    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Colore PVC': '', 'Cerniere': '', 'Codice vetro infissi': '', 'Fermavetro Infisso': '', 'Canalina interno vetro Infisso':'', 'Vetri Ornamentali':''}:
         lst.pop(0)
     return lst
 
@@ -894,7 +926,11 @@ def modify_list(list):
         "Soglia Infissi": item.get("Soglia Infissi", ""),
         "Colore PVC": item.get("Colore PVC", ""),
         "Modello Finestra": item.get("Modello Finestra", ""),
-        "Cerniere": item.get("Cerniere", "")
+        "Cerniere": item.get("Cerniere", ""),
+        "Codice vetro infissi": item.get("Codice vetro infissi", ""),
+        "Vetri Ornamentali": item.get("Vetri Ornamentali", ""),
+        "Fermavetro Infisso": item.get("Fermavetro Infisso", ""),
+        "Canalina interno vetro Infisso": item.get("Canalina interno vetro Infisso", "")
     } for item in list}
 
     return transformed_data

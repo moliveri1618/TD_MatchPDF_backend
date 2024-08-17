@@ -1,3 +1,39 @@
+tipologia_infisso_porta_finestra = {
+    "101": "1 ANTA",
+    "201": "2 ANTE",
+    "202": "2 ANTE",
+    "203": "2 ANTE",
+    "204": "2 ANTE",
+    "401": "2 ANTE",
+    "301": "3 ANTE",
+    "302": "3 ANTE",
+    "303": "3 ANTE",
+    "304": "3 ANTE",
+    "321": "3 ANTE",
+    "322": "3 ANTE",
+    "323": "3 ANTE",
+    "324": "3 ANTE",
+    "414": "3 ANTE",
+    "415": "3 ANTE",
+    "420": "3 ANTE",
+    "421": "3 ANTE",
+    "424": "3 ANTE",
+    "471": "4 ANTE",
+    "472": "4 ANTE",
+    "205": "1 ANTA CON SOPRALUCE",
+    "206": "1 ANTA CON SOPRALUCE",
+    "208": "1 ANTA CON SOPRALUCE",
+    "309": "2 ANTE CON SOPRALUCE",
+    "310": "2 ANTE CON SOPRALUCE",
+    "329": "2 ANTE CON SOPRALUCE",
+    "330": "2 ANTE CON SOPRALUCE",
+    "403": "2 ANTE CON SOPRALUCE",
+    "404": "2 ANTE CON SOPRALUCE",
+    "207": "1 ANTA CON SOTTOLUCE FISSO VETRATO",
+    "308": "2 ANTA CON SOTTOLUCE FISSO VETRATO",
+    "402": "2 ANTA CON SOTTOLUCE FISSO VETRATO",
+}
+
 tipologia_infisso = {
     "101": "1 ANTA",
     "201": "2 ANTE",
@@ -40,7 +76,7 @@ tipologia_infisso = {
     "914": "HST 4 ANTE"
 }
 
-nodo_centrale = {
+colore_pvc = {
     "01": "BIANCO EXTRALISCIO 01",
     "06": "GRIGIO SATINATO 06",
     "07": "BIANCO PERLA GOFFRATO 07",
@@ -57,6 +93,8 @@ nodo_centrale2 = {
     "S28": "NODO CON BATTUTA",
     "25": "NODO CON BATTUTA",
     "28": "NODO SENZA BATTUTA",
+    "NL45": "NODO SENZA BATTUTA",
+    "NL45K": "NODO SENZA BATTUTA",
     "H25": "NODO HISTORY (MANIGLIA CENTRALE)"
 }
 
@@ -163,14 +201,15 @@ modello_finestra = {
     "584": "BILICO"
 }
 
-canaline_interno_vetro = {
+
+canalina_interno_vetro_Infisso = {
     "01": "CANALINA VETRO BIANCA 01",
     "02": "CANALINA VETRO BIANCA 02",
     "03": "CANALINA VETRO BIANCA 03"
 }
 
 
-fermovetro_infisso = {
+fermavetro_infisso = {
     "66": "FERMAVETRO CLASSIC",
     "33": "FERMAVETRO IN STILE",
     "20RC2": "FERMAVETRO NOVA",
@@ -180,12 +219,24 @@ fermovetro_infisso = {
 
 nodo_centrale_pattern = r'^[0-79][0-79]/[0-79][0-79]$'
 modello_finestra__cerniere_pattern = r'^[NKCAS]?\d{0,3}[NKCAS]?\d{0,3}(\.\d+)?(-\d+)?[NKCAS]?$'
+cerniere_pattern = r"^\d{1,4}\.\d$"
+vetro_pannello_pattern = r'^[NKCASUF]?\d{0,3}[NKCASUF]?\d{0,3}(\.\d+)?(-\d+)?[NKCAS]?$'
+vetro_pannello_Fn1_pattern = r'^[A-Za-z0-9]{4}$'
+
+
 
 soglia_infissi = {
     "9": "SOGLIA STANDARD (Non ribassata)",
-    "733": "SOGLIA RIBASSATA",
     "377": "SOGLIA RIBASSATA",
     "54": "LAMA PARAFREDDO SENZA SOGLIA"
+}
+
+vetri_ornamentali = {
+    '48': 'VETRO SATINATO 48',
+    '19': 'VETRO STAMPATO 19',
+    '31': 'VETRO CINCILLA 31',
+    '49': 'VETRO SATINATO 49',
+    '18': 'VETRO CATTEDRALE BIANCO 18'
 }
 
 
@@ -211,85 +262,12 @@ obj_model = {
     # "Maniglie_infissi": "",
     # "Colore_Maniglie_Infissi": "",
     # "Azionamento": "",
-    # "Codice_vetro_infissi": "",
-    # "Vetri_Ornamentali": "",
-    # "Canalina_interno_vetro_Infisso": "",
-    # "Fermavetro_Infisso": "",
+    "Codice vetro infissi": "",
+    "Vetri Ornamentali": "",
+    "Canalina interno vetro Infisso": "",
+    "Fermavetro Infisso": "",
     # "Guarnizioni": ""
 }
 
-tipologia_infisso_porta_finestra = {
-    "101": "1 ANTA",
-    "201": "2 ANTE",
-    "202": "2 ANTE",
-    "203": "2 ANTE",
-    "204": "2 ANTE",
-    "401": "2 ANTE",
-    "301": "3 ANTE",
-    "302": "3 ANTE",
-    "303": "3 ANTE",
-    "304": "3 ANTE",
-    "321": "3 ANTE",
-    "322": "3 ANTE",
-    "323": "3 ANTE",
-    "324": "3 ANTE",
-    "414": "3 ANTE",
-    "415": "3 ANTE",
-    "420": "3 ANTE",
-    "421": "3 ANTE",
-    "424": "3 ANTE",
-    "471": "4 ANTE",
-    "472": "4 ANTE",
-    "205": "1 ANTA CON SOPRALUCE",
-    "206": "1 ANTA CON SOPRALUCE",
-    "208": "1 ANTA CON SOPRALUCE",
-    "309": "2 ANTE CON SOPRALUCE",
-    "310": "2 ANTE CON SOPRALUCE",
-    "329": "2 ANTE CON SOPRALUCE",
-    "330": "2 ANTE CON SOPRALUCE",
-    "403": "2 ANTE CON SOPRALUCE",
-    "404": "2 ANTE CON SOPRALUCE",
-    "207": "1 ANTA CON SOTTOLUCE FISSO VETRATO",
-    "308": "2 ANTA CON SOTTOLUCE FISSO VETRATO",
-    "402": "2 ANTA CON SOTTOLUCE FISSO VETRATO",
-}
 
-
-colore_pvc = {
-    "01": "BIANCO EXTRALISCIO 01",
-    "06": "GRIGIO SATINATO 06",
-    "07": "BIANCO PERLA GOFFRATO 07",
-    "13": "TINTA A LEGNO CASTAGNO 13",
-    "19": "TINTA A LEGNO ROVERE 19",
-    "27": "BIANCO PERLA SATINATO 27",
-    "42": "BIANCO GOFFRATO 42",
-    "45": "BIANCO SATINATO 45",
-    "46": "GRIGIO SETA SATINATO 46",
-    "55": "TINTA A LEGNO NOCE CHIARO 55"
-}
-
-
-test_matched_list1 = {'PF2 Salone+Studio 414 match con 6': {'Tipologia Infissi': '3 ANTE', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF2 Salone match con 6': {'Tipologia Infissi': '3 ANTE', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 1': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 2': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 3': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 4': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 5': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}}  
-test_matched_list2 = {
-            'PF2 Salone+Studio 414 match con 1': {
-                'Tipologia Infissi': '3 ANTE',
-                'Soglia Infissi': 'None',
-                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
-                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
-                'Cerniere': 'None'
-            },
-            'PF2 Salone+Studio 414 match con 2': {
-                'Tipologia Infissi': '3 ANTE',
-                'Soglia Infissi': 'None',
-                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
-                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
-                'Cerniere': 'None'
-            },
-            'PF2 Salone+Studio 414 match con 3': {
-                'Tipologia Infissi': '3 ANTE',
-                'Soglia Infissi': 'None',
-                'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55',
-                'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE',
-                'Cerniere': 'None'
-            }
-        }
+example_of_success_array = {'PF2 Salone+Studio 414 match con 6': {'Tipologia Infissi': '3 ANTE', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF2 Salone match con 6': {'Tipologia Infissi': '3 ANTE', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'TINTA A LEGNO NOCE CHIARO 55', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 1': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 2': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 3': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 4': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}, 'PF1dxCucina match con 5': {'Tipologia Infissi': '1 ANTA', 'Soglia Infissi': 'SOGLIA RIBASSATA', 'Nodo Centrale': 'BIANCO GOFFRATO 42', 'Modello Finestra': 'FIN-WINDOW 77 SLIM LINE', 'Cerniere': 'CERNIERE A VISTA'}}  
