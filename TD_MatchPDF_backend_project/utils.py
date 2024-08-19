@@ -978,7 +978,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     # print(list2)
     # print('\n')
 
-    #compare and remove the matches
+    # compare and remove the matches
     # list2 = remove_keys(list2)
     # print(list2)
     matched_list, list1_no_match, list2_no_match = remove_matches_from_list(list1, list2)
@@ -990,4 +990,4 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     # print(list2_no_match)
     # print('\n')
 
-    return matched_list, list1_no_match, list2_no_match
+    return matched_list, list1_no_match, list2_no_match, len(list1), len(list2)

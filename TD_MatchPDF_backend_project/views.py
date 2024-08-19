@@ -73,11 +73,13 @@ def pdf_compare_contratto_ordine(request):
         file_path1, file_path2 = save_PDF(request, 'Files_contratto_ordine')
 
         # PDF Compare
-        matched_list, list1_no_match, list2_no_match = get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
+        matched_list, list1_no_match, list2_no_match, len_list1, len_list2 = get_contratto_ordine_data(file_path1, file_path2, 'Files_contratto_ordine')
         response_data = {
             'matched_list': matched_list,
             'no_match_list_ordine': list1_no_match,
-            'no_match_list_contratto': list2_no_match
+            'no_match_list_contratto': list2_no_match,
+            'len_ordine': len_list1,
+            'len_contratto': len_list2
         }
 
         return JsonResponse(response_data, safe=False)
