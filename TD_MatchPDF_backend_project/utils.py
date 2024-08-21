@@ -931,6 +931,11 @@ def delete_not_infisso(list2):
     return list2
 
 
+def enumerate_properly(list1):
+    new_dict = {i + 1: list1[key] for i, key in enumerate(list1)}
+
+    return new_dict
+
 def modify_list(list):
     transformed_data = {}
     duplicate_count = {}
@@ -1007,6 +1012,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list2 = clean_and_enumerate(list2)
     list2 = remove_trash(list2)
     list2 = delete_not_infisso(list2)
+    list2 = enumerate_properly(list2)
     len_list2 = len(list2)
     # print(list2)
     # print('\n')
