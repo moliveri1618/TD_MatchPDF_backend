@@ -751,6 +751,7 @@ def  pdf_rules(context):
     all_obj = []
     res = obj_model
     flag = ''
+    n_pezzi = 1
     for i in range(len(lines)):
 
         if lines[i].strip() == "anta"             or \
@@ -763,6 +764,13 @@ def  pdf_rules(context):
         # Ignore empty lines
         if lines[i].strip() == "":
             continue
+
+        # how many obj per obj
+        if lines[i].strip() == 'tipo' and lines[i+3] == 'pezzi':
+            # print(lines[i+2])
+            # print(lines[i+3])
+            n_pezzi = lines[i+4].strip()
+            # print(n_pezzi)
 
         # Tipologia infissi  A1 A2
         if lines[i].strip() == 'tipo':
@@ -869,16 +877,20 @@ def  pdf_rules(context):
         elif lines[i].strip() == 'data:':
             #print('--------')
             #print(res)
-            all_obj.append(res)
+            for n in range(int(n_pezzi)):
+                all_obj.append(res)
             res = {}
             flag = ''
+            n_pezzi = 1
 
         elif lines[i].strip() == 'pos..':
             is_end_of_obj = res.get('Pos Cliente', 'porco dio') # we are the end of the obj if post cliente exists, return all
             if is_end_of_obj != 'porco dio':
-                all_obj.append(res)
+                for n in range(int(n_pezzi)):
+                    all_obj.append(res)
                 res = {}
                 flag = ''
+                n_pezzi = 1
 
         # if lines[i].strip() == '6/11':  # for testing
         #     print('yoo')
@@ -920,18 +932,37 @@ def delete_not_infisso(list2):
 
 
 def modify_list(list):
-    # Transform the data
-    transformed_data = {item.get("Pos Cliente", "").strip(): {
-        "Tipologia Infissi": item.get("Tipologia Infissi", ""),
-        "Soglia Infissi": item.get("Soglia Infissi", ""),
-        "Colore PVC": item.get("Colore PVC", ""),
-        "Modello Finestra": item.get("Modello Finestra", ""),
-        "Cerniere": item.get("Cerniere", ""),
-        "Codice vetro infissi": item.get("Codice vetro infissi", ""),
-        "Vetri Ornamentali": item.get("Vetri Ornamentali", ""),
-        "Fermavetro Infisso": item.get("Fermavetro Infisso", ""),
-        "Canalina interno vetro Infisso": item.get("Canalina interno vetro Infisso", "")
-    } for item in list}
+    transformed_data = {}
+    duplicate_count = {}
+
+    for item in list:
+        pos_cliente = item.get("Pos Cliente", "").strip()
+
+        # Check if the key already exists
+        if pos_cliente in transformed_data:
+            # Increment the count of duplicates for this pos_cliente
+            if pos_cliente in duplicate_count:
+                duplicate_count[pos_cliente] += 1
+            else:
+                duplicate_count[pos_cliente] = 1
+            
+            # Modify the key to handle the duplicate
+            new_key = f"{pos_cliente}_duplicate{duplicate_count[pos_cliente]}"
+        else:
+            new_key = pos_cliente
+
+        # Store the data in the transformed_data dictionary
+        transformed_data[new_key] = {
+            "Tipologia Infissi": item.get("Tipologia Infissi", ""),
+            "Soglia Infissi": item.get("Soglia Infissi", ""),
+            "Colore PVC": item.get("Colore PVC", ""),
+            "Modello Finestra": item.get("Modello Finestra", ""),
+            "Cerniere": item.get("Cerniere", ""),
+            "Codice vetro infissi": item.get("Codice vetro infissi", ""),
+            "Vetri Ornamentali": item.get("Vetri Ornamentali", ""),
+            "Fermavetro Infisso": item.get("Fermavetro Infisso", ""),
+            "Canalina interno vetro Infisso": item.get("Canalina interno vetro Infisso", "")
+        }
 
     return transformed_data
 
@@ -964,6 +995,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list1 = modify_list(list1)
     list1 = clean_dict(list1)
     list1 = delete_not_tipologia_infissi(list1)
+    len_list1 = len(list1)
     # print(list1)
     # print('\n')
 
@@ -975,6 +1007,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list2 = clean_and_enumerate(list2)
     list2 = remove_trash(list2)
     list2 = delete_not_infisso(list2)
+    len_list2 = len(list2)
     # print(list2)
     # print('\n')
 
@@ -990,4 +1023,4 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     # print(list2_no_match)
     # print('\n')
 
-    return matched_list, list1_no_match, list2_no_match, len(list1), len(list2)
+    return matched_list, list1_no_match, list2_no_match, len_list1, len_list2

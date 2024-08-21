@@ -1,0 +1,524 @@
+versione
+20/08/2024
+CHIARO FRANCESCO
+commissione
+425008483
+nr. ordine
+ordine
+indirizzo cliente
+TIGULLIO DESIGN
+GENOVA SRL
+Via Struppa, 130/C
+16165 Genova
+T: 010 8593420
+M: 0185934268
+E: info@tigulliodesign.it
+sigla cliente
+2TGU
+Gentile signore e signori,
+con la presente ordiniamo i seguenti posizioni a base delle condizioni 
+generali di contratto di Finstral.
+Tutte le misure sono in mm. Tutte le specifiche e illustrazioni grafiche 
+sono viste dall’interno.
+Vi preghiamo di inviarci la conferma d'ordine.
+Sempre cordiali saluti
+Lorenzo Bignone
+NOME DELL'IMPRESA
+T +39 351 096 4713
+ E lorenzo.bignone@tigulliodesign.it
+ordine
+2TGU
+commissione CHIARO FRANCESCO
+data: 
+20/08/2024
+Page 2 of 6
+pos..
+pos. cliente
+tipo
+Sala+Studio
+420
+pezzi
+ 2
+porta
+1
+BRM-L
+BRM-A
+2160
+1655
+scarico aqua
+0
+descrizione
+codice
+telaio
+posizione
+col. esterno
+col. interno/esterno
+col. interno
+966
+forma a Z profondità: 77 mm, ingombro esterno: 54 mm
+01
+01
+*
+969
+traversa/montante telaio
+01
+01
+verticale
+NL45
+nodo centrale
+01
+01
+verticale
+lavorazioni telaio
+taglio telaio esterno 3 mm
+179N
+posizio sinistra
+taglio telaio esterno 3 mm
+179N
+posizio destra
+taglio telaio esterno 3 mm
+179N
+posizio sopra
+taglio telaio 128
+128
+posizio sotto
+taglio telaio interno 40 mm
+140
+posizio sopra
+283
+foro di fissaggio laterale e superiore 6 mm
+anta
+descrizione
+codice
+Nova-line
+971
+col. int./est.
+campo 1:
+01 / 01
+Nova-line
+971
+col. int./est.
+campo 2:
+01 / 01
+Nova-line
+971
+col. int./est.
+campo 3:
+01 / 01
+ferramenta
+esecuzione
+Din
+anta/ribalta sinistra,
+411.0
+sicurezza standard
+1
+campo 1:
+6010 01
+maniglia per finestra in alluminio serie 1
+colore 01
+alt. Maniglia
+1050
+esecuzione
+Din
+apertura ad anta sinistra con coman
+225.0
+sicurezza standard
+1
+campo 2:
+esecuzione
+Din
+anta/ribalta destra,
+411.0
+sicurezza standard
+2
+campo 3:
+6010 01
+maniglia per finestra in alluminio serie 1
+colore 01
+alt. Maniglia
+1050
+vetro/pannello
+Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-20-4T, 30 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
+21F3
+campo 1:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-20-4T, 30 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
+21F3
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+Plus-Valor 2 con Multiprotect e Bodysafe doppio vetro 33.1v-20-4T, 30 mm protezione antinfortunistica interno 2(B)2 esterno 1(C
+21F3
+campo 3:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+allargamento anta
+campo 1:
+- / -
+col. interno/estern
+454
+maniglietta esterna per porte-finestre
+campo 3:
+- / -
+col. interno/estern
+454
+maniglietta esterna per porte-finestre
+accessori e materiale di montagg
+campo :
+269
+PVC coprifilo piatto 60x3 mm
+lunghezza: 2200 mm, colore: 01, pezzi: 7
+campo :
+247
+PVC coprifilo angolare 80x80x3 mm
+lunghezza: 2200 mm, colore: 01, pezzi: 5
+2/6
+20/08/2024
+Ordine serramenti per conferma ordine 425008483
+commissione CHIARO FRANCESCO
+ordine
+2TGU
+commissione CHIARO FRANCESCO
+data: 
+20/08/2024
+Page 3 of 6
+pos..
+pos. cliente
+tipo
+Camera
+401
+pezzi
+ 1
+finestra
+2
+BRM-L
+BRM-A
+1120
+1664
+scarico aqua
+0
+descrizione
+codice
+telaio
+posizione
+col. esterno
+col. interno/esterno
+col. interno
+966
+forma a Z profondità: 77 mm, ingombro esterno: 54 mm
+01
+01
+*
+NL45
+nodo centrale
+01
+01
+verticale
+lavorazioni telaio
+taglio telaio esterno 3 mm
+179N
+posizio sinistra
+taglio telaio esterno 3 mm
+179N
+posizio destra
+taglio telaio esterno 3 mm
+179N
+posizio sopra
+taglio telaio esterno 3 mm
+179N
+posizio sotto
+283
+foro di fissaggio laterale e superiore 6 mm
+anta
+descrizione
+codice
+Nova-line
+971
+col. int./est.
+campo 1:
+01 / 01
+Nova-line
+971
+col. int./est.
+campo 2:
+01 / 01
+ferramenta
+esecuzione
+Din
+apertura ad anta sinistra con coman
+425.0
+sicurezza standard
+1
+campo 1:
+esecuzione
+Din
+anta/ribalta destra,
+411.0
+sicurezza standard
+2
+campo 2:
+6010 01
+maniglia per finestra in alluminio serie 1
+colore 01
+alt. Maniglia
+400
+vetro/pannello
+Plus-Valor 2 con Bodysafe doppio vetro 4T-20-6v, 30 mm protezione antinfortunistica interno 1(C)2
+2F63
+campo 1:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+Plus-Valor 2 con Bodysafe doppio vetro 4T-20-6v, 30 mm protezione antinfortunistica interno 1(C)2
+2F63
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+accessori e materiale di montagg
+campo :
+269
+PVC coprifilo piatto 60x3 mm
+lunghezza: 1800 mm, colore: 01, pezzi: 7
+campo :
+247
+PVC coprifilo angolare 80x80x3 mm
+lunghezza: 1800 mm, colore: 01, pezzi: 5
+3/6
+20/08/2024
+Ordine serramenti per conferma ordine 425008483
+commissione CHIARO FRANCESCO
+ordine
+2TGU
+commissione CHIARO FRANCESCO
+data: 
+20/08/2024
+Page 4 of 6
+pos..
+pos. cliente
+tipo
+Bagno
+101
+pezzi
+ 1
+finestra
+3
+BRM-L
+BRM-A
+1110
+645
+scarico aqua
+0
+descrizione
+codice
+telaio
+posizione
+col. esterno
+col. interno/esterno
+col. interno
+966
+forma a Z profondità: 77 mm, ingombro esterno: 54 mm
+01
+01
+*
+lavorazioni telaio
+taglio telaio esterno 3 mm
+179N
+posizio sinistra
+taglio telaio esterno 3 mm
+179N
+posizio destra
+taglio telaio esterno 3 mm
+179N
+posizio sopra
+taglio telaio esterno 3 mm
+179N
+posizio sotto
+283
+foro di fissaggio laterale e superiore 6 mm
+anta
+descrizione
+codice
+Nova-line
+971
+col. int./est.
+campo 1:
+01 / 01
+ferramenta
+esecuzione
+Din
+anta/ribalta sinistra,
+411.0
+sicurezza standard
+1
+campo 1:
+6010 01
+maniglia per finestra in alluminio serie 1
+colore 01
+alt. Maniglia
+400
+vetro/pannello
+Plus-Valor 2 con Bodysafe doppio vetro 4T-20-6v, 30 mm protezione antinfortunistica interno 1(C)2
+2F63
+campo 1:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+accessori e materiale di montagg
+campo :
+269
+PVC coprifilo piatto 60x3 mm
+lunghezza: 1300 mm, colore: 01, pezzi: 7
+campo :
+247
+PVC coprifilo angolare 80x80x3 mm
+lunghezza: 1300 mm, colore: 01, pezzi: 5
+4/6
+20/08/2024
+Ordine serramenti per conferma ordine 425008483
+commissione CHIARO FRANCESCO
+ordine
+2TGU
+commissione CHIARO FRANCESCO
+data: 
+20/08/2024
+Page 5 of 6
+pos..
+pos. cliente
+tipo
+Cucina
+401
+pezzi
+ 1
+finestra
+4
+BRM-L
+BRM-A
+1374
+1050
+scarico aqua
+0
+descrizione
+codice
+telaio
+posizione
+col. esterno
+col. interno/esterno
+col. interno
+966
+forma a Z profondità: 77 mm, ingombro esterno: 54 mm
+01
+01
+*
+NL45
+nodo centrale
+01
+01
+verticale
+lavorazioni telaio
+taglio telaio esterno 3 mm
+179N
+posizio sinistra
+taglio telaio esterno 3 mm
+179N
+posizio destra
+taglio telaio esterno 3 mm
+179N
+posizio sopra
+taglio telaio esterno 3 mm
+179N
+posizio sotto
+283
+foro di fissaggio laterale e superiore 6 mm
+anta
+descrizione
+codice
+Nova-line
+971
+col. int./est.
+campo 1:
+01 / 01
+Nova-line
+971
+col. int./est.
+campo 2:
+01 / 01
+ferramenta
+esecuzione
+Din
+apertura ad anta sinistra con coman
+425.0
+sicurezza standard
+1
+campo 1:
+esecuzione
+Din
+anta/ribalta destra,
+411.0
+sicurezza standard
+2
+campo 2:
+6010 01
+maniglia per finestra in alluminio serie 1
+colore 01
+alt. Maniglia
+550
+vetro/pannello
+Plus-Valor 2 con Bodysafe doppio vetro 4T-20-6v, 30 mm protezione antinfortunistica interno 1(C)2
+2F63
+campo 1:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+Plus-Valor 2 con Bodysafe doppio vetro 4T-20-6v, 30 mm protezione antinfortunistica interno 1(C)2
+2F63
+campo 2:
+66
+fermavetro Classic, dalle linee decise col.dist.
+03
+accessori e materiale di montagg
+campo :
+269
+PVC coprifilo piatto 60x3 mm
+lunghezza: 1800 mm, colore: 01, pezzi: 7
+campo :
+247
+PVC coprifilo angolare 80x80x3 mm
+lunghezza: 1800 mm, colore: 01, pezzi: 5
+5/6
+20/08/2024
+Ordine serramenti per conferma ordine 425008483
+commissione CHIARO FRANCESCO
+ordine
+2TGU
+commissione CHIARO FRANCESCO
+data: 
+20/08/2024
+Page 6 of 6
+Riepilogo per la pianificazione della produzione Finstral
+Elementi:
+posizione
+unità
+pezzi
+ferramenta speciale
+forma
+anta
+telaio
+966
+971
+1 - Rechteckform
+ 5
+ 12,80
+1,2,3,4
+ordinati secondo codice anta
+Interlocutore:
+sett. di consegna richiesta:
+Lorenzo Bignone
+6/6
+20/08/2024
+Ordine serramenti per conferma ordine 425008483
+commissione CHIARO FRANCESCO
