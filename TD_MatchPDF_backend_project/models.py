@@ -226,7 +226,7 @@ vetro_pannello_Fn1_pattern = r'^[A-Za-z0-9]{4}$'
 
 
 soglia_infissi = {
-    "9": "SOGLIA STANDARD (Non ribassata)",
+    "9": "SOGLIA STANDARD (NON RIBASSATA)",
     "377": "SOGLIA RIBASSATA",
     "54": "LAMA PARAFREDDO SENZA SOGLIA"
 }

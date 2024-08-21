@@ -376,7 +376,14 @@ def add_regola_to_res(res, nuova_regola, data_ordine, renamed_data):
     res.append()
 
 
+def update_colore_pvc(list):
 
+    # Update the 'Colore PVC' where necessary
+    for key, infisso in list.items():
+        if infisso.get('Colore PVC') == 'BIANCO LISCIO 01':
+            infisso['Colore PVC'] = 'BIANCO EXTRALISCIO 01'
+
+    return list
 
 
 def get_ordine_conferma_ordine_data(file_path1, file_path2):
@@ -1013,6 +1020,7 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     list2 = remove_trash(list2)
     list2 = delete_not_infisso(list2)
     list2 = enumerate_properly(list2)
+    list2 = update_colore_pvc(list2)
     len_list2 = len(list2)
     # print(list2)
     # print('\n')
