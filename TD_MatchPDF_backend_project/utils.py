@@ -641,7 +641,7 @@ def pdf_rules2(context2):
     lines = context2.split('\n')
     all_obj = []
     res = {}
-    n_obj = 1
+    n_obj = 0
     flag_specifiche_condizioni = 0
 
     for i in range(len(lines)):
@@ -649,22 +649,9 @@ def pdf_rules2(context2):
         # Ignore empty lines
         if lines[i].strip() == "":
             continue
- 
-        if lines[i].strip() == "Infisso":
-
-            try:
-                for n in range(int(n_obj)):
-                    all_obj.append(res)
-                    # print(all_obj)
-                    # print('\n')
-            except ValueError:
-                print(f"Skipping: {n_obj} is not an integer")
-
-            res = {}
-            n_obj = 0
-            #print(lines[i-1].strip())
 
         if lines[i].strip()[:1] == "G" and "(" in lines[i]:
+
             if 'Fornitore'in lines[i]:
 
                 #reset
@@ -675,15 +662,17 @@ def pdf_rules2(context2):
                         # print('\n')
                 except ValueError:
                     print(f"Skipping: {n_obj} is not an integer")
-
                 res = {}
                 n_obj = 0
 
+                # add design
                 res['Design'] = lines[i-1].strip()
+
+                # find n obj
                 try:
                     n_obj = int(lines[i-2].strip())
                 except (IndexError, ValueError) as e:
-                    n_obj = 1
+                    print(f"Skipping: {n_obj} is not an integer")
             
             # print(lines[i])
             split_string = lines[i].split("(", 1)
@@ -693,9 +682,17 @@ def pdf_rules2(context2):
 
         if lines[i].strip() == 'CONDIZIONI' or lines[i].strip() == 'SPECIFICHE' and flag_specifiche_condizioni == 0:
             flag_specifiche_condizioni = 1
-            all_obj.append(res)
 
-        #print(lines[i].strip())
+            # reset
+            try:
+                for n in range(int(n_obj)):
+                    all_obj.append(res)
+                    # print(all_obj)
+                    # print('\n')
+            except ValueError:
+                print(f"Skipping: {n_obj} is not an integer")
+            res = {}
+            n_obj = 0
 
     return all_obj
 
