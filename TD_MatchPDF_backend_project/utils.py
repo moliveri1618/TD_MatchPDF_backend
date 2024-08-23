@@ -783,7 +783,8 @@ def  pdf_rules(context):
             if i + 2 < len(lines):
                 #print(lines[i + 2])
                 if lines[i + 2] == 'pezzi':
-                    lines[i + 2] = '414'
+                    if lines[i + 3].strip() != '1':
+                        lines[i + 2] = '414'
 
                 if lines[i + 5] == 'porta':
                     porta_finestra = 'PORTA FINESTRA'
