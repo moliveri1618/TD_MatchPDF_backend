@@ -217,13 +217,22 @@ fermavetro_infisso = {
     "33RC2": "FERMAVETRO IN STILE SICUREZZA"
 }
 
+
 nodo_centrale_pattern = r'^[0-79][0-79]/[0-79][0-79]$'
 modello_finestra__cerniere_pattern = r'^[NKCAS]?\d{0,3}[NKCAS]?\d{0,3}(\.\d+)?(-\d+)?[NKCAS]?$'
 cerniere_pattern = r"^\d{1,4}\.\d$"
 vetro_pannello_pattern = r'^[NKCASUF]?\d{0,3}[NKCASUF]?\d{0,3}(\.\d+)?(-\d+)?[NKCAS]?$'
 vetro_pannello_Fn1_pattern = r'^[A-Za-z0-9]{4}$'
+nodo_centrale_pattern = r'\d+'
 
-
+nodo_centrale = {
+    "S28": "NODO CON BATTUTA",
+    "S25": "NODO CON BATTUTA",
+    "28": "NODO SENZA BATTUTA",
+    "NL45": "NODO SENZA BATTUTA",
+    "NL45K": "NODO SENZA BATTUTA",
+    "H25": "NODO HISTORY (MANIGLIA CENTRALE)"
+}
 
 soglia_infissi = {
     "9": "SOGLIA STANDARD (NON RIBASSATA)",
@@ -243,7 +252,8 @@ vetri_ornamentali = {
 tipologia_guarnizione = {
     "3a guarn.": "TERZA GUARNIZIONE",
     "3a e 4a guarn.": "TERZA E QUARTA GUARNIZIONE",
-    "nullo": "QUARTA GUARNIZIONE DI BATTUTA"
+    "": "QUARTA GUARNIZIONE DI BATTUTA",
+    " ": "QUARTA GUARNIZIONE DI BATTUTA"
 }
 
 cerniere = {
@@ -251,22 +261,68 @@ cerniere = {
     "2": "CERNIERE A SCOMPARSA"
 }
 
+
+
+maniglie_infissi ={
+    "6010": "MANIGLIA SERIE 1",
+    "6020": "MANIGLIA SERIE 1 CON PULSANTE",
+    "6030": "MANIGLIA SERIE 1 CON CHIAVE",
+    "7040": "MANIGLIA SERIE 2",
+    "7070": "MANIGLIA SERIE 2",
+    "7120": "MANIGLIA SERIE 2 A PRESSIONE",
+    "1901": "MANIGLIA SERIE 11",
+    "1911":"MANIGLIA SERIE 11",
+    "3011":"MANIGLIA SERIE 11", 
+    "4911":"MANIGLIA SERIE 11",
+    "1902": "MANIGLIA SERIE 12",
+    "4912": "MANIGLIA SERIE 12",
+    "3012": "MANIGLIA SERIE 12",
+    "1903": "MANIGLIA SERIE 13 CODICE 1903",
+    "3013": "MANIGLIA SERIE 13 CODICE 1903",
+    "4913": "MANIGLIA SERIE 13 CODICE 1903",
+    "1904": "MANIGLIA SERIE 14",
+    "3014": "MANIGLIA SERIE 14",
+    "4914": "MANIGLIA SERIE 14",
+    "3015": "MANIGLIA SERIE 15",
+    "1905": "MANIGLIA SERIE 15",
+    "4915": "MANIGLIA SERIE 15",
+    "1906": "MANIGLIA SERIE 16 (SENZA BOCCHETTA)",
+    "3016": "MANIGLIA SERIE 16 (CON BOCCHETTA)",
+    "4916": "MANIGLIA SERIE 16 (CON BOCCHETTA)",
+}
+
+
+colore_maniglie_infissi = {
+    "03": "NERO OPACO M03",
+    "01": "BIANCO OPACO M01",
+    "79": "TITANIO GF79",
+    "74": "BRONZO 74",
+    "56": "EV1 56",
+    "40": "OTTONE LUCIDO 40",
+    "07": "BIANCO PERLA 07",
+    "01": "BIANCO LISCIO 01",
+    "43": "ACCIAIO INOX 43",
+    "E03": "NERO ANODIZZATO E03",
+    "E02": "BRONZO SCURO ANODIZZATO E02"
+}
+
+
+
+
 obj_model = {
     "Tipologia Infissi": "",
-    # "Materiale_infissi": "",
+    "Guarnizioni": "",
     "Soglia Infissi": "",
     "Colore PVC": "",
     "Cerniere": "",
     "Modello Finestra": "",
-    # "Colore_PVC": "",
-    # "Maniglie_infissi": "",
-    # "Colore_Maniglie_Infissi": "",
-    # "Azionamento": "",
+    "Maniglie infissi": "",
+    "Colore Maniglie Infissi": "",
     "Codice vetro infissi": "",
     "Vetri Ornamentali": "",
     "Canalina interno vetro Infisso": "",
     "Fermavetro Infisso": "",
-    # "Guarnizioni": ""
+    "Nodo centrale": ""
 }
 
 

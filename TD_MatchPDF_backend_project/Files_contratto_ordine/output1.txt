@@ -3,36 +3,34 @@ Via Struppa 130c – 16165, Genova
 P.iva 01839260997
 Email: info@tigulliodesign.it
 Phone: +39 010 859 3420
- 
-CONTRATTO DI APPALTO
 NUMERO
-3077
+6992
 DATA
-21/05/2024
+14/05/2024
 ADDETTO
-Giulio Grasso
+Tinca Mantog
 CELLULARE
-+39 328 1264071
++39 345 6714153
 COMMITTENTE
-MANGLAVITE MARINA
+Bettin Margherita Maria
 FATTURAZIONE ELETTRONICA / PEC
 0000000  
 CF / P.IVA
-MNGMRN45S64F205N
+BTTMGH68P54L378V
 INDIRIZZO
-VIA RONCAGLIA 13
+Via Guerrazzi Francesco 51
 CITTÀ
-MILANO (MI)
+MONZA ( )
 CAP
-20146
+20900
 LUOGO / ZONA
-VIA RONCAGLIA 13 - MILANO (MI) - 20146 
+Via Guerrazzi Francesco 51 - MONZA (MB) - 20900 
 CELLULARE
-3393128276
-TELEFONO
  
+TELEFONO
+3483674087
 EMAIL
-lucagiorgiocosta@gmail.com
+margherita.bettin@gmail.com
 ALTRI CONTATTI
  
 CONTATTO PROGETTO
@@ -42,113 +40,129 @@ ARCHITETTO
 CONTATTO IMPRESA EDILE
  
 CONSEGNA
-120-150 giorni dall'esito definitivo delle misure e dal versamento
+90-120 giorni dall'esito definitivo delle misure e dal versamento
 dell'acconto (escluso festività), salvo imprevisti
 TIPOLOGIA DI POSA IN OPERA
-Refilatura telaio esistente
+ 
 IBAN
 IT40Q0306901439100000001820 - IT55U0503401431000000000614 - IT11O0538732050000047174375
 ARTICOLI
 QUANTITÀ
 ARTICOLO
 PREZZO
-1
-Infisso
-G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( FINESTRA 1 ANTA )
-G Materiale Infissi ( PVC )
-G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( BIANCO GOFFRATO 42 )
-G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BIANCO LISCIO 01 )
-G Nodo centrale ( NODO SENZA BATTUTA )
-G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 2F48 )
-G Vetri Ornamentali ( VETRO SATINATO 48 )
-G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
-G Fermavetro Infisso ( FERMAVETRO CLASSIC )
-G Cerniere ( CERNIERE A VISTA )
-G Guarnizioni ( TERZA GUARNIZIONE )
-BAGNO MISURA CLIENTE 430X980 ok *****MANIGLIE BASSE PER SCONTO 75% °°°°
-Page 1/6
 2
 Infisso
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( FINESTRA 1 ANTA )
+G Tipologia Infissi ( FINESTRA 2 ANTE CON SOTTOLUCE FISSO VETRATO )
 G Materiale Infissi ( PVC )
 G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( BIANCO GOFFRATO 42 )
+G Colore PVC ( TINTA LEGNO ROVERE 19 )
 G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BIANCO LISCIO 01 )
-G Nodo centrale ( NODO SENZA BATTUTA )
-G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 2F48 )
-G Vetri Ornamentali ( VETRO SATINATO 48 )
-G Canalina interno vetro Infisso ( CANALINA VETRO BIANCA 01 )
+G Colore Maniglie Infissi ( BRONZO 74 )
+G Areazione ( APERTURA ANTA/RIBALTA )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2926 )
+G Vetri Ornamentali ( VETRO SATINATO 49 )
+G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
 G Guarnizioni ( TERZA GUARNIZIONE )
-G Listelli Infissi ( LISTELLI ESTERNI CLASSIC )
-MISURA 790 X1510 BAGNO *****MANIGLIE BASSE PER SCONTO 75% °°°°
+G Sistema Sicurezza Infissi ( VETRO DI SICUREZZA P2A, ESECUZIONE STANDARD
+(NOTTOLINI MAGGIORATI) )
+Page 1/5
+Infissi Camera da Letto
+Misure indicative fornite dalla cliente: 1350x2150
+Tonalità PVC da confermare in fase di sopralluogo
+Parte fissa vetrata satinata
+Infisso Acustico
+Predisposizione per Zanzariera plissé
 3
+Infisso
+G Fornitore ( FINSTRAL)
+G Tipologia Infissi ( PORTA FINESTRA 1 ANTA )
+G Materiale Infissi ( PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
+G Colore PVC ( TINTA LEGNO ROVERE 19 )
+G Maniglie infissi ( MANIGLIA SERIE 1 )
+G Colore Maniglie Infissi ( BRONZO 74 )
+G Areazione ( APERTURA ANTA/RIBALTA )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2926 )
+G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
+G Fermavetro Infisso ( FERMAVETRO CLASSIC )
+G Cerniere ( CERNIERE A VISTA )
+G Soglia Infissi ( SOGLIA STANDARD (NON RIBASSATA) )
+G Guarnizioni ( TERZA E QUARTA GUARNIZIONE )
+G Sistema Sicurezza Infissi ( VETRO DI SICUREZZA P2A, ESECUZIONE STANDARD
+(NOTTOLINI MAGGIORATI) )
+PF Studio e Camera da letto
+Misure indicative fornite dalla cliente: 900x2400
+Tonalità PVC da confermare in fase di sopralluogo
+Infisso Acustico
+- Predisposizione per Zanzariera su due degli infissi (su indicazioni del tecnico)
+2
+Infisso
+G Fornitore ( FINSTRAL)
+G Tipologia Infissi ( PORTA FINESTRA 2 ANTE )
+G Materiale Infissi ( PVC )
+G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
+G Colore PVC ( TINTA LEGNO ROVERE 19 )
+G Maniglie infissi ( MANIGLIA SERIE 1 )
+G Colore Maniglie Infissi ( BRONZO 74 )
+G Areazione ( APERTURA ANTA/RIBALTA )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2926 )
+G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
+G Fermavetro Infisso ( FERMAVETRO CLASSIC )
+G Cerniere ( CERNIERE A VISTA )
+G Soglia Infissi ( SOGLIA STANDARD (NON RIBASSATA) )
+G Guarnizioni ( TERZA E QUARTA GUARNIZIONE )
+G Sistema Sicurezza Infissi ( VETRO DI SICUREZZA P2A, ESECUZIONE STANDARD
+(NOTTOLINI MAGGIORATI) )
+PF Studio e Camera da letto
+Misure indicative fornite dalla cliente: 1350x2400
+Tonalità PVC da confermare in fase di sopralluogo
+Infisso Acustico
+Predisposizione per Zanzariere scorrevoli
+Page 2/5
+1
 Infisso
 G Fornitore ( FINSTRAL)
 G Tipologia Infissi ( PORTA FINESTRA 3 ANTE )
 G Materiale Infissi ( PVC )
 G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( TINTA LEGNO NOCE CHIARO 55 )
+G Colore PVC ( TINTA LEGNO ROVERE 19 )
 G Maniglie infissi ( MANIGLIA SERIE 1 )
 G Colore Maniglie Infissi ( BRONZO 74 )
-G Nodo centrale ( NODO SENZA BATTUTA )
-G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 21F8 )
+G Areazione ( APERTURA ANTA/RIBALTA )
+G Tipologia Vetro ( VETRI DOPPI BASSO EMISSIVI )
+G Codice vetro infissi ( VETRO 2926 )
 G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
 G Fermavetro Infisso ( FERMAVETRO CLASSIC )
 G Cerniere ( CERNIERE A VISTA )
-G Soglia Infissi ( SOGLIA RIBASSATA )
-G Guarnizioni ( TERZA GUARNIZIONE )
-G Listelli Infissi ( LISTELLI ESTERNI CLASSIC )
-MISURE 1780 X2400 SOGGIORNO E 1 CAMERA 1 ANTA FISSA CODICE 10 *****MANIGLIE
-BASSE PER SCONTO 75% °°°°
-Page 2/6
-1
-Infisso
+G Soglia Infissi ( SOGLIA STANDARD (NON RIBASSATA) )
+G Guarnizioni ( TERZA E QUARTA GUARNIZIONE )
+G Sistema Sicurezza Infissi ( VETRO DI SICUREZZA P2A, ESECUZIONE STANDARD
+(NOTTOLINI MAGGIORATI) )
+PF Salotto
+Misure indicative fornite dalla cliente: 1950x2400
+Tonalità PVC da confermare in fase di sopralluogo
+Infisso Acustico
+€ 16.800,00
+8
+Cassettoni
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( FINESTRA 2 ANTE )
 G Materiale Infissi ( PVC )
-G Modello Finestra ( FIN-WINDOW 77 SLIM LINE )
-G Colore PVC ( BIANCO GOFFRATO 42 )
-G Maniglie infissi ( MANIGLIA SERIE 1 )
-G Colore Maniglie Infissi ( BIANCO LISCIO 01 )
-G Nodo centrale ( NODO SENZA BATTUTA )
-G Areazione ( APERTURA ANTA/RIBALTA CON DISPOSITIVO ESTATE/INVERNO )
-G Codice vetro infissi ( VETRO 2F48 )
-G Canalina interno vetro Infisso ( CANALINA VETRO NERA 03 )
-G Fermavetro Infisso ( FERMAVETRO CLASSIC )
-G Cerniere ( CERNIERE A VISTA )
-G Guarnizioni ( TERZA GUARNIZIONE )
-G Listelli Infissi ( LISTELLI ESTERNI CLASSIC )
-MISURE 1600 X 1530 CAMERA DA LETTO LATO CORTILE *****MANIGLIE BASSE PER SCONTO
-75% °°°°
-1
-Infisso
+G Colore PVC ( BIANCO LISCIO 01 )
+G Accessori cassettoni ( COMPLETO DI COPERCHIO ISPEZIONABILE )
+G Tipologia posa cassettone ( POSA SU RIVESTIMENTO )
+- Valutare sostituzione o rivestimento in fase di sopralluogo
+- Confermare tonalità PVC in fase di sopralluogo
+€ 5.530,00
+8
+Thermoflex
 G Fornitore ( FINSTRAL)
-G Tipologia Infissi ( BILICO )
-G Materiale Infissi ( PVC )
-G Colore PVC ( TINTA LEGNO NOCE CHIARO 55 )
-G Canalina interno vetro Infisso ( CANALINA VETRO MARRONE 02 )
-G Fermavetro Infisso ( FERMAVETRO CLASSIC )
-G Cerniere ( CERNIERE A VISTA )
-G Guarnizioni ( TERZA GUARNIZIONE )
-MISURE 1600 X 1530 FIN PIVOT VETRO 2113 E MANIGLIA 642 *****MANIGLIE BASSE PER
-SCONTO 75% CAMERA LATO STRADA °°°°
-€ 18.400,00
-1
-Asseverazione o Relazione Tecnica
-G Fornitore ( ALTRO)
-G Note ( È COMPRESO IL COSTO DELLA RELAZIONE TECNICA (E/O ASSEVERAZIONE),
-CHE VIENE REALIZZATA A CURA DI UN COLLABORATORE ESTERNO ABILITATO )
-€ 1.640,00
+€ 0,00
 La presente proposta d’ordine è stata formulata in base alle misure fornite dal cliente, e dovrà essere confermata dal
 nostro tecnico in fase di rilievo misure (qualora fossero rilevate misure non coerenti con quelle comunicate, sarà
 necessario apportare le opportune modifiche alla proposta d'ordine)
@@ -159,61 +173,35 @@ Rimozione e smaltimento serramenti esistenti
 Inclusa
 Posa in opera
 Inclusa
-Page 3/6
+Page 3/5
 Collaudo e certificazioni di posa al termine dei lavori
 Inclusa
-Trasporto al piano con piattaforme meccaniche, qualora necessarie
-Inclusa
+Opere murarie
+Non inclusa
 Assistenza pratica per detrazione fiscale
 Inclusa
-FORNITURA E POSA DI MANUFATTI IDONEI ALL’ELIMINAZIONE DELLE BARRIERE ARCHITETTONICHE SECONDO IL D.M. 236/1989 E ALLA
-DETRAZIONE DI CUI ALL’ART. 119 TER DEL D.L. 34/2020 La Società Tigullio Design Genova SRL dichiara di rendersi disponibile ad accettare il pagamento
-tramite SCONTO IN FATTURA (D.p.r. 917/86 e successive modifiche). Per usufruire dell’agevolazione gli interventi devono rispettare i requisiti previsti dal
-decreto del Ministro dei lavori pubblici n. 236 del 14 giugno 1989 (Prescrizioni tecniche necessarie a garantire l’accessibilità, l’adattabilità e la visitabilità degli
-edifici privati e di edilizia residenziale pubblica sovvenzionata e agevolata, ai fini del superamento e dell’eliminazione delle barriere architettoniche). Il fornitore
-non è responsabile della detrazione che farà il cliente.
-Il CLIENTE dichiara esplicitamente con la firma della presente Proposta d’ordine di:
- NON VOLER OPTARE per lo sconto in fattura e pertanto si impegna ad onoraredirettamente le scadenze economiche nei tempi e nei modi stabiliti nella
-presente proposta d’ordine (si informa che, a completamento della pratica per la detrazione fiscale, qualora spettante, è necessario inviare una comunicazione
-all’ENEA entro 90 giorni dalla fine dei lavori. La pratica è esclusivamente a carico del cliente. Tigullio Design Genova SRL si manleva da ogni responsabilità circa
-tale invio);
- VOLER OPTARE per lo sconto in fattura di cui DL34/2020 Art. 121 obbligandosipertanto a onorare direttamente la parte residua del debito nei tempi e nei
-modi stabiliti nella presente proposta d’ordine. L’azienda si occuperà dell’invio della comunicazione per l’opzione dello sconto in fattura nei tempi e nei modi
-previsti.
-Nel caso dello sconto in fattura la società Tigullio Design Genova SRL informa il Cliente che l’ordine verrà evaso dopo il pagamento della fattura di acconto.
-Tigullio Design Genova SRL si manleva da una eventuale esito non positivo della pratica di sconto in fattura e il cliente dovrà saldare la rimanenza tramite
-bonifico bancario.
-Il Cliente dichiara:
-G di essere in regola con gli obblighi concernenti le dichiarazioni in materia di imposte e tasse e con i conseguenti adempimenti
-G di non aver commesso violazioni, definitivamente accertate, rispetto agli obblighi relativi al pagamento delle imposte e tasse;
-E con la presente manleva la ditta Tigullio Design Genova SRL in qualità di:
-G fornitrice di prodotti oggetto di interventi di risparmio energetico e/o di ristrutturazione edilizia;
-da ogni eventuale conseguenza pregiudizievole che potesse derivare dalla non veridicità delle dichiarazioni rese.
-Ai fini prescritti dall'art. 1, c. 43bis L. 234/2021 si attesta che il CCNL applicato nell'esecuzione dei lavori è il seguente: C.C.N.L. EDILIZIA ANCE F012
+Si informa che, per ottenere la detrazione fiscale di legge, qualora spettante, è necessario inviare una comunicazione
+ENEA. Il cliente si impegna a produrre tutta la documentazione che la Tigullio Design Genova SRL richiederà,
+unitamente all’invio della ricevuta del pagamento della fattura d’acconto e/o entro e non oltre 20 giorni dalla firma della
+proposta d’ordine. Ai fini prescritti dall'art. 1, c. 43bis L. 234/2021 si attesta che il CCNL applicato nell'esecuzione dei
+lavori è il seguente: C.C.N.L. EDILIZIA ANCE F012
 FIRMA
 NOTE
-Garanzia Tigullio Design 24 mesi
-Garanzia Produttore 48 mesi.
+ 
 MODALITÀ DI PAGAMENTO
-A carico cliente pari al 25% all'ordine. Restante 75% sconto in fattura
+40% Acconto + 60% Saldo arrivo merce a magazzino
 FIRMA DEL PROPONENTE
 IMPONIBILE
-€ 20.040,00
+€ 22.330,00
 IVA DI LEGGE
-€ 1.096,80
+€ 3.091,40
 TOTALE COMPLESSIVO (IVA COMPRESA)
-€ 21.136,80
-TOTALE A CARICO DEL CLIENTE CON FORMULA DELLO
-SCONTO IN FATTURA
-€ 5.284,20
+€ 25.421,40
 DICHIARO DI AVER APPROVATO E ACCETTATO
 SPECIFICATAMENTE TUTTE LE CONDIZIONI DI VENDITA
 CONTENUTE IN TALE FOGLIO
 Il committente
 CONDIZIONI
-Page 4/6
-J
-J
 1. Frontespizio
 Sul frontespizio del presente contratto sono evidenziati:
 -i dati fiscali relativi ai soggetti contraenti;
@@ -239,6 +227,7 @@ imputabile a ritardi di terzi.
 installazione.
 - In caso di rilevazione di vizi o difetti dovrà darne tempestiva comunicazione direttamente alla ditta Venditrice.
 - Non avrà alcun effetto denuncia esposta altrimenti o a terzi.
+Page 4/5
 6. Deposito della cosa venduta
 - Nel caso in cui l’acquirente non consenta per motivi da lui derivanti la consegna dei beni da parte della ditta Venditrice, quest’ultima avrà facoltà di custodirli in
 deposito, per conto e a spese dell’acquirente.
@@ -287,7 +276,6 @@ e/o nella quantità.
 13. Interessi di mora per ritardo nei pagamenti
 - La ditta Venditrice, nel caso di ritardo nei pagamenti concordati da parte del acquirente, si riserva la facoltà di applicare interessi di mora, nella misura legale
 corrente nel periodo, dal giorno di scadenza del pagamento al momento della sua reale effettuazione.
-Page 5/6
 14. Assistenza
 - Qualsiasi difformità emersa in fase di collaudo sarà coperta dalla garanzia di 24 mesi.
 - Per eventuali assistenze e/o sostituzioni saranno dovute, in tale periodo unicamente € 30 per il diritto di chiamata.
@@ -316,4 +304,4 @@ SRL con sede legale in Via Struppa 130C – 16165 Genova, all’indirizzo e-mail
 diritto di proporre reclamo all’autorità di controllo competente (Garante per la Protezione dei Dati Personali) qualora ritenesse che il trattamento dei suoi Dati
 Personali sia contrario alla normativa vigente.
 Powered by TCPDF (www.tcpdf.org)
-Page 6/6
+Page 5/5

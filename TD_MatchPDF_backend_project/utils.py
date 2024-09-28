@@ -506,12 +506,16 @@ def remove_matches_from_list(list1, list2):
             # print(obj2['Tipologia Infisso'])
             # print(key1)
             
-            if  obj1['Tipologia Infissi'] == obj2.get('Tipologia Infissi', obj1['Tipologia Infissi'])                                                   and \
-                obj1['Soglia Infissi'] == obj2.get('Soglia Infissi', obj1['Soglia Infissi'])       and \
-                obj1['Colore PVC'] == obj2.get('Colore PVC', obj1['Colore PVC'])          and \
-                obj1['Modello Finestra'] == obj2.get('Modello Finestra', obj1['Modello Finestra']) and \
-                obj1['Cerniere'] == obj2.get('Cerniere', obj1['Cerniere']):
-                    
+            if  obj1['Tipologia Infissi'] == obj2.get('Tipologia Infissi', obj1['Tipologia Infissi'])                     and \
+                obj1['Soglia Infissi'] == obj2.get('Soglia Infissi', obj1['Soglia Infissi'])                              and \
+                obj1['Colore PVC'] == obj2.get('Colore PVC', obj1['Colore PVC'])                                          and \
+                obj1['Modello Finestra'] == obj2.get('Modello Finestra', obj1['Modello Finestra'])                        and \
+                obj1['Cerniere'] == obj2.get('Cerniere', obj1['Cerniere'])                                                and \
+                obj1['Colore Maniglie Infissi'] == obj2.get('Colore Maniglie Infissi', obj1['Colore Maniglie Infissi'])   and \
+                obj1['Guarnizioni'] == obj2.get('Guarnizioni', obj1['Guarnizioni'])                                       and \
+                obj1['Nodo centrale'] == obj2.get('Nodo centrale', obj1['Nodo centrale'])                                 and \
+                obj1['Maniglie infissi'] == obj2.get('Maniglie infissi', obj1['Maniglie infissi']) :
+
                     matched_list[str(key1) + ' match con ' + str(key2)] = obj1
                     
                     del list1[key1]
@@ -749,6 +753,18 @@ def cerniere_definer(text_line):
         return 'None'
 
 
+def maniglie_infissi_definer(text_line):
+    if text_line in maniglie_infissi:
+        return maniglie_infissi[text_line]
+    else:
+        return 'None'
+    
+def colore_maniglie_infissi_definer(text_line):
+    if text_line in colore_maniglie_infissi:
+        return colore_maniglie_infissi[text_line]
+    else:
+        return 'None'
+
 def  pdf_rules(context):
 
     lines = context.split('\n')
@@ -805,8 +821,17 @@ def  pdf_rules(context):
                     res['Tipologia Infissi'] = tipologia_infissi_definer(lines[i + 2].strip())
 
                 res['Pos Cliente'] = lines[i + 1]
+                if res['Pos Cliente'] == 'U':
+                    print('yo')
                 #print(res['tipologia_infisso'])
                 #print('------')
+
+        #a4 tipologia guarnizioni
+        elif lines[i].strip() == 'scarico aqua': 
+            if lines[i+2].strip() == '3a guarn.':
+                res['Guarnizioni'] = 'TERZA GUARNIZIONE'
+            else:
+                res['Guarnizioni'] = 'QUARTA GUARNIZIONE DI BATTUTA'
 
         # Soglia infissi  B1
         elif flag == 'telaio' and lines[i].strip() == 'col. esterno':
@@ -832,6 +857,13 @@ def  pdf_rules(context):
                 #print(res['Colore pvc'])
                 #print("--------")
 
+        #Nodo centrale
+        elif flag == 'telaio' and re.match(nodo_centrale_pattern, lines[i].strip()):
+            #print('telaio number', lines[i].strip())
+            stoca = nodo_centrale_definer(str(lines[i].strip()))
+            if stoca != 'None':
+                res['Nodo centrale'] = stoca
+
         # Modello finestra C1
         elif flag == 'anta' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
             #print('anta', lines[i].strip())
@@ -839,13 +871,25 @@ def  pdf_rules(context):
             if stoca != 'None':
                 res['Modello Finestra'] = stoca
 
-        # Cerniere D1
+        # Cerniere D1,
         elif flag == 'ferramenta' and re.match(cerniere_pattern, lines[i].strip()) and lines[i-1].strip() != 'alt. Maniglia':
             # print('ferramenta', lines[i].strip())
             # print('pos cliente', res['Pos Cliente'])
             stoca = cerniere_definer(lines[i].strip())
             if stoca != 'None':
                 res['Cerniere'] = stoca
+
+        #maniglie infissi D2 , colore maniglie infissi D3
+        elif flag == 'ferramenta' and lines[i].strip().split()[0] == 'colore':
+            #print('maniglie infissi', lines[i-2].strip().split()[0])
+            #print('colore maniglie infissi', lines[i].strip().split()[1])
+            stoca = maniglie_infissi_definer(lines[i-2].strip().split()[0])
+            if stoca != 'None':
+                res['Maniglie infissi'] = stoca
+
+            stoca = colore_maniglie_infissi_definer(lines[i].strip().split()[1])
+            if stoca != 'None':
+                res['Colore Maniglie Infissi'] = stoca
 
         # # accessori E1
         # elif flag == 'accessori' and re.match(modello_finestra__cerniere_pattern, lines[i].strip()):
@@ -917,7 +961,7 @@ def extract_numbers(string):
     return numbers[0]
 
 def clean_list(lst):
-    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Colore PVC': '', 'Cerniere': '', 'Codice vetro infissi': '', 'Fermavetro Infisso': '', 'Canalina interno vetro Infisso':'', 'Vetri Ornamentali':''}:
+    if lst[0] == {'Tipologia Infissi': '', 'Modello Finestra': '', 'Soglia Infissi': '', 'Colore PVC': '', 'Cerniere': '', 'Codice vetro infissi': '', 'Fermavetro Infisso': '', 'Canalina interno vetro Infisso':'', 'Vetri Ornamentali':'', "Maniglie infissi": '', "Colore Maniglie Infissi": '', "Nodo Centrale":'', 'Guarnizioni':''}:
         lst.pop(0)
     return lst
 
@@ -971,10 +1015,15 @@ def modify_list(list):
             "Codice vetro infissi": item.get("Codice vetro infissi", ""),
             "Vetri Ornamentali": item.get("Vetri Ornamentali", ""),
             "Fermavetro Infisso": item.get("Fermavetro Infisso", ""),
-            "Canalina interno vetro Infisso": item.get("Canalina interno vetro Infisso", "")
+            "Canalina interno vetro Infisso": item.get("Canalina interno vetro Infisso", ""),
+            "Colore Maniglie Infissi": item.get("Colore Maniglie Infissi",""),
+            "Maniglie infissi": item.get("Maniglie infissi", ""),
+            "Guarnizioni": item.get("Guarnizioni", ""),
+            "Nodo centrale": item.get("Nodo centrale", "")
         }
 
     return transformed_data
+
 
 
 def get_text_from_textfile2(txt_path):
@@ -1024,8 +1073,6 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     # print('\n')
 
     # compare and remove the matches
-    # list2 = remove_keys(list2)
-    # print(list2)
     matched_list, list1_no_match, list2_no_match = remove_matches_from_list(list1, list2)
 
     # print(matched_list)
@@ -1034,5 +1081,9 @@ def get_contratto_ordine_data(pdf_path1, pdf_path2, folder_name):
     # print('\n')
     # print(list2_no_match)
     # print('\n')
+
+    print('Total Obj Ordine', len_list1)
+    print('Total Obj Contratto', len_list2)
+    print('Total Matches', len(matched_list))
 
     return matched_list, list1_no_match, list2_no_match, len_list1, len_list2
